@@ -1,0 +1,35 @@
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{siunitx}
+%para evitar separacion silabica al final de linea
+\tolerance=1
+\emergencystretch=\maxdimen
+    \usepackage{subfigure}
+\hyphenpenalty=10000
+\hbadness=10000
+\usepackage{vmargin}
+	\setpapersize{A4}
+	\setmarginsrb
+		{2cm} %margen izquierdo
+		{1cm} %margen superior (distancia del borde superior al encabezado)
+		{2cm} %margen derecho
+		{1cm} %margen inferior (distancia del borde inferior al pie)
+		{0cm} %altura del encabezado
+		{2cm} %espacio entre el texto y el encabezado de pagina (para hacer los 3cm)
+		{0cm} %altura del pie de pagina
+		{2cm} %espacio entre el texto y el pie de pagina (para hacer los 3cm)
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{steinmetz}
+
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\Large\bfseries}{Problema~\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{Solución:}{1em}{}
+
+\renewcommand{\theenumi}{\alph{enumi}}
