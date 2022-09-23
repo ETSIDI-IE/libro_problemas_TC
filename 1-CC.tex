@@ -9,7 +9,25 @@ figura.
 \end{center}
 
   \subsection*{Solución}
-  Se plantea el sistema de ecuaciones en forma matricial:
+  Se plantea el sistema de ecuaciones en forma matricial, siendo de la forma $[R]\cdot[I]=[U]$. Cada $R_{i,i}$ de la matriz $[R]$ se corresponde con la suma de resistencias incluidas en la malla $i$; cada $\pm R_{ij}$ se corresponde con la suma de las resistencias incluidas en las ramas compartidas por las mallas $i$ y $j$, con signo positivo ($+$) si las corrientes van en el mismo sentido, y negativo ($-$) en caso contrario; y cada $\sum \epsilon_i$ es la suma algebraica de las fuerzas electromotrices de los generadores de la malla $i$, considerando un signo positivo ($+$) si contribuyen al giro de la corriente, y negativo ($-$) en caso contrario (es decir, si la corriente sale por el polo $+$ de la fuente, se considera positivo; si sale por el polo $-$, se considera negativo). Así:
+  \begin{equation*}
+    \begin{bmatrix}
+      R_1+R_2 & -R_2 & 0 \\
+      -R_2 & R_2+R_3+R_4 & -R_4 \\
+      0 & -R_4 & R_4+R_5
+    \end{bmatrix} \cdot
+    \begin{bmatrix}
+      I_1\\
+      I_2\\
+      I_3
+    \end{bmatrix} = %
+    \begin{bmatrix}
+      -E_1 \\
+      E_1\\
+      E_2
+    \end{bmatrix}
+  \end{equation*}
+  Reemplazando con los valores correspondientes, el sistema a resolver es:
   \begin{equation*}
     \begin{bmatrix}
       7 & -5 & 0 \\
@@ -34,7 +52,7 @@ figura.
     I_3&=\qty{10.45}{\ampere}
   \end{align*}
 
-  \noindent\rule{7in}{2.8pt}
+  \noindent\rule{\linewidth}{2.8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -48,8 +66,26 @@ figura.
 
 
 \subsection*{Solución}
-Se plantea el sistema de ecuaciones en forma matricial, suponiendo que
+Siguiendo las mismas consideraciones del ejercicio anterior, se plantea el sistema de ecuaciones en forma matricial, suponiendo que
 las tres mallas van en sentido horario:
+\begin{equation*}
+  \begin{bmatrix}
+    R_1+R_2+R_6 & -R_2 & 0 \\
+    -R_2 & R_2+R_3+R_5 & -R_5 \\
+    0 & -R_5 & R_4+R_5
+  \end{bmatrix} \cdot
+  \begin{bmatrix}
+    I_a\\
+    I_b\\
+    I_c
+  \end{bmatrix} = %
+  \begin{bmatrix}
+    E \\
+    0\\
+    0
+  \end{bmatrix}
+\end{equation*}
+Reemplazando con los valores correspondientes, el sistema a resolver es:
 \begin{equation*}
   \begin{bmatrix}
     27 & -7 & 0 \\
@@ -59,31 +95,31 @@ las tres mallas van en sentido horario:
   \begin{bmatrix}
     I_a\\
     I_b\\
-    I_0
+    I_c
   \end{bmatrix} = %
   \begin{bmatrix}
-    U_s \\
+    E \\
     0\\
     0
   \end{bmatrix}
 \end{equation*}
-donde además se sabe el valor de $I_0=\qty{7.5}{\milli\ampere}$. Por
+donde además se sabe el valor de $I_c=I_0=\qty{7.5}{\milli\ampere}$. Por
 tanto, de la tercera ecuación se puede obtener el valor de $I_b$:
 \begin{equation*}
-  -6\,I_b+12\,I_0=-6\,I_b+12\cdot 7.5 = 0\Rightarrow 6\,I_b=90 \Rightarrow I_b=\dfrac{90}{6}=\qty{15}{\milli\ampere}
+  -6\,I_b+12\,I_c=-6\,I_b+12\cdot 7.5 = 0\Rightarrow 6\,I_b=90 \Rightarrow I_b=\dfrac{90}{6}=\qty{15}{\milli\ampere}
 \end{equation*}
 Con $I_b$ calculado, se utiliza la segunda ecuación para determinar
 $I_a$:
 \begin{equation*}
-  -7\,I_a+17\,I_b-6\,I_0=-7\,I_a+17\cdot 15-6\cdot 7.5 = 0\Rightarrow 7\,I_a=210\Rightarrow I_a=\dfrac{210}{7}=\qty{30}{\milli\ampere}
+  -7\,I_a+17\,I_b-6\,I_c=-7\,I_a+17\cdot 15-6\cdot 7.5 = 0\Rightarrow 7\,I_a=210\Rightarrow I_a=\dfrac{210}{7}=\qty{30}{\milli\ampere}
 \end{equation*}
 Determinada $I_a$, se emplea la primera ecuación para obtener el valor
-de $U_s$:
+de $E$:
 \begin{equation*}
-  27\,I_a-7\,I_b=27\cdot 30 - 7 \cdot 15 = U_s = {\qty{705}{\milli\volt}}
+  27\,I_a-7\,I_b=27\cdot 30 - 7 \cdot 15 = E = {\qty{705}{\milli\volt}}
 \end{equation*}
 
-\noindent\rule{7in}{2.8pt}
+\noindent\rule{\linewidth}{2.8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
