@@ -447,94 +447,98 @@ $R_i = \mathrm{i\ } \Omega; C_i = \mathrm{i\ } \mu F; E_1 = 6V; E_2 =
 \end{center}
 
 \subsection*{Solución}
-Se sustituyen los condensadores por circuitos abiertos. En
-consecuencia, por las ramas correspondientes no puede circular
-corriente:
+
+Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente. En particular:
+
 \begin{align*}
-  I_1 &= 0A\\
-  I_6 &= 0 A
+  I_1 &= \qty{0}{\ampere}\\
+  I_6 &= \qty{0}{\ampere}
 \end{align*}
 
-Para aplicar el método de los nudos transformamos las fuentes
-$\epsilon_2$ y $\epsilon_3$ en fuentes de corriente, de valor:
-\begin{align*}
-  I_{\epsilon2}&=\dfrac{\epsilon_2}{R_3}=\dfrac{18}{3}=\qty{6}{\ampere}\\
-  I_{\epsilon3}&=\dfrac{\epsilon_3}{R_5}=\dfrac{6}{5}=\qty{1.2}{\ampere}
-\end{align*}
-Se plantea el método de los nudos en forma matricial:
+Para aplicar el método de los nudos transformamos las fuentes $\epsilon_2$ y $\epsilon_3$ en fuentes de corriente. Las ecuaciones del método de los nudos son:
+
 \begin{equation*}
   \begin{bmatrix}
-    \frac{1}{3} + \frac{1}{4} & -\frac{1}{4}\\
-    -\frac{1}{4} & \frac{1}{5} + \frac{1}{4}
+    G_3 + G_4 & -G_4\\
+    -G_4 & G_5 + G_4\\
   \end{bmatrix} \cdot %
   \begin{bmatrix}
-    U_A\\
-    U_B
+    V_A\\
+    V_B
   \end{bmatrix} = %
   \begin{bmatrix}
-    6\\
-    1.2
+    \epsilon_2/R_3\\
+    \epsilon_3/R_5
   \end{bmatrix}
 \end{equation*}
-Resolviendo el sistema:
-\begin{align*}
-  U_A &= {15}V\\
-  U_B &= {11} V
-\end{align*}
-Además, puesto que $D$ está conectado a tierra:
-\begin{equation*}
-  {U_D = 0 V}
-\end{equation*}
-Por otra parte, la caída de tensión en la resistencia $R_1$ es 0
-porque $I_1 = 0$, luego:
-\begin{equation*}
-  {U_C = U_D=0 V}
-\end{equation*}
-Con estos resultados se pueden obtener los valores de las corrientes
-de rama:
+
+Sustituimos valores y resolvemos:
 
 \begin{align*}
-  U_A&= I_2 \cdot R_3 + \epsilon_2\Rightarrow I_2=\dfrac{15-18}{3}={-1 A}\\
-  U_B& = I_3 \cdot R_5 + \epsilon_3\Rightarrow I_3=\dfrac{11-6}{5}={1 A}
+  V_A &= \qty{15}{\volt}\\
+  V_B &= \qty{11}{\volt}
 \end{align*}
 
-Además, teniendo en cuenta que $I_1 = I_6 = 0$, se obtiene:
+Además, $V_D = 0$, dado que está conectado a tierra. Por otra parte, la caída de tensión en la resistencia $R_1$ es 0 porque $I_1 = 0$, luego $V_C = V_D$.
+
+Con estos resultados podemos obtener los valores de las corrientes de rama. Volvemos al circuito original para plantear las ecuaciones de rama:
+
 \begin{align*}
-  I_5 &= I_3=1A\\
-  I_4 &= I_2=-1 A
+  V_A &= I_2 \cdot R_3 + \epsilon_2\\
+  V_B &= I_3 \cdot R_5 + \epsilon_3
 \end{align*}
 
-Finalmente, se calculan las diferencias de potencial en los
-condensadores. Para $C_1$, se considera la polaridad positiva en A:
+De estas ecuaciones despejamos $I_2$ e $I_3$. Además, teniendo en cuenta que $I_1 = I_6 = 0$, tenemos:
+
+\begin{align*}
+  I_5 &= I_3\\
+  I_4 &= I_2\\
+  I_2 &= -I_3
+\end{align*}
+
+En definitiva:
+
+\begin{align*}
+  I_1 &= \qty{0}{\ampere}\\
+  I_2 &= \qty{-1}{\ampere}\\
+  I_3 &= \qty{1}{\ampere}\\
+  I_4 &= \qty{-1}{\ampere}\\
+  I_5 &= \qty{1}{\ampere}\\
+  I_6 &= \qty{0}{\ampere}
+\end{align*}
+
+Finalmente, calculamos las diferencias de potencial en los
+condensadores. En $C_1$ asignamos la polaridad positiva en A, y
+tenemos:
+
 \begin{equation*}
-  U_{AC} = U_{C1} + \epsilon_1 \Rightarrow U_{C1} = 15-6= {{9} V}
+  U_{AC} = U_{C1} + \epsilon_1 \rightarrow U_{C1} = \qty{9}{\volt}
 \end{equation*}
 
-Para $C_2$ y $C_3$ el cálculo es directo, asignando la polaridad
-positiva en A y B, respectivamente:
-\begin{equation*}
-  U_{C2} =  U_{AC} = {{15} V}
-\end{equation*}
-\begin{equation*}
-  U_{C3} =  U_{BD} = {{11} V}
-\end{equation*}
-  
+Para $C_2$ y $C_3$ el cálculo es directo, asignando la polaridad positiva en A y B, respectivamente:
+
+\begin{align*}
+  U_{C2} &=  U_{AC} = \qty{15}{\volt}\\
+  U_{C3} &=  U_{BD} = \qty{11}{\volt}
+\end{align*}
 
 En consecuencia, las cargas almacenadas en cada condensador son:
+
 \begin{align*}
-  q_1 &= C_1 \cdot U_{C1} = {{9}{\mu C}}\\
-  q_2&= C_2 \cdot U_{C2} = {{30}{\mu C}}\\
-  q_3 &= C_3 \cdot U_{C3} = {{33}{\mu C}}
+  q_1 &= C_1 \cdot U_{C1} = \qty{9}{\micro\coulomb}\\
+  q_2 &= C_2 \cdot U_{C2} = \qty{30}{\micro\coulomb}\\
+  q_3 &= C_3 \cdot U_{C3} = \qty{33}{\micro\coulomb}
 \end{align*}
-  
+
 Y las energías:
+
 \begin{align*}
-  E_{C1} &= \frac{1}{2} \cdot C_1 \cdot U^2_{C1} = {{40.5}{\mu J}}\\
-  E_{C2} &= \frac{1}{2} \cdot C_2 \cdot U^2_{C2} = {{225}{\mu J}}\\
-  E_{C3} &= \frac{1}{2} \cdot C_3 \cdot U^2_{C3} = {{181.5}{\mu J}}
+  E_{C1} &= \frac{1}{2} \cdot C_1 \cdot U^2_{C1} = \qty{40.5}{\micro\joule}\\
+  E_{C2} &= \frac{1}{2} \cdot C_2 \cdot U^2_{C2} = \qty{225}{\micro\joule}\\
+  E_{C3} &= \frac{1}{2} \cdot C_3 \cdot U^2_{C3} = \qty{181.5}{\micro\joule}
 \end{align*}
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \section{Enunciado}
 
@@ -548,11 +552,11 @@ se pide determinar:
 \end{itemize}
 
 Datos:
-$\epsilon_{A}=\SI{90}{\volt};\quad \epsilon_{B}=\SI{60}{\volt};\quad
-\epsilon_{C}=\SI{30}{\volt};\quad R_{1}= R_2 = R_3 =
-\SI{10}{\ohm};\quad R_{4}= R_5 = \SI{30}{\ohm};\quad C_{1}=
-\SI{10}{\micro\farad};\quad C_{2}= \SI{20}{\micro\farad};\quad L_1 =
-\SI{1}{\micro\henry}$
+$\epsilon_{A}=\qty{90}{\volt};\quad \epsilon_{B}=\qty{60}{\volt};\quad
+\epsilon_{C}=\qty{30}{\volt};\quad R_{1}= R_2 = R_3 =
+\qty{10}{\ohm};\quad R_{4}= R_5 = \qty{30}{\ohm};\quad C_{1}=
+\qty{10}{\micro\farad};\quad C_{2}= \qty{20}{\micro\farad};\quad L_1 =
+\qty{1}{\micro\henry}$
 
 \begin{center}
   \includegraphics[scale = 0.8]{figuras/mallas_carga_inicial.pdf}
@@ -560,18 +564,26 @@ $\epsilon_{A}=\SI{90}{\volt};\quad \epsilon_{B}=\SI{60}{\volt};\quad
 
 
 \subsection*{Solución}
-Al estar alimentado por corriente continua, los condensadores se
-comportan como un circuito abierto, y la bobina como un cortocircuito,
-quedando el circuito como el mostrado en la figura. Se puede afirmar
-que:
+
+Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente. En particular:
+
 \begin{align*}
-  {I_5=0A}\\
-  {I_7=0A}
+  I_5 &= \qty{0}{\ampere}\\
+  I_7 &= \qty{0}{\ampere}
 \end{align*}
 
 \begin{center}
   \includegraphics[width=\linewidth]{figuras/BT1_10_mod.pdf}
 \end{center}
+
+En consecuencia,
+
+\begin{align*}
+  I_3 &= -I_8\\
+  I_4 &= I_6
+\end{align*}
+
+Además, la bobina $L_1$ es un cortocircuito.
 
 En el circuito de la izquierda se tienen dos mallas, considerando las
 corrientes mostradas en la figura.
@@ -580,64 +592,81 @@ corrientes mostradas en la figura.
   \includegraphics{figuras/BT1_10_izq_mallas.pdf}
 \end{center}
 
-Se plantea el sistema de ecuaciones en modo matricial:
+
 \begin{equation*}
   \begin{bmatrix}
-    20 & -10 \\
-    -10 & 20
-  \end{bmatrix} \cdot
+    R_1 + R_2 & -R_2\\
+    -R_2 & R_2 + R_3\\
+  \end{bmatrix} \cdot %
   \begin{bmatrix}
     I_a\\
     I_b
   \end{bmatrix} = %
   \begin{bmatrix}
-    90 \\
-    -60
+    \epsilon_A\\
+    -\epsilon_B
   \end{bmatrix}
 \end{equation*}
-cuya solución es:
+
+La solución de este sistema es:
+
 \begin{align*}
-  I_a&=\qty{4}{\ampere}\\
-  I_b&=\qty{-1}{\ampere}
+  I_a &= \qty{4}{\ampere}\\
+  I_b &= \qty{-1}{\ampere}
 \end{align*}
-Se establecen las igualdades entre las diferentes corrientes de rama y
-de malla, y se calculan sus valores:
+siendo,
+
 \begin{align*}
-  I_1&=I_a=\qty{4}{\ampere}\\
-  I_2&=I_a-I_b=4-(-1)=\qty{5}{\ampere}\\
-  I_3&=I_b=\qty{-1}{\ampere}\\
-  I_8&=-I_b=-(-1)=\qty{1}{\ampere}
+  I_1 &= I_a\\
+  I_2 &= I_a - I_b\\
+  I_3 &= I_b\\
+  I_8 &= -I_b
 \end{align*}
-	
-Para el circuito de la derecha se tiene una única malla:
+
+Para el circuito de la derecha tenemos una única malla:
+
 \begin{equation*}
-  {I_4=I_6=\dfrac{U_{30V}}{R_{30\Omega}}=\dfrac{30}{30}=\qty{1}{\ampere}}
+  \epsilon_C = I_4 \cdot R_4 \rightarrow I_4 = \qty{1}{\ampere}
 \end{equation*}
 
-Los potenciales en los puntos $A$ y $B$ son:
-\begin{equation*}
-  {U_A = \epsilon_C = {30} V}
-\end{equation*}
-\begin{equation*}
-  U_B = R_5 \, I_5 = {0} V
-\end{equation*}
-Para calcular el potencial en el punto $C$ se debe tener en cuenta que
-el condensador $C_1$ conserva su carga inicial porque el circuito no
-está cerrado en la parte superior. Por tanto,
-\begin{equation*}
-  U_{CB} = U_{C1} = \dfrac{q^0_{C1} }{C_1} =\dfrac{10}{10}= {1 V}
-\end{equation*}
 Por tanto,
-\begin{equation*}
-  U_C = U_{CB} + U_B = 1+0={{1} V}
-\end{equation*}
-
-A partir de este resultado, se calculan el resto de potenciales:
 
 \begin{align*}
-  U_D &= U_{DC} + U_C = \epsilon_B + U_C =60+1={{61} V}\\
-  U_E &= U_{ED} + U_D = I_1 \, R_1 + U_D =4\cdot 10+61={{101} V}\\
-  U_F &= U_{FC} + U_C = -I_3 \, R_3 + U_C =-(-1)\cdot 10+1={{11} V}
+  I_1 &= \qty{4}{\ampere}\\
+  I_2 &= \qty{5}{\ampere}\\
+  I_3 &= \qty{-1}{\ampere}\\
+  I_4 &= \qty{1}{\ampere}\\
+  I_5 &= \qty{0}{\ampere}\\
+  I_6 &= \qty{1}{\ampere}\\
+  I_7 &= \qty{0}{\ampere}\\
+  I_8 &= \qty{1}{\ampere}\\
+\end{align*}
+
+Los potenciales en los puntos A y B se calculan así:
+
+\begin{align*}
+  V_A &= \epsilon_C = \qty{30}{\volt}\\
+  V_B &= R_5 \cdot I_5 = \qty{0}{\volt}
+\end{align*}
+
+Para calcular el potencial en el punto C debemos tener en cuenta que el condensador $C_1$ conserva su carga inicial porque el circuito no está cerrado en la parte superior. Por tanto,
+
+\begin{equation*}
+  U_{CB} = U_{C1} = \frac{q^0_{C1} }{C_1} = \qty{1}{\volt}
+\end{equation*}
+
+Por tanto,
+
+\begin{equation*}
+  U_C = U_{CB} + U_B = \qty{1}{\volt}
+\end{equation*}
+
+A partir de este resultado podemos calcular el resto de potenciales:
+
+\begin{align*}
+  U_D &= U_{DC} + U_C = \epsilon_B + U_C = \qty{61}{\volt}\\
+  U_E &= U_{ED} + U_D = I_1 \cdot R_1 + U_D = \qty{101}{\volt}\\
+  U_F &= U_{FC} + U_C = -I_3 \cdot R_3 + U_C = \qty{11}{\volt}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -650,15 +679,22 @@ carga. Mediante el método de las mallas determina:
 \item Polaridades, cargas, y energías de los condensadores
 \item Balance de potencias
 \end{itemize}
-Datos:
-$ \epsilon_{1}={118}V; \epsilon_{2}={236} V; \epsilon_{3}=118V; R_{1}=
-{4}\Omega; R_{2}=R_{3}={1}{\Omega}; R_{4}= {3}{\Omega};
-R_{5}={2}{\Omega}; C_{1}=C_{2}=C_{3}={2}{\mu F}; X_1 = X_2 = X_3 =
-{1}{\Omega}$
-
-\begin{center}
-  \includegraphics{figuras/mallas_condensadores.pdf}
-\end{center}
+\begin{minipage}[c]{0.3\linewidth}
+  \begin{align*}
+    \epsilon_{1}&=\qty{118}{\volt}\\
+    \epsilon_{2}&=\qty{236}{\volt}\\
+    \epsilon_{3}&=\qty{118}{\volt}\\
+    R_{1}&= \qty{4}{\ohm}\\
+    R_{2}&=R_{3}=\qty{1}{\ohm}\\
+    R_{4}&= \qty{3}{\ohm}\\
+    R_{5}&= \qty{2}{\ohm}\\
+    C_{1}&=C_{2}=C_{3}=\qty{2}{\micro\farad}\\
+    X_1 &= X_2 = X_3 = \qty{1}{\ohm}\\
+  \end{align*}
+\end{minipage}
+\begin{minipage}[c]{0.7\linewidth}
+  \includegraphics{../figs/mallas_condensadores.pdf}
+\end{minipage}
 
 \subsection*{Solución}
 Se sustituyen los condensadores y las bobinas por sus equivalentes en
@@ -670,94 +706,106 @@ de malla como se muestra en el circuito de la figura.
   \includegraphics{figuras/mallas_condensadores_sol.pdf}
 \end{center}
 
-Planteando el sistema de ecuaciones en forma matricial:
+\[
+\small{
+\left(\begin{array}{c}
+    E_1\\
+    E_2\\
+    E_3 - E_2
+  \end{array}\right) = \left(\begin{array}{ccc}
+    R_1 + R_4 & -R_4 & 0\\
+    -R_4 & R_4 + R_5 + R_2 & -R_{2}\\
+    0 & -R_2 & R_2 + R_3
+  \end{array}\right) \cdot \left(\begin{array}{c}
+    I_{A}\\
+    I_{B}\\
+    I_{C}
+  \end{array}\right)
+}
+\]
 
-\begin{equation*}
-  \begin{bmatrix}
+\[
+\small{
+\left(\begin{array}{c}
+    118\\
+    236\\
+    118
+  \end{array}\right) = \left(\begin{array}{ccc}
     7 & -3 & 0\\
     -3 & 6 & -1\\
     0 & -1 & 2
-  \end{bmatrix}
-  \cdot
-  \begin{bmatrix}
-    I_a\\
-    I_b\\
-    I_c
-  \end{bmatrix}
-  =
-  \begin{bmatrix}
-    118\\
-    236\\
-    -118
-  \end{bmatrix}
-\end{equation*}
+  \end{array}\right) \cdot \left(\begin{array}{c}
+    I_{A}\\
+    I_{B}\\
+    I_{C}
+  \end{array}\right)
+}
+\]
 
 La solución es:
-\begin{align*}
-  I_a & =  {40}A\\
-  I_b & =  {54}A\\
-  I_c & =  -{32}A
-\end{align*}
+
+\begin{eqnarray*}
+I_A & = & \qty{40}{\ampere}\\
+I_B & = & \qty{54}{\ampere}\\
+I_C & = & -\qty{32}{\ampere}
+\end{eqnarray*}
 
 Por tanto, las corrientes indicadas en el circuito son:
 
-\begin{align*}
-  I_1 &= I_a =  {40}A\\
-  I_2  &= I_c-I_b =-32-54= {-86}A\\
-  I_3  &= -I_c=  {32}A\\
-  I_4& = I_b-I_a = 54-40=  {14}A\\
-  I_5 &= I_b=  {54}A
-\end{align*}
-
+\begin{eqnarray*}
+I_1 & = & \qty{40}{\ampere}\\
+I_2 & = & \qty{-86}{\ampere}\\
+I_3 & = &  \qty{32}{\ampere}\\
+I_4 & = &  \qty{14}{\ampere}\\
+I_5 & = &  \qty{54}{\ampere}
+\end{eqnarray*}
 
 Las tensiones en los puntos indicados son:
-\begin{align*}
-  U_A&=U_B = {0}V\\
-  U_C &= I_4 \cdot R_4 =14\cdot 3= {42}V\\
-  U_D &= I_5 \cdot R_5 + U_C = 54\cdot 2+42= {150}V
-\end{align*}
-
-Por tanto, suponiendo como polaridad $+$ los extremos de los
-condensadores $C_1$ y $C_2$ conectados a $A$, y el $C_3$ conectado a
-$B$, los valores de tensión son:
-\begin{align*}
-  U_{C1} &= U_{AB} =  {0}V\\
-  q_1 &= C_1 \cdot U_{C1}  = 0 \mu F\\
-  E_{C1} &=\frac{1}{2} \cdot C_1 \cdot U^2_{C1} = {0}J
-\end{align*}
 
 \begin{align*}
-  U_{C2} &= U_{AC} =  0-42=-42V \text{ (polaridad opuesta)}\\
-  q_2 &= C_2 \cdot U_{C2} = 2\cdot 42 = 84 \mu F\\
-  E_{C2} &=\frac{1}{2} \cdot C_2 \cdot U^2_{C2} = \frac{1}{2} \cdot 84\cdot 10^{-6} \cdot 42^2=1.76 mJ
+V_A &= \qty{0}{\volt}\\
+V_B &= \qty{0}{\volt}\\
+V_C &= I_4 \cdot R_4 = \qty{42}{\volt}\\
+V_D &= I_5 \cdot R_5 + V_c = \qty{150}{\volt}\\
 \end{align*}
 
-\begin{align*}
-  U_{C3} &= U_{BC} =  0-42=-42V \text{ (polaridad opuesta)}\\
-  q_3 &= C_3 \cdot U_{C3} = 2\cdot 42 = 84 \mu F\\
-  E_{C3} &=\frac{1}{2} \cdot C_3 \cdot U^2_{C3} = \frac{1}{2} \cdot 84\cdot 10^{-6} \cdot 42^2=1.76 mJ
-\end{align*}
+Por tanto, las polaridades de los condensadores son las marcadas en la figura, con los valores de tensión siguientes:
 
-Finalmente, el balance de potencias calcula la potencia entregada por
-los elementos activos y la potencia consumida por los elementos
-pasivos.
-\begin{itemize}
-\item \textbf{Potencia de los generadores:}
-  \begin{itemize}
-  \item $P_{\epsilon1}=-\epsilon_1\,I_1=-118\cdot 40=-4720$ W (G)
-  \item $P_{\epsilon2}=\epsilon_2\,I_2=236\cdot (-86)=-20296$ W (G)
-  \item $P_{\epsilon3}=\epsilon_3\,I_3=118\cdot 32=3776$ W (R)
-  \end{itemize}
-\item \textbf{Potencia de las resistencias:}
-  \begin{itemize}
-  \item $P_{R1}=R_1\,I_1^2=4\cdot 40^2=6400$ W
-  \item $P_{R2}=R_2\,I_2^2=1\cdot (-86)^2=7396$ W
-  \item $P_{R3}=R_3\,I_3^2=1\cdot 32^2=1024$ W
-  \item $P_{R4}=R_4\,I_4^2=3\cdot 14^2=588$ W
-  \item $P_{R5}=R_5\,I_5^2=2\cdot 54^2=5832$ W
-  \end{itemize}
-\end{itemize}
-donde se cumple que la suma es 0.
+\begin{eqnarray*}
+U_{C1} = U_{BA} & = & \qty{0}{\volt}\\
+q_1 = C_1 \cdot U_{C1} & = & \qty{0}{\micro\coulomb}\\
+E_{C2} & = & \qty{0}{\joule}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+U_{C2} = U_{CA} & = & \qty{42}{\volt}\\
+q_2 = C_2 \cdot U_{C2} & = & \qty{84}{\micro\coulomb}\\
+E_{C2} & = & \qty{1.76}{\milli\joule}
+\end{eqnarray*}
+
+\begin{eqnarray*}
+U_{C3} = U_{CB} & = & \qty{42}{\volt}\\
+q_3 = C_3 \cdot U_{C3} & = & \qty{84}{\micro\coulomb}\\
+E_{C3} & = & \qty{1.76}{\milli\joule}
+\end{eqnarray*}
+
+Finalmente, el balance de potencias calcula la potencia entregada por los elementos activos y la potencia consumida por los elementos pasivos.
+
+La potencia total entregada por los elementos activos es $\qty{21240}{\watt}$:
+\begin{eqnarray*}
+P_{E1} = E_1 \cdot I_1 & = & \qty{4720}{\watt}\\
+P_{E2} = E_2 \cdot (-I_2) & = & \qty{20296}{\watt}\\
+P_{E3} = E_3 \cdot (-I_3) & = & \qty{-3776}{\watt}
+\end{eqnarray*}
+
+La potencia total consumida por los elementos pasivos también es $\qty{21240}{\watt}$:
+\begin{eqnarray*}
+P_{R1} = R_1 \cdot I_1^2 & = & \qty{6400}{\watt}\\
+P_{R2} = R_2 \cdot I_2^2 & = & \qty{7396}{\watt}\\
+P_{R3} = R_3 \cdot I_3^2 & = & \qty{1024}{\watt}\\
+P_{R4} = R_4 \cdot I_4^2 & = & \qty{588}{\watt}\\
+P_{R5} = R_5 \cdot I_5^2 & = & \qty{5832}{\watt}
+\end{eqnarray*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Enunciado}
@@ -859,124 +907,121 @@ En el circuito de la figura se debe determinar:
 \item La carga y polaridad en los condensadores, supuestos sin carga
   inicial.
 \end{itemize}
-Datos:
-$\epsilon_1 ={1}V; \epsilon_2 ={7}V; R_i = {1}\Omega; C_i = {i}{\mu
-  F}$
-
-\begin{center}
-  \includegraphics{figuras/mallas_agrupacion_condensadores.pdf}
-\end{center}
-
+\begin{minipage}[c]{0.3\linewidth}
+  \begin{align*}
+    \epsilon_1&=\qty{1}{\volt}\\
+    \epsilon_2&=\qty{7}{\volt}\\
+    R_i &= \qty{1}{\ohm}\\
+    C_i &= \qty{i}{\micro\farad}
+  \end{align*}
+\end{minipage}
+\begin{minipage}[c]{0.7\linewidth}
+  \includegraphics{../figs/mallas_agrupacion_condensadores.pdf}
+\end{minipage}
 
 \subsection*{Solución}
-Se sustituyen los condensadores por circuitos abiertos. En
-consecuencia, por las ramas correspondientes no puede circular
-corriente. En particular:
+Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente. En particular:
 
 \begin{align*}
-  I_3 &= {0}{A}\\
-  I_4 &= {0}{A}
+  I_3 &= \qty{0}{\ampere}\\
+  I_4 &= \qty{0}{\ampere}
 \end{align*}
 
-Se tienen entonces dos mallas. Definiendo dos corrientes de malla con
-giro a derechas:
+Tenemos dos mallas, y definimos dos corrientes de malla dextrógiras:
 
 \begin{equation*}
   \begin{bmatrix}
-    3 & -1\\
-    -1 & 4\\
+    R_1 + R_2 + R_3 & -R_3\\
+    -R_3 & R_3 + R_4 + R_6 + R_7\\
   \end{bmatrix} \cdot %
   \begin{bmatrix}
     I_a\\
     I_b
   \end{bmatrix} = %
   \begin{bmatrix}
-    1\\
-    7
+    \epsilon_1\\
+    \epsilon_2
   \end{bmatrix}
 \end{equation*}
 
 La solución de este sistema es:
 
 \begin{align*}
-  I_a &= {1}{A}\\
-  I_b &= {2}{A}
+  I_a &= \qty{1}{\ampere}\\
+  I_b &= \qty{2}{\ampere}
 \end{align*}
 siendo,
+
 \begin{align*}
-  I_1 &= I_a = {1}{A}\\
-  I_2 &= I_b - I_a = {1}{A}\\
-  I_5 &= -I_b = {-2}{A}
+  I_1 &= I_a = \qty{1}{\ampere}\\
+  I_2 &= I_b - I_a = \qty{1}{\ampere}\\
+  I_5 &= -I_b = \qty{-2}{\ampere}
 \end{align*}
 
-Se calcula ahora el balance de potencias, diferenciando entre
-elementos activos (generadores) y pasivos (receptores):
-\begin{itemize}
-\item \textbf{Potencia de los generadores:}
-  \begin{itemize}
-  \item $P_{\epsilon1}=-\epsilon_1\,I_1=-1\cdot 1=-1$ W (G)
-  \item $P_{\epsilon2}=\epsilon_2\,I_5=7\cdot (-2)=-14$ W (G)
-  \end{itemize}
-\item \textbf{Potencia de las resistencias:}
-  \begin{itemize}
-  \item $P_{R1}=R_1\,I_1^2=1\cdot 1^2=1$ W
-  \item $P_{R2}=R_2\,I_1^2=1\cdot 1^2=1$ W
-  \item $P_{R3}=R_3\,I_2^2=1\cdot 1^2=1$ W
-  \item $P_{R4}=R_4\,(I_1+I_2)^2=1\cdot (1+1)^2=4$ W
-  \item $P_{R5}=R_5\,I_4^2=1\cdot 0^2=0$ W
-  \item $P_{R6}=R_6\,I_5^2=1\cdot (-2)^2=4$ W
-  \item $P_{R7}=R_7\,I_5^2=1\cdot (-2)^2=4$ W
-  \end{itemize}
-\end{itemize}
-cumpliéndose que $\sum P = 0$. Los potenciales en los puntos indicados
-son:
+La potencia de los dos elementos activos es:
+
 \begin{align*}
-  U_A &= -I_2 \cdot R_3 = -1\cdot 1= \qty{-1}{V}\\
-  U_B &= -\epsilon_2 - I_5 \cdot R_7 =-7-(-2)\cdot 1= \qty{-5}{V}\\
-  U_C &= U_{CB} + U_B = -I_5 \cdot R_6 + U_B = -(-2)\cdot 1+(-5)= \qty{-3}{V}
+  P_{\epsilon1} = \epsilon_1 \cdot I_1 = \qty{1}{\watt}\\
+  P_{\epsilon2} = \epsilon_2 \cdot (-I_5) = \qty{14}{\watt}
 \end{align*}
 
-La carga almacenada en el condensador $C_4$ se calcula con la
-ecuación:
+En total, $P_\epsilon = \qty{15}{\watt}$.
+
+Aplicando la ley de Joule en cada resistencia comprobamos que la potencia total disipada en las resistencias del circuito coincide con esta cantidad.
+
+Los potenciales en los puntos indicados son:
+
+\begin{align*}
+  V_A &= -I_2 \cdot R_3 = \qty{-1}{\volt}\\
+  V_B &= -\epsilon_2 - I_5 \cdot R_7 = \qty{-5}{\volt}\\
+  V_C &= U_{CB} + V_B = -I_5 \cdot R_6 + V_B = \qty{-3}{\volt}
+\end{align*}
+
+La carga almacenada en el condensador $C_4$ se calcula con la ecuación:
 \begin{equation*}
   q_4 = C_4 \cdot U_{C4} = C_4 \cdot (-U_C) = \qty{12}{\micro\coulomb}
 \end{equation*}
 donde se ha asignado la polaridad positiva en la conexión a tierra.
 
-Los condensadores $C_1$, $C_2$ y $C_3$ forman parte de una
-asociación. Los condensadores $C_1$ y $C_2$ están asociados en
-paralelo:
+Los condensadores $C_1$, $C_2$ y $C_3$ forman parte de una asociación. Los condensadores $C_1$ y $C_2$ están asociados en paralelo:
 \begin{equation*}
-  C_{12} = C_1 || C_2 = C_1 + C_2 = 1+2={3}{\mu F}
+  C_{12} = C_1//C_2 = C_1 + C_2 = \qty{3}{\micro\farad}
 \end{equation*}
-A su vez, están conectados en serie con el condensador $C_3$:
-\begin{equation*}
-  C_{eq} = \frac{C_{12} \cdot C_3}{C_{12} + C_3} =\dfrac{3\cdot 3}{3+3}= {1.5}{\mu F}
-\end{equation*}
-Este condensador equivalente está conectado entre A y tierra, y
-asignando la polaridad positiva a la conexión a tierra:
-\begin{equation*}
-  U_{CT} = -U_A = {1}{V} \Rightarrow q_T = C_T \cdot U_{CT} =1.5\cdot 1= {1.5}{\mu F}
-\end{equation*}
-Al tratarse de una conexión serie, esta carga es la misma que tienen
-el condensador $C_3$ y el condensador equivalente $C_{12}$.
-\begin{align*}
-  q_3 &=  {1.5}{\mu C}\\
-  q_{12} &=  {1.5}{\mu C}
-\end{align*}
-Con estas cargas se puede calcular las diferencias de potencial en
-estos condensadores:
-\begin{align*}
-  U_{C3} &=  \frac{q_3}{C_3} = \dfrac{1.5}{3}={0.5}{V}\\
-  U_{C12} &=  \frac{q_{12}}{C_{12}}=\dfrac{1.5}{3} = {0.5}{V}
-\end{align*}
-Por tanto:
-\begin{align*}
-  q_1 &= C_1 \cdot U_{C12}=1\cdot 0.5 = {0.5}{\mu C}\\
-  q_2 &= C_2 \cdot U_{C12}=2\cdot 0.5 = {1}{\mu C}
-\end{align*}
-donde se comprueba que $q_1 + q_2 = q_{12}$.
 
+A su vez, están conectados en serie con el condensador $C_3$:
+
+\begin{equation*}
+  C_T = \frac{C_{12} \cdot C_3}{C_{12} + C_3} = \qty{1.5}{\micro\farad}
+\end{equation*}
+
+Este condensador equivalente está conectado entre A y tierra, y asignamos la polaridad positiva a la conexión a tierra. Por tanto:
+
+\begin{equation*}
+  U_{CT} = -U_A = \qty{1}{\volt} \rightarrow q_T = C_T \cdot U_{CT} = \qty{1.5}{\micro\coulomb}
+\end{equation*}
+
+Al tratarse de una conexión serie, esta carga es la misma que tienen el condensador $C_3$ y el condensador equivalente $C_{12}$.
+
+\begin{align*}
+  q_3 &=  \qty{1.5}{\micro\coulomb}\\
+  q_{12} &=  \qty{1.5}{\micro\coulomb}
+\end{align*}
+
+Con estas cargas podemos calcular las diferencias de potencial en estos condensadores:
+
+\begin{align*}
+  U_{C3} &=  \frac{q_3}{C_3} = \qty{0.5}{\volt}\\
+  U_{C12} &=  \frac{q_{12}}{C_{12}} = \qty{0.5}{\volt}
+\end{align*}
+
+Por tanto,
+
+\begin{align*}
+  q_1 &= C_1 \cdot U_{C12} = \qty{0.5}{\micro\coulomb}\\
+  q_2 &= C_2 \cdot U_{C12} = \qty{1}{\micro\coulomb}
+\end{align*}
+
+Comprobamos que $q_1 + q_2 = q_{12}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Enunciado}
 El circuito de la figura está funcionando en régimen estacionario. Los
@@ -1337,7 +1382,7 @@ ramas:
 \begin{align*}
   U_A &= \epsilon \cdot \frac{R_2}{R_1 + R_2}\\
   U_B &= \epsilon \cdot \frac{R_4}{R_3 + R_4}\\
-  U_{AB} &= \epsilon \cdot (\frac{R_2}{R_1 + R_2} -  \frac{R_4}{R_3 + R_4}) = \SI{6}{\volt} = \epsilon_{th}
+  U_{AB} &= \epsilon \cdot (\frac{R_2}{R_1 + R_2} -  \frac{R_4}{R_3 + R_4}) = \qty{6}{\volt} = \epsilon_{th}
 \end{align*}
 
 Para calcular la resistencia equivalente apagamos la fuente de
@@ -1351,8 +1396,8 @@ Para obtener la máxima potencia hay que conectar una resistencia
 $R_L = R_{th}$. Con esta resistencia el balance de potencias es:
 
 \begin{align*}
-  P_L &= \frac{\epsilon_{th}^2}{4R_{th}} = \SI{1.0125}{\watt}\\
-  P_\epsilon &= 2 \cdot P_L = \SI{2.025}{\watt}
+  P_L &= \frac{\epsilon_{th}^2}{4R_{th}} = \qty{1.0125}{\watt}\\
+  P_\epsilon &= 2 \cdot P_L = \qty{2.025}{\watt}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
