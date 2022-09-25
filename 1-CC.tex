@@ -693,7 +693,7 @@ carga. Mediante el método de las mallas determina:
   \end{align*}
 \end{minipage}
 \begin{minipage}[c]{0.7\linewidth}
-  \includegraphics{../figs/mallas_condensadores.pdf}
+  \includegraphics{figuras/mallas_condensadores.pdf}
 \end{minipage}
 
 \subsection*{Solución}
@@ -912,11 +912,11 @@ En el circuito de la figura se debe determinar:
     \epsilon_1&=\qty{1}{\volt}\\
     \epsilon_2&=\qty{7}{\volt}\\
     R_i &= \qty{1}{\ohm}\\
-    C_i &= \qty{i}{\micro\farad}
+    C_i &= \qty[parse-numbers=false]{i}{\micro\farad}
   \end{align*}
 \end{minipage}
 \begin{minipage}[c]{0.7\linewidth}
-  \includegraphics{../figs/mallas_agrupacion_condensadores.pdf}
+  \includegraphics{figuras/mallas_agrupacion_condensadores.pdf}
 \end{minipage}
 
 \subsection*{Solución}
@@ -1475,7 +1475,7 @@ siendo la máxima potencia transferida:
 
 \section{Enunciado}
 Obtener el generador equivalente de Thévenin del circuito de la figura respecto de A y B.\\
-Datos: $I_g=\qty{10}{\ampere}; R_1=1\Omega;\; \alpha=5$
+Datos: $I_g=\qty{10}{\ampere}; R_1=\qty{1}{\ohm}; \alpha=5$
 \begin{center}
   \includegraphics{figuras/Thevenin1.pdf}
 \end{center}
@@ -1534,87 +1534,50 @@ Datos: $R = {1}{\Omega};\; \epsilon_g = {10}{V};\; \alpha = \beta = 1$
 \end{center}
 
 \subsection*{Solución}
-Para calcular el equivalente de Norton, se cortocircuita la salida del
-circuito:
-\begin{center}
-  \includegraphics{figuras/norton_corto.pdf}
-\end{center}
+Para calcular el equivalente de Norton cortocircuitamos la salida del circuito. Podemos escribir las siguientes ecuaciones:
 
-Aplicando el método de mallas, ambas en sentido horario:
-\begin{equation*}
-  \begin{bmatrix}
-    3 & -1\\
-    -1 & 2
-  \end{bmatrix}
-  \cdot 
-  \begin{bmatrix}
-    I_a\\
-    I_b
-  \end{bmatrix}
-  = 
-  \begin{bmatrix}
-    10-1\,U_R\\
-    1\,U_R-1\,I_R
-  \end{bmatrix}
-\end{equation*}
-donde además se sabe que:
-\begin{align*}
-  I_R&=I_b-I_a\\
-  U_R&=1\, I_b
-\end{align*}
-Combinando las ecuaciones, se obtiene que:
-\begin{equation*}
-  I_a=I_b=I_{sc}=\dfrac{10}{3}\,A
-\end{equation*}
-    
-Para obtener la resistencia equivalente, se apaga la fuente
-independiente y se conecta un generador de prueba en AB:
-\begin{center}
-  \includegraphics{figuras/norton_fuenteprueba.pdf}
-\end{center}
+\begin{minipage}{0.5\linewidth}
+  \includegraphics[width=.9\linewidth]{figuras/norton_corto.pdf}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \begin{align*}
+    U_R &= R \cdot I_{sc}\\
+    I_g+ I_R &= I_{sc}\\
+    U_{CD} &= \epsilon_g - 2 \cdot R \cdot I_g\\
+    U_{CD} &= \beta \cdot U_r - I_R \cdot R\\
+    U_{CD} &= U_R + \alpha \cdot I_R
+  \end{align*}
+\end{minipage}
 
+Combinando estas ecuaciones obtenemos:
 
-Aplicando el método de mallas, ambas en sentido horario:
 \begin{equation*}
-  \begin{bmatrix}
-    3 & -1\\
-    -1 & 2
-  \end{bmatrix}
-  \cdot 
-  \begin{bmatrix}
-    I_a\\
-    I_b
-  \end{bmatrix}
-  = 
-  \begin{bmatrix}
-    -1\,U_R\\
-    1\,U_R-1\,I_R-\epsilon_0
-  \end{bmatrix}
-\end{equation*}
-donde además se sabe que:
-\begin{align*}
-  I_R&=I_b-I_a\\
-  U_R&=1\, I_b
-\end{align*}
-Combinando las ecuaciones, se obtiene que:
-\begin{align*}
-  I_a&=\qty{0}{\ampere}\\
-  I_b&=-\dfrac{\epsilon_0}{2}
-\end{align*}
-y, dado que:
-\begin{equation*}
-  I_0=-I_b=\dfrac{\epsilon_0}{2}
-\end{equation*}
-la resistencia de Norton:
-\begin{equation*}
-  R_{N} = \dfrac{\epsilon_0}{I_0}=\dfrac{\epsilon_0}{\frac{\epsilon_0}{2}} = {2}{\Omega}
+  I_{sc} = 10/3\si{\ampere} = I_N
 \end{equation*}
 
-Por tanto, habrá que conectar una resistencia de ${2}{\Omega}$ para
-obtener la máxima potencia disponible, siendo entonces la potencia:
+Para obtener la resistencia equivalente apagamos la fuente independiente y conectamos un generador de prueba en AB:
+
+
+\begin{minipage}{0.5\linewidth}
+  \includegraphics[width=.9\linewidth]{figuras/norton_fuenteprueba.pdf}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \begin{align*}
+    U_R &= -I_0 \cdot R\\
+    I_2 + I_R + I_0 &= 0\\
+    U_{CD} &= -2R\cdot I_2\\
+    U_{CD} &= \beta \cdot U_R - I_R \cdot R\\
+    U_{CD} &= U_R + \alpha \cdot I_R + \epsilon_0
+  \end{align*}
+\end{minipage}
+
+Combinando estas ecuaciones obtenemos:
+
 \begin{equation*}
-  P_L=\dfrac{\epsilon_{th}^2}{4\,R_L}=\dfrac{(I_N\,R_N)^2}{4\,R_L}=\dfrac{(\frac{10}{3}\cdot 2)^2}{4\cdot 2}=5.56\,W
+  R_{th} = \frac{\epsilon_0}{I_0} = \SI{2}{\ohm}
 \end{equation*}
+
+Por tanto, habrá que conectar una resistencia de $\SI{2}{\ohm}$ para obtener la máxima potencia disponible.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
