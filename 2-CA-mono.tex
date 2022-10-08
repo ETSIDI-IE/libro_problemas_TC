@@ -459,8 +459,6 @@ Y, finalmente, la corriente medida por el amperímetro:
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \section{Enunciado}
 El circuito de la figura tiene carácter inductivo.  La impedancia de
@@ -769,9 +767,10 @@ Calcula:
 \item Compara de forma razonada los resultados de los apartados 4 y 5 con los valores calculados en los apartados 1 y 2.
 \end{enumerate}
 \begin{enumerate}
-\item El valor eficaz de la corriente absorbida por el motor.
 
 \subsection*{Solución}
+
+\item El valor eficaz de la corriente absorbida por el motor.
 
 
   \begin{align*}
@@ -1590,19 +1589,19 @@ La tensión en circuito abierto es:
 siendo $\epsilon_1 = \overline{Z}_2 \cdot \overline{I}$. Por tanto,
 
 \begin{equation*}
-  \epsilon_{th} = \alpha \cdot \overline{\epsilon}_1 \cdot \frac{\overline{Z}_1}{\overline{Z}_2} + \overline{\epsilon}_1 + \overline{\epsilon}_2 = 10 - 10j \si{\volt}
+  \epsilon_{th}  = \alpha \cdot \overline{\epsilon}_1 \cdot \frac{\overline{Z}_1}{\overline{Z}_2} + \overline{\epsilon}_1 + \overline{\epsilon}_2 = 10 - 10j \si{\volt}
 \end{equation*}
 
 Para obtener la impedancia apagamos las fuentes independientes. Al apagar la fuente $\epsilon_1$, la impedancia $Z_2$ queda cortocircuitada y, por tanto, $I = 0$. En consecuencia, la fuente dependiente también queda apagada y obtenemos:
 
 \begin{equation*}
-  \overline{Z}_{th} = \overline{Z}_1 = 4 - 3j \si{\volt}
+  \overline{Z}_{th} = \overline{Z}_1 = 4 - 3j \si{\ohm}
 \end{equation*}
 
 Para obtener la máxima potencia debemos conectar la impedancia:
 
 \begin{equation*}
-  \overline{Z}_{L} = \overline{Z}^*_{th} = 4 + 3j \si{\volt}
+  \overline{Z}_{L} = \overline{Z}^*_{th} = 4 + 3j \si{\ohm}
 \end{equation*}
 
 El balance de potencias es:
@@ -1657,7 +1656,8 @@ Datos:
 
 \subsection*{Solución}
 
-Calculamos la tensión en circuito abierto, planteando las siguientes ecuaciones:
+Calculamos la tensión en circuito abierto, planteando las siguientes
+ecuaciones:
 
 \begin{align*}
   \overline{I}_g + \overline{I}_Z + \overline{I}_{Z1} &= 0\\
@@ -1671,10 +1671,11 @@ Combinando estas ecuaciones obtenemos:
   \overline{U}_{AB} = (\beta + \overline{Z}_2) \cdot \frac{\overline{\epsilon}_g + \overline{I}_g \cdot \overline{Z}_1}{\overline{Z}_1 + \overline{Z}_2} = 138.48 + 3.99j \si{\volt} = \overline{\epsilon}_{th}
 \end{equation*}
 
-Para calcular la impedancia apagamos las fuentes independientes y conectamos un generador de prueba en AB:
+Para calcular la impedancia apagamos las fuentes independientes y
+conectamos un generador de prueba en AB:
 
 \begin{minipage}{0.5\linewidth}
-\includegraphics[width=.9\linewidth]{figuras/thevenin6_fuenteprueba.pdf}
+  \includegraphics[width=.9\linewidth]{figuras/thevenin6_fuenteprueba.pdf}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
   \begin{align*}
@@ -1696,13 +1697,16 @@ La potencia en AB depende de la carga conectada:
 \end{equation*}
 
 \begin{itemize}
-\item Cuando $\overline{Z}_L = \overline{Z}_{th}$, $P_{AB} = \SI{17.15}{\watt}$
+\item Cuando $\overline{Z}_L = \overline{Z}_{th}$,
+  $P_{AB} = \SI{17.15}{\watt}$
 \item Cuando $\overline{Z}_L = R_{th}$, $P_{AB} = \SI{18.22}{\watt}$
 \item Cuando $\overline{Z}_L = jX_{th}$, $P_{AB} = \SI{0}{\watt}$
-\item Cuando $\overline{Z}_L = \overline{Z}^*_{th}$, $P_{AB} = \SI{18.61}{\watt}$
+\item Cuando $\overline{Z}_L = \overline{Z}^*_{th}$,
+  $P_{AB} = \SI{18.61}{\watt}$
 \end{itemize}
 
-Comprobamos que el máximo valor se obtiene cuando conectamos la impedancia de Thévenin conjugada.
+Comprobamos que el máximo valor se obtiene cuando conectamos la
+impedancia de Thévenin conjugada.
 
 
 %%% Local Variables:
