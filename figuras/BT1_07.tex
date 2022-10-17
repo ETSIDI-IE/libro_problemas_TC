@@ -20,9 +20,9 @@
   (E) node[left] {$A$} to [short, o-*] (E')
   (F) node[above] {$B$} to [short, o-*] (F')
   (G) node[right] {$C$} to [short, o-*] (G')
-  (E') to [R, l = $180\Omega$] (F')
-  (F') to [R, l = $180\Omega$] (G')
-  (G') to [R, l = $180\Omega$] (E');
+  (E') to [R, l = $R_1$] (F')
+  (F') to [R, l = $R_2$] (G')
+  (G') to [R, l = $R_3$] (E');
   
   \coordinate(A) at (6,0);
   \coordinate(A') at ($(A) + (.3, .3)$);
@@ -35,9 +35,9 @@
   (A) node[left] {$A$} to [short, o-] (A')
   (B) node[above] {$B$} to [short, o-] (B')
   (C) node[right] {$C$} to [short, o-] (C')
-  (A') to [R, l = $\frac{10}{3}\Omega$, -*] (N) node[right] {$N$}
-  (B') to [R, l = $5\Omega$] (N)
-  (C') to [R, l = $10\Omega$] (N);
+  (A') to [R, l = $R_4$, -*] (N) node[right] {$N$}
+  (B') to [R, l = $R_5$] (N)
+  (C') to [R, l = $R_6$] (N);
 \end{circuitikz}
 
 \end{document}
