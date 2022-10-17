@@ -9,14 +9,14 @@
   \coordinate(A) at (3,3);
   \coordinate(E) at (0,0);
   \draw
-  (0,3) to [R, l_= $5\Omega$, i= $I_1$] (A)
-  (A) to [R, l=$12\Omega$, i = $I_2$] (3,0) 
-  (A) to [short, -] ++(2,0) coordinate (C)
-  (C) to [R, l=$6\Omega$, i = $I_3$] (5,0) 
+  (0,3) to [R, l_= $R_1$, i= $I_1$,-*] (A)
+  (A) to [R, l=$R_2$, i = $I_2$,-*] (3,0) 
+  (A) to [short, -*] ++(2,0) coordinate (C)
+  (C) to [R, l=$R_3$, i = $I_3$,-*] (5,0) 
   (C) to [short, -] ++(2,0) coordinate (D)
-  (D) to [R, l=$18\Omega$, i = $I_4$] (7,0) 
+  (D) to [R, l=$R_4$, i = $I_4$] (7,0) 
   (7,0) to [short, -] (E)
-  (0,3) to [esource, v_= $50\;\text{V}$] (E);
+  (0,3) to [esource, v_= ${V}$] (E);
 \end{circuitikz}
 
 \end{document}
