@@ -847,16 +847,16 @@ Las potencias del motor 1 son:
 y las del motor 2:
 \begin{align*}
   P_2&=5000W\\ Q_2&=P_5\,\tan(\phi_2)=5000\cdot
-                    \tan(\arccos(0.85))=5882.35VAr\\
-  S_2&=\dfrac{P_2}{\cos(\phi_2)}=\dfrac{5000}{0.85}=3098.72VA
+                    \tan(\arccos(0.85))=3098.72VAr\\
+  S_2&=\dfrac{P_2}{\cos(\phi_2)}=\dfrac{5000}{0.85}=5882.53VA
 \end{align*}
 
 Por el T. Boucherot, la potencia total de las cargas es:
 
 \begin{align*}
-  P_T&=P_1+P_2=7000+5000=12000W\\
-  Q_T&=Q_1+Q_2=8183.91+5882.35=11282.63VAr\\
-  S_T&=\sqrt{P_T^2+Q_T^2}=\sqrt{12000^2+11282.63^2}=16471.12VA
+  P_T&=P_1+P_2 = 12000W\\
+  Q_T&=Q_1+Q_2 = 11282.63VAr\\
+  S_T&=\sqrt{P_T^2+Q_T^2}=16471.12VA
 \end{align*}
 
 por lo que la instalación conjunta tiene un f.d.p. de:
@@ -878,23 +878,22 @@ las corrientes:
 La resistencia de cada conductor de la línea es:
 \begin{equation*}
   R_l=\rho\,\dfrac{L}{S}=\dfrac{21}{1000}\cdot
-  \dfrac{100}{16}=0.13\Omega \Rightarrow R_{L,T}=2\,R_l=2\cdot
-  0.13=0.26\Omega
+  \dfrac{100}{16}=0.13\Omega
 \end{equation*}
 
 Así, la potencia perdida en la línea:
 \begin{equation*}
-  P_L=R_{L,T}\,I^2=0.26\cdot 71.62^2=1333.65W
+  P_L= 2 \cdot R_L \cdot I^2=1346.2W
 \end{equation*}
 
 y el triángulo de potencias del generador, por el T. Boucherot:
 \begin{align*}
-  P_g&=P_L+P_T=1333.62+12000=13333.65 W\\ Q_g&=Q_T=11282.63 VAr\\
-  S_g&=\sqrt{P_g^2+Q_g^2}=\sqrt{13333.65^2+11282.63^2}=17466.65 VA
+  P_g&=P_L+P_T= 13346.23 W\\ Q_g&=Q_T=11282.63 VAr\\
+  S_g&=\sqrt{P_g^2+Q_g^2}=17476.26 VA
 \end{align*} por lo que
 la tensión a la salida del generador es:
 \begin{equation*}
-  U_g=\dfrac{S_g}{I}=\dfrac{17466.65}{71.62}=243.88 V
+  U_g=\dfrac{S_g}{I}=244.4 V
 \end{equation*}
 
 Para mejorar el factor de potencia, se sabe que la potencia reactiva
@@ -928,12 +927,12 @@ la corriente total en las cargas (entregada por el generador):
 \end{equation*} Con esta
 corriente, la potencia perdida en la línea:
 \begin{equation*}
-  P_L'=R_{L,T}\,I'^2=0.26\cdot 54.92^2=784.21W
+  P_L'=2 \cdot R_L \cdot I'^2= 791.76W
 \end{equation*} y el
 triángulo de potencias del generador, por el T. Boucherot:
 \begin{align*}
-  P_g'&=P_L+P_T=784.21+12000=12784.21 W\\ Q_g'&=Q_T'=3944.21 VAr\\
-  S_g'&=\sqrt{P_g'^2+Q_g'^2}=\sqrt{12784.21^2+3944.21^2}=13378.82 VA
+  P_g'&=P_L+P_T=12791.75 W\\ Q_g'&=Q_T'=3944.21 VAr\\
+  S_g'&=\sqrt{P_g'^2+Q_g'^2}=13386.02 VA
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
