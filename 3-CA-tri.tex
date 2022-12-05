@@ -133,14 +133,14 @@ Las impedancias $\overline{Z_1}$ están conectadas en estrella, mientras que las
 
 El amperímetro $A_1$ mide la corriente de línea que va a la impedancia $\overline{Z_{1,A}}$ (módulo de $\overline{I_{1,a}}$). Puesto que se tiene la tensión de fase $\overline{U_{a}}$ y el valor de la impedancia de $\overline{Z_1}$, la corriente $\overline{I_{1,a}}$ es:
 \begin{equation*}
-    I_{1,a} = frac{U_f}{Z_1} = \qty{20}{\ampere}.
+    I_{1,a} = \frac{U_f}{Z_1} = \qty{20}{\ampere}.
 \end{equation*}
 por lo que el amperímetro $A_1$ marca 20 A. 
 
 El amperímetro $A_2$ mide la corriente de línea que va a la impedancia $\overline{Z_{2,A}}$ (módulo de $\overline{I_{2,a}}$). La corriente que circula por esta impedancia (corriente de fase) es:
 
 \begin{equation*}
-    I_{2f} = frac{U}{Z_2} = \qty[parse-numbers = false]{20\sqrt{3}}{\ampere}.
+    I_{2f} = \frac{U}{Z_2} = \qty[parse-numbers = false]{20\sqrt{3}}{\ampere}.
 \end{equation*}
 
 Por tanto, el amperímetro $A_2$, que marca el módulo de la corriente de línea $I_{2,a}$: 
@@ -543,8 +543,8 @@ Para calcular la potencia de $Z_2$ debemos obtener la corriente de fase:
 Por tanto,
 
 \begin{align*}
-  P_2 &= 3 \cdot I_{1f}^2 R_1 = 3 \cdot (2\sqrt{3})^2 \cdot (100\cos(\ang{60})) = \SI{1800}{\watt}\\
-  Q_2 &= 3 \cdot I_{1f}^2 X_1 = 3 \cdot (2\sqrt{3})^2 \cdot (100\sin(\ang{60})) = {1800\sqrt{3}}\unit{\volt\ampere_r}
+  P_1 &= 3 \cdot I_{1f}^2 R_1 = 3 \cdot (2\sqrt{3})^2 \cdot (100\cos(\ang{60})) = \SI{1800}{\watt}\\
+  Q_1 &= 3 \cdot I_{1f}^2 X_1 = 3 \cdot (2\sqrt{3})^2 \cdot (100\sin(\ang{60})) = {1800\sqrt{3}}\unit{\volt\ampere_r}
 \end{align*}
 
 Aplicando Boucherot:
@@ -944,7 +944,7 @@ Con esta información se pide:
 \item Calcular los condensadores necesarios para
   mejorar el factor de potencia hasta 0,9, indicando cómo se deben
   conectar.
-\item vez conectados los condensadores del anterior
+\item Una vez conectados los condensadores del anterior
   apartado, determinar la corriente de línea y la lectura de todos los
   aparatos de medida del apartado 2.
 \end{enumerate}
@@ -1034,7 +1034,7 @@ Los aparatos de medida descritos antes miden ahora:
   retraso. Sabiendo que el amperímetro marca
   $\qty[parse-numbers=false]{76\sqrt{3}}{\ampere}$, determinar:
   \begin{enumerate}
-  \item Medida delos vatímetros 1 y 2.
+  \item Medida de los vatímetros 1 y 2.
   \item Valor de la impedancia $\overline{Z}$ en forma módulo-argumento.
   \item Valor de la capacidad mínima para mejorar el factor de potencia
     a $0.95$ en retraso.
@@ -1164,6 +1164,157 @@ para responder a las preguntas del problema:
 
 \end{enumerate}
 
+\section{Enunciado}
+Un sistema trifásico a cuatro hilos de $\qty{200}{\volt}$ a $\qty{50}{\hertz}$ y secuencia de fases directa está constituido por un motor a cuatro hilos de $\qty{3200}{\watt}$ de potencia y factor de potencia de 0.9, y un triángulo de impedancia $20\phase{\ang{30}}\unit{\ohm}$. Con esta información se debe determinar:
+
+\begin{enumerate}
+\item Impedancia equivalente del motor.
+\item Impedancia equivalente de todo el sistema.
+\end{enumerate}
+
+\subsection*{Solución}
+
+\begin{enumerate}
+\item Para calcular la impedancia del motor necesitamos obtener la corriente que lo alimenta. Dado que tenemos la potencia activa y su factor de potencia el cálculo es inmediato:
+
+  \[
+    P_m = \sqrt{3} \cdot U \cdot I_m \cdot \cos(\theta_m) \rightarrow I_m = \qty{10.26}{\ampere}.
+  \]
+Además, el ángulo se obtiene del factor de potencia: $\theta_m = \arccos(0.9) = \ang{25.84}$.
+  Con estos valores podemos calcular la impedancia equivalente en triángulo:
+
+  \[
+    \overline{Z}_{m\triangle} = \frac{U}{I_{mf}}\phase{\theta_m} = \frac{200}{10.26/\sqrt{3}}\phase{\ang{25.84}} = 33.76\phase{\ang{25.84}}\unit{\ohm}
+  \]
+
+  Y en estrella:
+
+\[
+  \overline{Z}_{mY} = \frac{U_f}{I_{m}}\phase{\theta_m} = \frac{200/\sqrt{3}}{10.26}\phase{\ang{25.84}} = 11.25\phase{\ang{25.84}}\unit{\ohm}
+  \]
+ 
+\item Para calcular la impedancia equivalente del conjunto necesitamos obtener la corriente total del sistema y, por tanto, el triángulo de potencias total. En primer lugar, el motor:
+
+  \begin{align*}
+    P_m &= \qty{3200}{\watt}\\
+    Q_m &= P_m \tan(25.84) = \qty{1549.83}{\VAr}
+  \end{align*}
+
+  A continuación, la impedancia. Primer debemos obtener la corriente de esta impedancia:
+
+  \begin{align*}
+    I_{zf} &= \frac{U}{Z_\triangle} = \qty{10}{\ampere}\\
+    I_z &= \sqrt{3}\cdot I_{zf} = 10\sqrt{3}\unit{\ampere}
+  \end{align*}
+  Y ya podemos obtener las potencias de esta impedancia:
+  \begin{align*}
+    P_z &= \sqrt{3}\cdot U \cdot I_z \cdot \cos(\ang{30}) = \qty{5196.2}{\watt}\\
+    Q_z &= P_m \tan(30) = \qty{3000}{\VAr}
+  \end{align*}
+
+  Aplicando Boucherot:
+
+  \begin{align*}
+    P &= P_m + P_z = \qty{8396.2}{\watt}\\
+    Q &= Q_m + Q_z = \qty{4549.8}{\VAr}\\
+    S & = \sqrt{P^2 + Q^2} = \qty{9549.7}{\voltampere}
+  \end{align*}
+
+  Con estos resultados obtenemos la corriente total y el ángulo de la impedancia equivalente:
+
+  \begin{align*}
+    I &= \frac{S}{\sqrt{3} U} = \qty{27.6}{\ampere}\\
+    \theta &= \arctan(\frac{Q}{P}) = \ang{28.45}
+  \end{align*}
+
+  Por tanto,
+
+  \begin{align*}
+    \overline{Z}_{\triangle} &= \frac{U}{I_{f}}\phase{\theta} = 12.57\phase{\ang{28.45}}\unit{\ohm}\\
+    \overline{Z}_{Y} &= \frac{U_f}{I}\phase{\theta} = 4.19\phase{\ang{28.45}}\unit{\ohm}
+  \end{align*}
+\end{enumerate}
+
+\section{Enunciado}
+
+En el circuito de la figura la tensión es $275\sqrt{3}\unit{\volt}$. Los motores 1 y 2 tienen factores de potencia 0.96 y 0.8, respectivamente. El vatímetro $W_a$ da una lectura de $2420\sqrt{3}\unit{\watt}$. Al medir las intensidades de los motores se comprueba que son iguales en ambos. Con esta información se debe determinar:
+
+\begin{enumerate}
+\item Secuencia de fases del sistema.
+\item Lectura del vatímetro $W_b$.
+\item Impedancias de cada uno de los motores e impedancia equivalente del conjunto.
+\end{enumerate}
+
+\begin{center}
+  \includegraphics{figuras/BT3_13}
+\end{center}
+
+\subsection*{Solución}
+
+\begin{enumerate}
+\item El sistema está equilibrado y es inductivo. Por tanto, la reactiva total es positiva. Por otra parte:
+
+  \[
+    W_a = \pm \frac{Q}{\sqrt{3}}
+  \]
+
+  Dado que la lectura del vatímetro es positiva y la potencia reactiva total también es positiva, hay que elegir el signo positivo. Este vatímetro está conectado entre B y C, luego se trata de una SFD.
+\item Con la lectura del vatímetro $W_a$ tenemos la potencia reactiva total del sistema. Por Boucherot sería:
+
+  \[
+    Q = Q_1 + Q_2 = \sqrt{3} \cdot U \cdot I_1 (\sen(\theta_1) + \sen(\theta_2))
+  \]
+  donde se ha tenido en cuenta que las corrientes de los dos motores son iguales, $I_1 = I_2$. De esta expresión podemos obtener el valor de estas corrientes.
+
+  \[
+    I_1 = I_2 = \frac{Q}{\sqrt{3} \cdot U \cdot (\sen(\theta_1) + \sen(\theta_2))} = \qty{10}{\ampere}
+  \]
+
+  Con una operación similar para la potencia activa:
+
+  \[
+    P = P_1 + P_2 = \sqrt{3} \cdot U \cdot I_1 (\cos(\theta_1) + \cos(\theta_2)) = \qty{14520}{\watt}
+  \]
+
+  Con este resultado podemos calcular la lectura del vatímetro $W_b$. Este vatímetro forma parte de un montaje Aron. Si añadimos un vatímetro ficticio en la fase A, $W_x$ , tendríamos:
+
+  \begin{align*}
+    W_x + W_b &= P\\
+    W_x - W_b &= Q/\sqrt{3} = W_a
+  \end{align*}
+
+  Por tanto:
+
+  \[
+    W_b = 1/2 \cdot (P - W_a) = \qty{5164.2}{\watt}
+  \]
+  
+\item Las impedancias de los dos motores podemos calcularlas con la tensión del sistema y las corrientes que los alimentan, calculadas en el apartado anterior, $I_1 = I_2 = \qty{10}{\ampere}$.
+
+    \begin{align*}
+      \overline{Z}_{1Y} &= \frac{U_f}{I_1}\phase{\theta_1} = 27.5\phase{\ang{16.26}}\unit{\ohm}\\
+      \overline{Z}_{2Y} &= \frac{U_f}{I_2}\phase{\theta_2} = 27.5\phase{\ang{36.87}}\unit{\ohm}
+  \end{align*}
+
+  Para calcular la impedancia equivalente del conjunto necesitamos la corriente total y el ángulo, que se obtienen del triángulo de potencias:
+
+  \begin{align*}
+    S &= \sqrt{P^2 + Q^2} = \qty{16233.9}{\voltampere}\\
+    I &= \frac{S}{\sqrt{3} \cdot U} = \qty{19.7}{\ampere}\\
+    \theta &= \arctan{\frac{Q}{P}} = \ang{26.56}
+  \end{align*}
+  Por tanto:
+
+  \[
+    \overline{Z}_{Y} = \frac{U_f}{I}\phase{\theta} = 13.97\phase{\ang{26.56}}\unit{\ohm}
+  \]
+
+  A este mismo resultado se puede llegar calculando la impedancia equivalente del paralelo de $\overline{Z}_{1Y}$ y $\overline{Z}_{2Y}$:
+
+  \[
+    \overline{Z}_Y = \frac{\overline{Z}_{1Y} \cdot \overline{Z}_{2Y}}{\overline{Z}_{1Y} + \overline{Z}_{2Y}} = 13.97\phase{\ang{26.56}}\unit{\ohm}
+  \]
+\end{enumerate}
 
 %%% Local Variables:
 %%% mode: latex
