@@ -1,6 +1,53 @@
 \chapter{Análisis transitorio}
 
 \section{Enunciado}
+En el circuito de la figura el interruptor ha estado abierto durante un tiempo
+prolongado, y en el instante $t = 0$ se cierra. Hay que determinar las
+respuestas del circuito en $t = 0^+$.
+
+\begin{minipage}{0.5\linewidth}
+  \center{\includegraphics{figuras/BT4_CondicionesIniciales_bobcon.pdf}}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \center{Datos:}
+  \begin{align*}
+    R1 &= 3\unit{\ohm}\\
+    R2 &= 5\unit{\ohm}\\
+    R3 &= 2\unit{\ohm}\\
+    L &= 0,2\unit{\henry}\\
+    C &= 0,5\unit{\milli\farad}\\
+    \epsilon(t) &= 20\cos(t)\unit{\volt}
+  \end{align*}
+\end{minipage}
+
+\subsection*{Solución}
+
+En $t < 0$, dado que el interruptor ha estado abierto, la bobina y el condensador están descargados. Por tanto, $i_2(0^-) = \qty{0}{\ampere}$ y $u_C(0^-) = \qty{0}{\volt}$.
+
+\smallskip
+\begin{minipage}{0.6\linewidth}
+En $t > 0$, al cerrarse el interruptor, la fuente de tensión alimenta al circuito. En el instante de cierre $e(0^+) = \qty{20}{\volt}$. Por otra parte, teniendo en cuenta las condiciones iniciales en la bobina y el condensador, tenemos:
+\begin{align*}
+  i_2(0^+) &= i_2(0^-) = \qty{0}{\ampere}\\
+  u_C(0^+) &= u_C(0^-) = \qty{0}{\volt}
+\end{align*}
+Estos resultados implican que, en ese instante, la bobina se comporta como un circuito abierto y el condensador como un cortocircuito. 
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+  \center{\includegraphics[scale=0.7]{figuras/BT4_CondicionesIniciales_bobcon0+.pdf}}
+\end{minipage}
+\smallskip
+
+En estas condiciones calculamos el resto de variables en $t = 0^+$.
+\begin{align*}
+  i_1(0^+) = i_3(0^+) &= \frac{e(0^+)}{R_1 + R_3} = \qty{4}{\ampere}\\
+  u_1(0^+) &= R_1 \cdot i_1(0^+) = \qty{12}{\volt}\\
+  u_2(0^+) &= R_2 \cdot i_2(0^+) = \qty{0}{\volt}\\
+  u_3(0^+) &= R_3 \cdot i_3(0^+) = \qty{8}{\volt}\\
+  u_L(0^+) &= u_3(0^+) = \qty{8}{\volt}
+\end{align*}
+
+\section{Enunciado}
 El interruptor de la figura lleva cerrado un tiempo que se puede considerar infinito. En el instante $t=0$, se abre, permaneciendo en esta posición definitivamente. Calcular la expresión de la intensidad $i(t)$ desde $t=0$ en adelante.
 
 Datos: $E = \qty{1}{\volt}$; $R_1 = \qty{1}{\ohm}$; $R_2 = R_3 = \qty{2}{\ohm}$; $C = \qty{4}{\milli\farad}$.
@@ -284,52 +331,6 @@ Datos: $E = \qty{10}{\volt}$; $L = \qty{0.2}{\henry}$; $I_g = \qty{1}{\ampere}$;
     \end{equation*}
 \end{enumerate}
 
-\section{Enunciado}
-En el circuito de la figura el interruptor ha estado abierto durante un tiempo
-prolongado, y en el instante $t = 0$ se cierra. Hay que determinar las
-respuestas del circuito en $t = 0^+$.
-
-\begin{minipage}{0.5\linewidth}
-  \center{\includegraphics{figuras/BT4_CondicionesIniciales_bobcon.pdf}}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-  \center{Datos:}
-  \begin{align*}
-    R1 &= 3\unit{\ohm}\\
-    R2 &= 5\unit{\ohm}\\
-    R3 &= 2\unit{\ohm}\\
-    L &= 0,2\unit{\henry}\\
-    C &= 0,5\unit{\milli\farad}\\
-    \epsilon(t) &= 20\cos(t)\unit{\volt}
-  \end{align*}
-\end{minipage}
-
-\subsection*{Solución}
-
-En $t < 0$, dado que el interruptor ha estado abierto, la bobina y el condensador están descargados. Por tanto, $i_2(0^-) = \qty{0}{\ampere}$ y $u_C(0^-) = \qty{0}{\volt}$.
-
-\smallskip
-\begin{minipage}{0.6\linewidth}
-En $t > 0$, al cerrarse el interruptor, la fuente de tensión alimenta al circuito. En el instante de cierre $e(0^+) = \qty{20}{\volt}$. Por otra parte, teniendo en cuenta las condiciones iniciales en la bobina y el condensador, tenemos:
-\begin{align*}
-  i_2(0^+) &= i_2(0^-) = \qty{0}{\ampere}\\
-  u_C(0^+) &= u_C(0^-) = \qty{0}{\volt}
-\end{align*}
-Estos resultados implican que, en ese instante, la bobina se comporta como un circuito abierto y el condensador como un cortocircuito. 
-\end{minipage}
-\begin{minipage}{0.4\linewidth}
-  \center{\includegraphics[scale=0.7]{figuras/BT4_CondicionesIniciales_bobcon0+.pdf}}
-\end{minipage}
-\smallskip
-
-En estas condiciones calculamos el resto de variables en $t = 0^+$.
-\begin{align*}
-  i_1(0^+) = i_3(0^+) &= \frac{e(0^+)}{R_1 + R_3} = \qty{4}{\ampere}\\
-  u_1(0^+) &= R_1 \cdot i_1(0^+) = \qty{12}{\volt}\\
-  u_2(0^+) &= R_2 \cdot i_2(0^+) = \qty{0}{\volt}\\
-  u_3(0^+) &= R_3 \cdot i_3(0^+) = \qty{8}{\volt}\\
-  u_L(0^+) &= u_3(0^+) = \qty{8}{\volt}
-\end{align*}
 
 
 \section{Enunciado}
