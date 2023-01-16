@@ -8,6 +8,8 @@ figura.
   \includegraphics{figuras/BT1_02.pdf}
 \end{center}
 
+  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{5}{\ohm}$; $R_3 = \qty{10}{\ohm}$, $R_4 = \qty{4}{\ohm}$; $R_5 = \qty{2}{\ohm}$; $E_1 = \qty{25}{\volt}$; $E_2 = \qty{50}{\volt}$
+
   \subsection*{Solución}
   Se plantea el sistema de ecuaciones en forma matricial, siendo de la forma $[R]\cdot[I]=[U]$. Cada $R_{i,i}$ de la matriz $[R]$ se corresponde con la suma de resistencias incluidas en la malla $i$; cada $\pm R_{ij}$ se corresponde con la suma de las resistencias incluidas en las ramas compartidas por las mallas $i$ y $j$, con signo positivo ($+$) si las corrientes van en el mismo sentido, y negativo ($-$) en caso contrario; y cada $\sum \epsilon_i$ es la suma algebraica de las fuerzas electromotrices de los generadores de la malla $i$, considerando un signo positivo ($+$) si contribuyen al giro de la corriente, y negativo ($-$) en caso contrario (es decir, si la corriente sale por el polo $+$ de la fuente, se considera positivo; si sale por el polo $-$, se considera negativo). Así:
   \begin{equation*}
@@ -52,7 +54,6 @@ figura.
     I_3&=\qty{10.45}{\ampere}
   \end{align*}
 
-  \noindent\rule{\linewidth}{2.8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -64,6 +65,7 @@ figura.
     \includegraphics{figuras/BT1_03.pdf}
   \end{center}
 
+  Datos: $R_1 = \qty{8}{\ohm}$; $R_2 = \qty{7}{\ohm}$; $R_3 = \qty{4}{\ohm}$, $R_4 = \qty{6}{\ohm}$; $R_5 = \qty{6}{\ohm}$; $R_6 = \qty{12}{\ohm}$; 
 
 \subsection*{Solución}
 Siguiendo las mismas consideraciones del ejercicio anterior, se plantea el sistema de ecuaciones en forma matricial, suponiendo que
@@ -119,7 +121,6 @@ de $E$:
   27\,I_a-7\,I_b=27\cdot 30 - 7 \cdot 15 = E = {\qty{705}{\milli\volt}}
 \end{equation*}
 
-\noindent\rule{\linewidth}{2.8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -130,6 +131,7 @@ Calcular la intensidad $I$ en el circuito de la figura.
   \includegraphics{figuras/BT1_04.pdf}
 \end{center}
 
+  Datos: $R_1 = \qty{27}{\ohm}$; $R_2 = \qty{47}{\ohm}$; $R_3 = \qty{27}{\ohm}$; $E_1 = \qty{460}{\volt}$; $E_2 = \qty{200}{\volt}$
 
 \subsection*{Solución}
 Se suponen las mallas mostradas en la siguiente figura.
@@ -168,6 +170,8 @@ posteriormente mediante un análisis por el método de los nudos.
 \begin{center}
   \includegraphics{figuras/BT1_08.pdf}
 \end{center}
+
+  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{1}{\ohm}$; $R_3 = \qty{4}{\ohm}$; $R_4 = \qty{5}{\ohm}$; $R_5 = \qty{3}{\ohm}$; $E_1 = \qty{10}{\volt}$; $E_2 = \qty{6}{\volt}$
 
 \subsection*{Solución}
 Se aplica primero el método de las mallas, considerando las corrientes
@@ -370,6 +374,8 @@ En el circuito de la figura, determinar:
 \begin{center}
   \includegraphics{figuras/BT1_09.pdf}
 \end{center}
+
+  Datos: $R_i = \qty[parse-numbers=false]{i}{\ohm}$; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; $E_1 = \qty{8}{\volt}$; $E_2 = \qty{6}{\volt}$; $E_3 = \qty{4}{\volt}$
 
 \subsection*{Solución}
 Al tratarse de un circuito alimentado por corriente continua, los
@@ -824,6 +830,7 @@ En el circuito de la figura, determinar:
   \includegraphics{figuras/BT1_11.pdf}
 \end{center}
 
+  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{4}{\ohm}$; $R_3 = \qty{2}{\ohm}$; $R_4 = \qty{1}{\ohm}$; $R_5 = \qty{2}{\ohm}$; $R_6 = \qty{1}{\ohm}$; $E_1 = \qty{8}{\volt}$; $E_2 = \qty{8}{\volt}$; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$
 
 \subsection*{Solución}
 Al tratarse de alimentación en CC, se sustituyen los condensadores por
@@ -1183,6 +1190,8 @@ en forma matricial es:
        \includegraphics{figuras/BT1_12.pdf}
      \end{center}
 
+     Datos: $R_1 = \qty{9}{\ohm}$; $R_2 = \qty{4}{\ohm}$; $R_3 = \qty{18}{\ohm}$; $R_4 = R_5 = R_6 = \qty{20}{\ohm}$; $E_1 = \qty{16}{\volt}$; $I_g = \qty{2}{\ampere}$
+
      \subsection*{Solución}
 
      \textbf{Resolución mediante mallas}
@@ -1302,6 +1311,8 @@ en forma matricial es:
   \includegraphics{figuras/BT1_16.pdf}
 \end{center}
 
+  Datos: $R_1 = \qty{20}{\ohm}$; $R_2 = \qty{30}{\ohm}$; $R_3 = \qty{20}{\ohm}$; $E_1 = \qty{32}{\volt}$; $E_2 = \qty{64}{\volt}$; $I_g = \qty{4}{\ampere}$
+
 \subsection*{Solución}
 El circuito es equivalente a la suma de tres circuitos en los que
 únicamente aparece un generador, anulándose el resto (cortocircuitando
@@ -1414,6 +1425,8 @@ para transferir la máxima potencia? ¿Cuál sería dicha potencia?
   \includegraphics{figuras/BT1_17.pdf}
 \end{center}
 
+Datos: $R_1 = R_2 = \qty{4}{\ohm}$; $R_3 = \qty{2}{\ohm}$; $E = \qty{10}{\volt}$; $I_g = \qty{8}{\ampere}$
+
 \subsection*{Solución}
 Se transforma la fuente de corriente en paralelo con la resistencia de
 $2\Omega$ en una fuente de tensión en serie con dicha resistencia,
@@ -1477,7 +1490,8 @@ siendo la máxima potencia transferida:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Enunciado}
-Obtener el generador equivalente de Thévenin del circuito de la figura respecto de A y B.\\
+Obtener el generador equivalente de Thévenin del circuito de la figura respecto de A y B.
+
 Datos: $I_g=\qty{10}{\ampere}; R_1=\qty{1}{\ohm}; \alpha=5$
 \begin{center}
   \includegraphics{figuras/Thevenin1.pdf}
