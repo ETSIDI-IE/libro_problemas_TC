@@ -2,7 +2,7 @@
 
 \section{Enunciado}
 En un circuito serie RL con $R=5\Omega$ y $L=0.06H$, la tensión en
-bornes de la bobina es $u_L(t)=15\cos(200\,t)$ V. Determinar:
+bornes de la bobina es $u_L(t)=15\sin(200\,t)$ V. Determinar:
 \begin{itemize}
 \item La tensión total
 \item Intensidad de corriente
@@ -15,29 +15,30 @@ bornes de la bobina es $u_L(t)=15\cos(200\,t)$ V. Determinar:
 De la expresión temporal de $u_L(t)$ se tiene que $\omega=200$ rad/s,
 por lo que:
 \begin{equation*}
-  \overline{X_L}=\mathrm{j}\,\omega\,L=\mathrm{j}\,200\cdot0.06=\mathrm{j}\,12\Omega
+  \overline{X}_L=\mathrm{j}\,\omega\,L=\mathrm{j}\,200\cdot0.06=\mathrm{j}\,12\Omega
 \end{equation*}
 siendo la impedancia del circuito:
 \begin{equation*}
-  \overline{Z_{eq}}=R+\overline{X_L}=5+\mathrm{j}\,12=13\phase{67.3801^\circ}\,\Omega
+  \overline{Z}_{eq}=R+\overline{X}_L=5+\mathrm{j}\,12=13\phase{67.3801^\circ}\,\Omega
 \end{equation*}
 El fasor correspondiente a $u_L(t)$ es:
 \begin{equation*}
-  \overline{U_L}=\dfrac{15}{\sqrt{2}}\phase{0^\circ}V
+  \overline{U}_L=\dfrac{15}{\sqrt{2}}\phase{0^\circ}V
 \end{equation*}
 Por la ley de Ohm, la intensidad de corriente en la bobina (igual a la
 total, al estar en serie):
 \begin{equation*}
-  \overline{I}=\dfrac{\overline{U_L}}{\overline{X_L}}=\dfrac{\frac{15}{\sqrt{2}}\phase{0^\circ}}{\mathrm{j}\,12}=0.88\phase{-90^\circ}A
+  \overline{I}=\dfrac{\overline{U}_L}{\overline{X}_L}=\dfrac{\frac{15}{\sqrt{2}}\phase{0^\circ}}{\mathrm{j}\,12}=0.88\phase{-90^\circ}A
 \end{equation*}
 y la tensión total, por la 2LK:
 \begin{equation*}
-  \overline{U}=\overline{U_R}+\overline{U_L}=5\cdot (0.88\phase{-90^\circ})+\dfrac{15}{\sqrt{2}}\phase{0^\circ}=11.48\phase{-22.5304^\circ} V
+  \overline{U}=\overline{U}_R+\overline{U}_L=5\cdot (0.88\phase{-90^\circ})+\dfrac{15}{\sqrt{2}}\phase{0^\circ}=11.48\phase{-22.5304^\circ} V
 \end{equation*}
 siendo el ángulo de desfase de la intensidad respecto a la tensión:
 \begin{equation*}
   \phi=\theta_U-\theta_I=-22.5304-(-90)=67.4696^\circ
 \end{equation*}
+(la ligera diferencia en los decimales respecto al ángulo de $\overline{Z}_{eq}$ es debida a las aproximaciones en decimales en operaciones previas).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Enunciado}
