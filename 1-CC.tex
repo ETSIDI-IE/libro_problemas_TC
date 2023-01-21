@@ -881,6 +881,32 @@ rama del circuito:
   I_5&=I_6=I_c=\qty{0.5}{\ampere}\\
 \end{align*}
 
+Una forma alternativa de resolver el circuito consiste en reparar en que $E_1$ es generador dominante, por lo que puede determinarse directamente el valor de $I_2 = - E_1 / R_1 = -4\si{\ampere}$. Esto permite usar únicamente 2 mallas, lo que reduce el sistema de ecuaciones a 2x2: 
+
+\vspace{2mm}
+\begin{minipage}{0.6\linewidth}
+    \begin{center}
+    \includegraphics{figuras/BT1_11_mod2.pdf}
+    \end{center}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+    \begin{equation*}
+      \begin{bmatrix}
+        6 & -2  \\
+        -2 & 6
+      \end{bmatrix} \cdot
+      \begin{bmatrix}
+        I_b\\
+        I_c
+      \end{bmatrix} = %
+      \begin{bmatrix}
+        -16\\
+        8
+      \end{bmatrix}
+    \end{equation*}
+\end{minipage}
+Cuya solución es la misma que la obtenida anteriormente.
+
 Conociendo las corrientes y teniendo el nudo de tierra como
 referencia, se calculan los potenciales:
 \begin{align*}
