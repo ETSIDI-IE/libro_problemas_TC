@@ -708,8 +708,8 @@ carga. Mediante el método de las mallas determina:
 \subsection*{Solución}
 Se sustituyen los condensadores y las bobinas por sus equivalentes en
 un circuito de corriente continua (circuito abierto y cortocircuito,
-respectivamente). En el circuito resultante se marcan tres corrientes
-de malla como se muestra en el circuito de la figura.
+respectivamente). En el circuito resultante se definen tres corrientes
+de malla, como se muestra en el circuito de la figura:
 
 \begin{center}
   \includegraphics{figuras/mallas_condensadores_sol.pdf}
@@ -738,7 +738,7 @@ de malla como se muestra en el circuito de la figura.
 \left(\begin{array}{c}
     118\\
     236\\
-    118
+    -118
   \end{array}\right) = \left(\begin{array}{ccc}
     7 & -3 & 0\\
     -3 & 6 & -1\\
@@ -754,9 +754,9 @@ de malla como se muestra en el circuito de la figura.
 La solución es:
 
 \begin{eqnarray*}
-I_A & = & \qty{40}{\ampere}\\
-I_B & = & \qty{54}{\ampere}\\
-I_C & = & -\qty{32}{\ampere}
+I_a & = & \qty{40}{\ampere}\\
+I_b & = & \qty{54}{\ampere}\\
+I_c & = & -\qty{32}{\ampere}
 \end{eqnarray*}
 
 Por tanto, las corrientes indicadas en el circuito son:
@@ -778,24 +778,24 @@ V_C &= I_4 \cdot R_4 = \qty{42}{\volt}\\
 V_D &= I_5 \cdot R_5 + V_c = \qty{150}{\volt}\\
 \end{align*}
 
-Por tanto, las polaridades de los condensadores son las marcadas en la figura, con los valores de tensión siguientes:
+Por tanto, las polaridades de los condensadores y sus valores de tensión son los siguientes:
 
 \begin{eqnarray*}
 U_{C1} = U_{BA} & = & \qty{0}{\volt}\\
-q_1 = C_1 \cdot U_{C1} & = & \qty{0}{\micro\coulomb}\\
-E_{C2} & = & \qty{0}{\joule}
+q_1 = C_1 \cdot U_{C1} & = & \qty{0}{\coulomb}\\
+E_{C1} = \frac{1}{2} C_1 \cdot U_{C1}^2 & = & \qty{0}{\joule}
 \end{eqnarray*}
 
 \begin{eqnarray*}
 U_{C2} = U_{CA} & = & \qty{42}{\volt}\\
 q_2 = C_2 \cdot U_{C2} & = & \qty{84}{\micro\coulomb}\\
-E_{C2} & = & \qty{1.76}{\milli\joule}
+E_{C2} = \frac{1}{2} C_2 \cdot U_{C2}^2 & = & \qty{1.76}{\milli\joule}
 \end{eqnarray*}
 
 \begin{eqnarray*}
 U_{C3} = U_{CB} & = & \qty{42}{\volt}\\
 q_3 = C_3 \cdot U_{C3} & = & \qty{84}{\micro\coulomb}\\
-E_{C3} & = & \qty{1.76}{\milli\joule}
+E_{C3} = \frac{1}{2} C_3 \cdot U_{C3}^2 & = & \qty{1.76}{\milli\joule}
 \end{eqnarray*}
 
 Finalmente, el balance de potencias calcula la potencia entregada por los elementos activos y la potencia consumida por los elementos pasivos.
