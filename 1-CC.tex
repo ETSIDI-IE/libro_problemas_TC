@@ -561,8 +561,8 @@ se pide determinar:
 \end{itemize}
 
 Datos:
-$\epsilon_{A}=\qty{90}{\volt};\quad \epsilon_{B}=\qty{60}{\volt};\quad
-\epsilon_{C}=\qty{30}{\volt};\quad R_{1}= R_2 = R_3 =
+$\epsilon_1=\qty{90}{\volt};\quad \epsilon_2=\qty{60}{\volt};\quad
+\epsilon_3=\qty{30}{\volt};\quad R_{1}= R_2 = R_3 =
 \qty{10}{\ohm};\quad R_{4}= R_5 = \qty{30}{\ohm};\quad C_{1}=
 \qty{10}{\micro\farad};\quad C_{2}= \qty{20}{\micro\farad};\quad L_1 =
 \qty{1}{\micro\henry}$
@@ -635,7 +635,7 @@ siendo,
 Para el circuito de la derecha tenemos una única malla:
 
 \begin{equation*}
-  \epsilon_C = I_4 \cdot R_4 \rightarrow I_4 = \qty{1}{\ampere}
+  \epsilon_3 = I_4 \cdot R_4 \rightarrow I_4 = \qty{1}{\ampere}
 \end{equation*}
 
 Por tanto,
@@ -654,7 +654,7 @@ Por tanto,
 Los potenciales en los puntos A y B se calculan así:
 
 \begin{align*}
-  V_A &= \epsilon_C = \qty{30}{\volt}\\
+  V_A &= \epsilon_3 = \qty{30}{\volt}\\
   V_B &= R_5 \cdot I_5 = \qty{0}{\volt}
 \end{align*}
 
@@ -673,7 +673,7 @@ Por tanto,
 A partir de este resultado podemos calcular el resto de potenciales:
 
 \begin{align*}
-  U_D &= U_{DC} + U_C = \epsilon_B + U_C = \qty{61}{\volt}\\
+  U_D &= U_{DC} + U_C = \epsilon_2 + U_C = \qty{61}{\volt}\\
   U_E &= U_{ED} + U_D = I_1 \cdot R_1 + U_D = \qty{101}{\volt}\\
   U_F &= U_{FC} + U_C = -I_3 \cdot R_3 + U_C = \qty{11}{\volt}
 \end{align*}
