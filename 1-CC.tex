@@ -180,7 +180,7 @@ de malla mostradas en la siguiente figura:
   \includegraphics{figuras/BT1_08_mallas.pdf}
 \end{center}
 
-Se plantea el sistema de ecuaciones en modo matricial:
+Se plantea el sistema de ecuaciones en forma matricial:
 \begin{equation*}
   \begin{bmatrix}
     3 & -1 & 0 \\
@@ -375,7 +375,7 @@ En el circuito de la figura, determinar:
   \includegraphics{figuras/BT1_09.pdf}
 \end{center}
 
-  Datos: $R_i = \qty[parse-numbers=false]{i}{\ohm}$; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; $E_1 = \qty{8}{\volt}$; $E_2 = \qty{6}{\volt}$; $E_3 = \qty{4}{\volt}$
+  Datos: $ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; \; $E_1 = \qty{8}{\volt}$; \; $E_2 = \qty{6}{\volt}$; \; $E_3 = \qty{4}{\volt}$
 
 \subsection*{Solución}
 Al tratarse de un circuito alimentado por corriente continua, los
@@ -406,16 +406,16 @@ tensiones en los diferentes nudos. Considerando $E$ como tierra:
 \end{align*}
 Con estas tensiones, se determina la carga de los condensadores:
 \begin{align*}
-  Q_{1\mu F}&=C_{1\mu F}\, U_{AE} = 1\cdot 10^{-6}\cdot (-7)=\qty{-7}{\micro\coulomb}\\
-  Q_{2\mu F}&=C_{2\mu F}\, U_{CE} = 2\cdot 10^{-6}\cdot (-2)=\qty{-4}{\micro\coulomb}\\
-  Q_{3\mu F}&=C_{3\mu F}\, U_{DE} = 3\cdot 10^{-6}\cdot 1=\qty{3}{\micro\coulomb}
+  Q_{1\mu F} &= C_{1\mu F} \cdot U_{AE} = 1\cdot 10^{-6}\cdot (-7)=\qty{-7}{\micro\coulomb}\\
+  Q_{2\mu F} &= C_{2\mu F} \cdot U_{CE} = 2\cdot 10^{-6}\cdot (-2)=\qty{-4}{\micro\coulomb}\\
+  Q_{3\mu F} &= C_{3\mu F} \cdot U_{DE} = 3\cdot 10^{-6}\cdot 1=\qty{3}{\micro\coulomb}
 \end{align*}
 Aquellos condensadores en los que la carga es negativa, significa que
 tienen la polaridad contraria a la considerada. La energía es:
 \begin{align*}
-  E_{1\mu F}&=\dfrac{1}{2}\,C_{1\mu F}\cdot U_{AE}^2 = \dfrac{1}{2}\cdot 1\cdot 10^{-6}\cdot (-7)^2=24.5\,\mu\text{J}\\
-  E_{2\mu F}&=\dfrac{1}{2}\,C_{2\mu F}\cdot U_{CE}^2 = \dfrac{1}{2}\cdot 2\cdot 10^{-6}\cdot (-2)^2=4\,\mu\text{J}\\
-  E_{3\mu F}&=\dfrac{1}{2}\,C_{3\mu F}\cdot U_{DE}^2 = \dfrac{1}{2}\cdot 3\cdot 10^{-6}\cdot 1^2=1.5\,\mu\text{J}
+  E_{1\mu F}&=\dfrac{1}{2}\,C_{1\mu F}\cdot U_{AE}^2 = \dfrac{1}{2}\cdot 1\cdot 10^{-6}\cdot (-7)^2 = \qty{24.5}{\micro\joule}\\
+  E_{2\mu F}&=\dfrac{1}{2}\,C_{2\mu F}\cdot U_{CE}^2 = \dfrac{1}{2}\cdot 2\cdot 10^{-6}\cdot (-2)^2 = \qty{4}{\micro\joule}\\
+  E_{3\mu F}&=\dfrac{1}{2}\,C_{3\mu F}\cdot U_{DE}^2 = \dfrac{1}{2}\cdot 3\cdot 10^{-6}\cdot 1^2 = \qty{1.5}{\micro\joule}
 \end{align*}
 
 Se calculan las potencias de los elementos activos y las potencias consumidas por las resistencias:
@@ -428,10 +428,10 @@ Se calculan las potencias de los elementos activos y las potencias consumidas po
     \end{align*}
 \item \textbf{Potencias de las resistencias:}
     \begin{align*}
-      P_{R,1}&=R_1\,I_1^2=1\cdot 1^2=1 W\\
-      P_{R,2}&=R_2\,I_2^2=2\cdot 1^2=2 W\\
-      P_{R,3}&=R_3\,I_3^2=3\cdot 1^2=3 W\\
-      P_{R,4}&=R_4\,I_4^2=4\cdot (-1)^2=4 W
+      P_{R,1}&= R_1 \cdot I_1^2=1\cdot 1^2 = \qty{1}{\watt}\\
+      P_{R,2}&= R_2 \cdot I_2^2=2\cdot 1^2 = \qty{2}{\watt}\\
+      P_{R,3}&= R_3 \cdot I_3^2=3\cdot 1^2 = \qty{3}{\watt}\\
+      P_{R,4}&= R_4 \cdot I_4^2=4\cdot (-1)^2 = \qty{4}{\watt}
     \end{align*}
 \end{itemize}
 donde se cumple que la potencia total aportada por los generadores es igual a la potencia consumida por las resistencias.
@@ -448,8 +448,8 @@ determinar:
   supuestos sin carga inicial.
 \end{itemize}
 Datos:
-$R_i = \mathrm{i\ } \Omega; C_i = \mathrm{i\ } \mu F; E_1 = 6V; E_2 =
-18 V; E_3 = {6} V$
+$ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; \; $E_1 = \qty{6}{\volt}$; \; $E_2 =
+\qty{18}{\volt}$; \; $E_3 = \qty{6}{\volt}$
 
 \begin{center}
   \includegraphics[]{figuras/nudos_condensadores.pdf}
@@ -881,7 +881,7 @@ rama del circuito:
   I_5&=I_6=I_c=\qty{0.5}{\ampere}\\
 \end{align*}
 
-Una forma alternativa de resolver el circuito consiste en reparar en que $E_1$ es generador dominante, por lo que puede determinarse directamente el valor de $I_2 = - E_1 / R_1 = -4\si{\ampere}$. Esto permite usar únicamente 2 mallas, lo que reduce el sistema de ecuaciones a 2x2: 
+Una forma alternativa de resolver el circuito consiste en reparar en que $E_1$ es generador dominante, por lo que puede determinarse directamente el valor de $I_2 = - E_1 / R_1 = -4\si{\ampere}$. Esto permite usar únicamente 2 mallas, lo que reduce el sistema de ecuaciones a $2\times 2$: 
 
 \vspace{2mm}
 \begin{minipage}{0.6\linewidth}
@@ -1070,9 +1070,11 @@ siguientes resultados:
 \item Balance de potencias.
 \end{itemize}
 Datos:
-$\epsilon_{1}={40}V; \epsilon_{2}={22}V; \epsilon_{3}={20}V;
-C_{1}=C_{2}=C_{3}={2}{\mu F}; R_{g1}=R_{g2}=R_{g3}={4}{\Omega};
-R_{1}=R_{2}=R_{3}=R_{4}={2}{\Omega}; R_{5}=R_{6}=R_{7}={1}{\Omega}$
+$ \quad \epsilon_{1}=\qty{40}{\volt}; \quad \epsilon_{2}=\qty{22}{\volt}; \quad \epsilon_{3}=\qty{20}{\volt}; \quad
+C_{1}=C_{2}=C_{3}=\qty{2}{\micro\farad}; \quad R_{g1}=R_{g2}=R_{g3}=\qty{4}{\ohm}; 
+\\
+\hspace*{14mm} R_{1}=R_{2}=R_{3}=R_{4}=\qty{2}{\ohm}; \quad R_{5}=R_{6}=R_{7}=\qty{1}{\ohm}$
+
 
 \begin{center}
   \includegraphics{figuras/mallas_condensadores_bobinas.pdf}
@@ -1112,28 +1114,28 @@ en forma matricial es:
      \end{equation*}
      cuya solución es:
      \begin{align*}
-       I_{a} & =  2\, A\\
-       I_{b} & =  1\, A\\
-       I_{c} & =  1\, A
+       I_{a} & =  \qty{2}{\ampere}\\
+       I_{b} & =  \qty{1}{\ampere}\\
+       I_{c} & =  \qty{1}{\ampere}
      \end{align*}
      Relacionando estas corrientes de malla con las corrientes de rama
      señaladas en el circuito original (teniendo en cuenta que las
      corrientes que circulan por ramas con condensadores son nulas):
      \begin{align*}
-       I_{1} & =  I_{a}=2\, A\\
-       I_{2} & =  -I_{a}+I_{b}=-1\, A\\
-       I_{3} & =  -I_{b}=-1\, A\\
-       I_{4} & =  0\, A\\
-       I_{5} & =  I_{a}=2\, A\\
-       I_{6} & =  I_{b}=1\, A\\
-       I_{7} & =  0\, A\\
-       I_{8} & =  -I_{a}+I_{c}=-1\, A\\
-       I_{9} & =  -I_{c}=-1\, A\\
-       I_{10} & = -I_{a}+I_{c}=-1\, A\\
-       I_{11} & =  0\, A\\
-       I_{12} & =  -I_{b}+I_{c}=0\, A\\
-       I_{13} & =  -I_{b}+I_{c}=0\, A\\
-       I_{14} & =  I_{c}=1\, A
+       I_{1} & =  I_{a} = \qty{2}{\ampere}\\
+       I_{2} & =  -I_{a}+I_{b} = \qty{-1}{\ampere}\\
+       I_{3} & =  -I_{b} = \qty{-1}{\ampere}\\
+       I_{4} & =  \qty{0}{\ampere}\\
+       I_{5} & =  I_{a} = \qty{2}{\ampere}\\
+       I_{6} & =  I_{b} = \qty{1}{\ampere}\\
+       I_{7} & =  \qty{0}{\ampere}\\
+       I_{8} & =  -I_{a}+I_{c} = \qty{-1}{\ampere}\\
+       I_{9} & =  -I_{c} = \qty{-1}{\ampere}\\
+       I_{10} & = -I_{a}+I_{c} = \qty{-1}{\ampere}\\
+       I_{11} & =  \qty{0}{\ampere}\\
+       I_{12} & =  -I_{b}+I_{c} = \qty{0}{\ampere}\\
+       I_{13} & =  -I_{b}+I_{c} = \qty{0}{\ampere}\\
+       I_{14} & =  I_{c} = \qty{1}{\ampere}
      \end{align*}
 
      El condensador $C_{1}$ está conectado directamente a la rama
@@ -1143,12 +1145,12 @@ en forma matricial es:
      corresponde a su borne superior, la tensión de este condensador
      es:
      \begin{equation*}
-       U_{C1}=E_{2}-I_{2}\cdot R_{g2}=22-(-1)\cdot4=26\, V
+       U_{C1} = E_{2}-I_{2}\cdot R_{g2} = 22-(-1)\cdot4 = \qty{26}{\volt}
      \end{equation*}
      siendo correcta la polaridad asignada por el signo positivo de
      este resultado. La energía almacenada por el condensador es:
      \begin{equation*}
-       E_{C1}=1/2\cdot V_{c1}^{2}\cdot C_{1}=0.676\, mJ
+       E_{C1} = 1/2\cdot V_{c1}^{2}\cdot C_{1} = \qty{0.676}{\milli\joule}
      \end{equation*}
 
      El condensador $C_{2}$ está conectado directamente a la rama
@@ -1158,12 +1160,12 @@ en forma matricial es:
      corresponde a su borne superior, la tensión de este condensador
      es:
      \begin{equation*}
-       U_{C2}=E_{3}-I_{3}\cdot R_{g3}=20-(-1)\cdot4=24\, V
+       U_{C2} = E_{3}-I_{3}\cdot R_{g3} = 20-(-1)\cdot4 = \qty{24}{\volt}
      \end{equation*}
      siendo correcta la polaridad asignada por el signo positivo de
      este resultado. La energía almacenada por el condensador es:
      \begin{equation*}
-       E_{C2}=1/2\cdot U_{C2}^{2}\cdot C_{2}=0.576\, mJ
+       E_{C2} = 1/2\cdot U_{C2}^{2}\cdot C_{2} = \qty{0.576}{\milli\joule}
      \end{equation*}
 
      El condensador $C_{3}$ está en paralelo con la resistencia
@@ -1173,12 +1175,12 @@ en forma matricial es:
      polaridad positiva de este condensador corresponde a su borne
      superior, la tensión de este condensador es:
      \begin{equation*}
-       U_{C3}=I_{12}\cdot R_{4}+I_{14}\cdot R_{7}=0+1\cdot1=1\, V
+       U_{C3} = I_{12}\cdot R_{4}+I_{14}\cdot R_{7} = 0+1\cdot1 = \qty{1}{\volt}
      \end{equation*}
      siendo correcta la polaridad asignada por el signo positivo de
      este resultado. La energía almacenada por el condensador es:
      \begin{equation*}
-       E_{C3}=1/2\cdot U_{C3}^{2}\cdot C_{3}=1\,\mu J
+       E_{C3} = 1/2\cdot U_{C3}^{2}\cdot C_{3} = \qty{1}{\micro\joule}
      \end{equation*}
 
      Se calcula ahora el balance de potencias, diferenciando entre
@@ -1192,16 +1194,16 @@ en forma matricial es:
        \end{itemize}
      \item \textbf{Potencia de las resistencias:}
        \begin{itemize}
-       \item $P_{Rg1}=R_{g1}\,I_1^2=4\cdot 2^2=16$ W
-       \item $P_{Rg2}=R_{g2}\,I_2^2=4\cdot (-1)^2=4$ W
-       \item $P_{Rg3}=R_{g3}\,I_3^2=4\cdot (-1)^2=4$ W
-       \item $P_{R1}=R_1\,I_1^2=2\cdot 2^2=8$ W
-       \item $P_{R2}=R_2\,I_6^2=2\cdot 1^2=2$ W
-       \item $P_{R3}=R_3\,I_8^2=2\cdot (-1)^2=2$ W
-       \item $P_{R4}=R_4\,I_{12}^2=2\cdot 0^2=0$ W
-       \item $P_{R5}=R_5\,I_9^2=1\cdot (-1)^2=1$ W
-       \item $P_{R6}=R_6\,I_{11}^2=1\cdot 0^2=0$ W
-       \item $P_{R7}=R_7\,I_{14}^2=1\cdot 1^2=1$ W
+       \item $P_{Rg1}=R_{g1}\,I_1^2=4\cdot 2^2=\qty{16}{\watt}$
+       \item $P_{Rg2}=R_{g2}\,I_2^2=4\cdot (-1)^2=\qty{4}{\watt}$
+       \item $P_{Rg3}=R_{g3}\,I_3^2=4\cdot (-1)^2=\qty{4}{\watt}$
+       \item $P_{R1}=R_1\,I_1^2=2\cdot 2^2=\qty{8}{\watt}$
+       \item $P_{R2}=R_2\,I_6^2=2\cdot 1^2=\qty{2}{\watt}$
+       \item $P_{R3}=R_3\,I_8^2=2\cdot (-1)^2=\qty{2}{\watt}$
+       \item $P_{R4}=R_4\,I_{12}^2=2\cdot 0^2=\qty{0}{\watt}$
+       \item $P_{R5}=R_5\,I_9^2=1\cdot (-1)^2=\qty{1}{\watt}$
+       \item $P_{R6}=R_6\,I_{11}^2=1\cdot 0^2=\qty{0}{\watt}$
+       \item $P_{R7}=R_7\,I_{14}^2=1\cdot 1^2=\qty{1}{\watt}$
        \end{itemize}
      \end{itemize}
      cumpliéndose que $P_g = P_R = \qty{38}{\watt}$.
@@ -1225,7 +1227,7 @@ en forma matricial es:
      Se hace la transformación de la fuente de corriente en una fuente
      de tensión:
      \begin{equation*}
-       \epsilon_{Ig}=I_g\cdot R_9=2\cdot 9=18\,V
+       \epsilon_{Ig}=I_g\cdot R_9=2\cdot 9=\qty{18}{\volt}
      \end{equation*}
      Así, el circuito está formado por 3 mallas como se muestra en la
      figura:
@@ -1309,9 +1311,9 @@ en forma matricial es:
      \end{equation*}
      cuya solución es:
      \begin{align*}
-       U_A&=-6.64\,V\\
-       U_B&=10.66\,V\\
-       U_C&=1.29\,V\\
+       U_A&=\qty{-6.64}{\volt}\\
+       U_B&=\qty{10.66}{\volt}\\
+       U_C&=\qty{1.29}{\volt}\\
      \end{align*}
      A partir de 1LK, 2LK y ley de Ohm, se obtienen las corrientes
      indicadas:
@@ -1349,7 +1351,7 @@ corriente). Se analiza cada circuito por separado.
 
 Las resistencia equivalente del paralelo es:
 \begin{equation*}
-  R_{paralelo}=\dfrac{20\cdot 30}{20+30}=12\Omega
+  R_{paralelo}=\dfrac{20\cdot 30}{20+30}=\qty{12}{\ohm}
 \end{equation*}
 siendo la corriente total del circuito, por ley de Ohm:
 \begin{equation*}
@@ -1365,7 +1367,7 @@ circula por la resistencia de 30 $\Omega$ en este caso) es:
 
 Las resistencia equivalente del paralelo es:
 \begin{equation*}
-  R_{paralelo}=\dfrac{20\cdot 30}{20+30}=12\Omega
+  R_{paralelo}=\dfrac{20\cdot 30}{20+30}=\qty{12}{\ohm}
 \end{equation*}
 siendo la corriente total del circuito, por ley de Ohm:
 \begin{equation*}
@@ -1383,7 +1385,7 @@ circula por la resistencia de 30 $\Omega$ en este caso) es:
 Las resistencia equivalente del circuito es (las tres están en
 paralelo):
 \begin{equation*}
-  R_{eq}=\dfrac{1}{\frac{1}{20}+\frac{1}{20}+\frac{1}{30}}=7.5\Omega
+  R_{eq}=\dfrac{1}{\frac{1}{20}+\frac{1}{20}+\frac{1}{30}}=\qty{7.5}{\ohm}
 \end{equation*}
 
 Dado que la corriente total del circuito son 4 A, con el concepto de
@@ -1429,7 +1431,7 @@ Para calcular la resistencia equivalente apagamos la fuente de
 tensión. En el circuito resultante obtenemos:
 
 \begin{equation*}
-  R_{th} = (R_1 || R_2) + (R_3 || R_4) = 80/9\si{\ohm}
+  R_{th} = (R_1 || R_2) + (R_3 || R_4) = 80/9 \, \si{\ohm}
 \end{equation*}
 
 Para obtener la máxima potencia hay que conectar una resistencia
@@ -1458,7 +1460,7 @@ Se transforma la fuente de corriente en paralelo con la resistencia de
 $2\Omega$ en una fuente de tensión en serie con dicha resistencia,
 como en la figura:
 \begin{equation*}
-  U_{I_g}=I_g\cdot R_2=8\cdot 2=16\, V
+  U_{I_g}=I_g\cdot R_2=8\cdot 2=\qty{16}{\volt}
 \end{equation*}
 
 \begin{center}
@@ -1473,7 +1475,7 @@ izquierda como masa, y dado que por la resistencia de $2\Omega$ no
 circula corriente (circuito abierto entre $A-B$), la tensión en $B$
 es:
 \begin{equation*}
-  U_B=16\,V
+  U_B=\qty{16}{\volt}
 \end{equation*}
 Aplicando la ley de Ohm a la malla superior:
 \begin{equation*}
@@ -1481,11 +1483,11 @@ Aplicando la ley de Ohm a la malla superior:
 \end{equation*}
 por lo que la tensión en el punto $A$:
 \begin{equation*}
-  U_A=4\cdot 1.25=5\,V
+  U_A=4\cdot 1.25=\qty{5}{\volt}
 \end{equation*}
 Así, la tensión $U_{AB}=\epsilon_{th}$:
 \begin{equation*}
-  U_{AB}=U_A-U_B=\epsilon_{th}=5-16=-11\,V
+  U_{AB}=U_A-U_B=\epsilon_{th}=5-16=\qty{-11}{\volt}
 \end{equation*}
 
 \textbf{Cálculo de $R_{th}$}
@@ -1494,7 +1496,7 @@ Al no haber fuentes dependientes, se puede obtener esta resistencia
 como la $R_{eq}$ vista desde los terminales $A-B$, anulando las
 fuentes:
 \begin{equation*}
-  R_{eq}=R_{th}=2+\dfrac{4\cdot 4}{4+4}=4\Omega
+  R_{eq}=R_{th}=2+\dfrac{4\cdot 4}{4+4}=\qty{4}{\ohm}
 \end{equation*}
 
 \textbf{Equivalente Thévenin} El equivalente de Thévenin queda como se
@@ -1506,11 +1508,11 @@ muestra a continuación:
 
 Aplicando el T. Máx. Trans. Potencia, la resistencia a conectar es:
 \begin{equation*}
-  R_L=R_{th}=4\Omega
+  R_L=R_{th}=\qty{4}{\ohm}
 \end{equation*}
 siendo la máxima potencia transferida:
 \begin{equation*}
-  P_{max}=\dfrac{\epsilon_{th}^2}{4\,R_{th}}=\dfrac{(-11)^2}{4\cdot 4}=7.56\,W
+  P_{max}=\dfrac{\epsilon_{th}^2}{4\,R_{th}}=\dfrac{(-11)^2}{4\cdot 4}=\qty{7.56}{\watt}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1530,11 +1532,11 @@ Por una parte:
 \end{equation*}
 Además:
 \begin{equation*}
-  U = I_g \cdot R_1=10\cdot 1 = 10\,V
+  U = I_g \cdot R_1=10\cdot 1 = \qty{10}{\volt}
 \end{equation*}
 Por tanto, el generador de Thévenin tiene una fem de:
 \begin{equation*}
-  U_{AB} = 6\, U= 6\cdot 10=60 V = \epsilon_{th}
+  U_{AB} = 6\, U= 6\cdot 10=\qty{60}{\volt} = \epsilon_{th}
 \end{equation*}
 
 Para calcular la impedancia, se apaga la fuente independiente. Como la
@@ -1552,7 +1554,7 @@ prueba a la salida:
 Por tanto,
 
 \begin{equation*}
-  R_{th} = \dfrac{\epsilon_0}{I_0}=\dfrac{6\,U}{U} = 6 \Omega
+  R_{th} = \dfrac{\epsilon_0}{I_0}=\dfrac{6\,U}{U} = \qty{6}{\ohm}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1570,7 +1572,7 @@ En el circuito de la figura, calcular:
   potencia.
 \end{itemize}
 
-Datos: $R = {1}{\Omega};\; \epsilon_g = {10}{V};\; \alpha = \qty{1}{\ohm}; \beta = 1$
+Datos: $R = \qty{1}{\ohm};\; \epsilon_g = \qty{10}{\volt};\; \alpha = \qty{1}{\ohm}; \beta = 1$
 
 \begin{center}
   \includegraphics{figuras/norton.pdf}
