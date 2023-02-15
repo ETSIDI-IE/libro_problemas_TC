@@ -706,52 +706,52 @@ carga. Mediante el método de las mallas determina:
 \end{minipage}
 
 \subsection*{Solución}
-Se sustituyen los condensadores y las bobinas por sus equivalentes en
-un circuito de corriente continua (circuito abierto y cortocircuito,
-respectivamente). En el circuito resultante se definen tres corrientes
-de malla, como se muestra en el circuito de la figura:
+Se sustituyen los condensadores y las bobinas por sus equivalentes en un circuito de corriente continua (circuito abierto y cortocircuito, respectivamente). En el circuito resultante, se definen tres corrientes de malla, como se muestra en el circuito de la figura:
 
-\begin{center}
-  \includegraphics{figuras/mallas_condensadores_sol.pdf}
+\begin{center}            
+    \includegraphics{figuras/mallas_condensadores_sol.pdf}
 \end{center}
+(la malla $b$ puede definirse de esta forma porque los puntos A y B están cortocircuitados)
 
-\[
-\small{
-\left(\begin{array}{c}
-    E_1\\
-    E_2\\
-    E_3 - E_2
-  \end{array}\right) = \left(\begin{array}{ccc}
-    R_1 + R_4 & -R_4 & 0\\
-    -R_4 & R_4 + R_5 + R_2 & -R_{2}\\
-    0 & -R_2 & R_2 + R_3
-  \end{array}\right) \cdot \left(\begin{array}{c}
-    I_{A}\\
-    I_{B}\\
-    I_{C}
-  \end{array}\right)
-}
-\]
+\vspace{4mm}
+Usamos la ecuación general del método de mallas:    
+\begin{equation*}
+    \begin{bmatrix}
+        R_1 + R_4 & -R_4 & 0\\
+        -R_4 & R_4 + R_5 + R_2 & -R_{2}\\
+        0 & -R_2 & R_2 + R_3
+    \end{bmatrix} \cdot %
+    \begin{bmatrix}
+        I_{a}\\
+        I_{b}\\
+        I_{c}
+    \end{bmatrix} = %
+    \begin{bmatrix}
+        \epsilon_1\\
+        \epsilon_2\\
+        \epsilon_3 - \epsilon_2
+    \end{bmatrix}
+\end{equation*} 
 
-\[
-\small{
-\left(\begin{array}{c}
-    118\\
-    236\\
-    -118
-  \end{array}\right) = \left(\begin{array}{ccc}
-    7 & -3 & 0\\
-    -3 & 6 & -1\\
-    0 & -1 & 2
-  \end{array}\right) \cdot \left(\begin{array}{c}
-    I_{A}\\
-    I_{B}\\
-    I_{C}
-  \end{array}\right)
-}
-\]
+\begin{equation*}
+    \begin{bmatrix}
+        7 & -3 & 0\\
+        -3 & 6 & -1\\
+        0 & -1 & 2
+    \end{bmatrix} \cdot %
+    \begin{bmatrix}
+        I_{a}\\
+        I_{b}\\
+        I_{c}
+    \end{bmatrix} = %
+    \begin{bmatrix}
+        118\\
+        236\\
+        -118
+    \end{bmatrix}
+\end{equation*}  
 
-La solución es:
+Cuya solución es:
 
 \begin{eqnarray*}
 I_a & = & \qty{40}{\ampere}\\
