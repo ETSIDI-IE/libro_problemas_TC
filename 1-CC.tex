@@ -4,11 +4,14 @@
 Calcular las corrientes de malla mostradas en el circuito de la
 figura.
 
+\vspace{2mm}
+Datos: $\; R_1 = \qty{2}{\ohm}$;\; $R_2 = \qty{5}{\ohm}$;\; $R_3 = \qty{10}{\ohm}$;\; $R_4 = \qty{4}{\ohm}$;\; $R_5 = \qty{2}{\ohm}$;\; $E_1 = \qty{25}{\volt}$;\; $E_2 = \qty{50}{\volt}$
+
 \begin{center}
   \includegraphics{figuras/BT1_02.pdf}
 \end{center}
 
-  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{5}{\ohm}$; $R_3 = \qty{10}{\ohm}$, $R_4 = \qty{4}{\ohm}$; $R_5 = \qty{2}{\ohm}$; $E_1 = \qty{25}{\volt}$; $E_2 = \qty{50}{\volt}$
+  
 
   \subsection*{Solución}
   Se plantea el sistema de ecuaciones en forma matricial, siendo de la forma $[R]\cdot[I]=[U]$. Cada $R_{i,i}$ de la matriz $[R]$ se corresponde con la suma de resistencias incluidas en la malla $i$; cada $\pm R_{ij}$ se corresponde con la suma de las resistencias incluidas en las ramas compartidas por las mallas $i$ y $j$, con signo positivo ($+$) si las corrientes van en el mismo sentido, y negativo ($-$) en caso contrario; y cada $\sum \epsilon_i$ es la suma algebraica de las fuerzas electromotrices de los generadores de la malla $i$, considerando un signo positivo ($+$) si contribuyen al giro de la corriente, y negativo ($-$) en caso contrario (es decir, si la corriente sale por el polo $+$ de la fuente, se considera positivo; si sale por el polo $-$, se considera negativo). Así:
@@ -61,11 +64,13 @@ figura.
   Calcular el valor de $E$ que hace que $I_0=\qty{7.5}{\milli\ampere}$
   en el circuito de la figura.
 
+\vspace{2mm}
+Datos: $\; R_1 = \qty{8}{\ohm}$;\; $R_2 = \qty{7}{\ohm}$;\; $R_3 = \qty{4}{\ohm}$,\; $R_4 = \qty{6}{\ohm}$;\; $R_5 = \qty{6}{\ohm}$;\; $R_6 = \qty{12}{\ohm}$
+
   \begin{center}
     \includegraphics{figuras/BT1_03.pdf}
   \end{center}
-
-  Datos: $R_1 = \qty{8}{\ohm}$; $R_2 = \qty{7}{\ohm}$; $R_3 = \qty{4}{\ohm}$, $R_4 = \qty{6}{\ohm}$; $R_5 = \qty{6}{\ohm}$; $R_6 = \qty{12}{\ohm}$; 
+   
 
 \subsection*{Solución}
 Siguiendo las mismas consideraciones del ejercicio anterior, se plantea el sistema de ecuaciones en forma matricial, suponiendo que
@@ -108,12 +113,12 @@ Reemplazando con los valores correspondientes, el sistema a resolver es:
 donde además se sabe el valor de $I_c=I_0=\qty{7.5}{\milli\ampere}$. Por
 tanto, de la tercera ecuación se puede obtener el valor de $I_b$:
 \begin{equation*}
-  -6\,I_b+12\,I_c=-6\,I_b+12\cdot 7.5 = 0\Rightarrow 6\,I_b=90 \Rightarrow I_b=\dfrac{90}{6}=\qty{15}{\milli\ampere}
+  -6\,I_b+12\,I_c=-6\,I_b+12\cdot 7.5 = 0 \quad \Rightarrow \quad 6\,I_b=90 \quad \Rightarrow \quad I_b=\dfrac{90}{6}=\qty{15}{\milli\ampere}
 \end{equation*}
 Con $I_b$ calculado, se utiliza la segunda ecuación para determinar
 $I_a$:
 \begin{equation*}
-  -7\,I_a+17\,I_b-6\,I_c=-7\,I_a+17\cdot 15-6\cdot 7.5 = 0\Rightarrow 7\,I_a=210\Rightarrow I_a=\dfrac{210}{7}=\qty{30}{\milli\ampere}
+  -7\,I_a+17\,I_b-6\,I_c=-7\,I_a+17\cdot 15-6\cdot 7.5 = 0\quad \Rightarrow \quad 7\,I_a=210\quad \Rightarrow \quad I_a=\dfrac{210}{7}=\qty{30}{\milli\ampere}
 \end{equation*}
 Determinada $I_a$, se emplea la primera ecuación para obtener el valor
 de $E$:
@@ -127,11 +132,13 @@ de $E$:
 \section{Enunciado}
 Calcular la intensidad $I$ en el circuito de la figura.
 
+\vspace{2mm}
+  Datos: $\; R_1 = \qty{27}{\ohm}$;\; $R_2 = \qty{47}{\ohm}$;\; $R_3 = \qty{27}{\ohm}$;\; $E_1 = \qty{460}{\volt}$;\; $E_2 = \qty{200}{\volt}$
+  
 \begin{center}
   \includegraphics{figuras/BT1_04.pdf}
 \end{center}
 
-  Datos: $R_1 = \qty{27}{\ohm}$; $R_2 = \qty{47}{\ohm}$; $R_3 = \qty{27}{\ohm}$; $E_1 = \qty{460}{\volt}$; $E_2 = \qty{200}{\volt}$
 
 \subsection*{Solución}
 Se suponen las mallas mostradas en la siguiente figura.
@@ -167,11 +174,13 @@ En el circuito de la figura obtener las intensidades de corriente
 señaladas primero mediante un análisis por el método de las mallas y
 posteriormente mediante un análisis por el método de los nudos.
 
+\vspace{2mm}
+Datos: $\; R_1 = \qty{2}{\ohm}$;\; $R_2 = \qty{1}{\ohm}$;\; $R_3 = \qty{4}{\ohm}$;\; $R_4 = \qty{5}{\ohm}$;\; $R_5 = \qty{3}{\ohm}$;\; $E_1 = \qty{10}{\volt}$;\; $E_2 = \qty{6}{\volt}$
+
 \begin{center}
   \includegraphics{figuras/BT1_08.pdf}
 \end{center}
-
-  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{1}{\ohm}$; $R_3 = \qty{4}{\ohm}$; $R_4 = \qty{5}{\ohm}$; $R_5 = \qty{3}{\ohm}$; $E_1 = \qty{10}{\volt}$; $E_2 = \qty{6}{\volt}$
+  
 
 \subsection*{Solución}
 Se aplica primero el método de las mallas, considerando las corrientes
@@ -228,7 +237,7 @@ quedando el circuito que se muestra a continuación.
   \includegraphics{figuras/BT1_08_nudos.pdf}
 \end{center}
 
-En este caso, se trabaja con las conductancias $G=\frac{1}{R}$. Se
+En este caso, se trabaja con las conductancias ($G=1/R$). Se
 escribe el sistema de ecuaciones en modo matricial:
 \begin{equation*}
   \begin{bmatrix}
@@ -263,8 +272,8 @@ fuentes de tensión se determinan de manera análoga:
 \end{align*}
 Por la 1LK, se determina el valor de $I_1$, $I_3$ e $I_5$:
 \begin{align*}
-  I_1&+5=I_{2\Omega}\Rightarrow I_1=I_{2\Omega}-5=1.69-5=\qty{-3.31}{\ampere}\\
-  I_5&+2=I_{3\Omega}\Rightarrow I_5=I_{3\Omega}-2=1.21-2=\qty{-0.79}{\ampere}\\
+  I_1&+5=I_{2\Omega} \quad \Rightarrow \quad I_1=I_{2\Omega}-5=1.69-5=\qty{-3.31}{\ampere}\\
+  I_5&+2=I_{3\Omega} \quad \Rightarrow \quad I_5=I_{3\Omega}-2=1.21-2=\qty{-0.79}{\ampere}\\
   I_3&=I_4+I_5=0.73+(-0.79)=\qty{-0.06}{\ampere}
 \end{align*}
 
@@ -279,10 +288,11 @@ calcular la diferencia de potencial entre A y B, y realizar un balance
 de potencias comparando la potencia de los elementos activos y la de
 los elementos pasivos.
 
+\vspace{2mm}
 Datos:
-$R_1 = R_2 = \qty{1}{\ohm}; R_3 = \qty{2}{\ohm}; R_4 = \qty{3}{\ohm};
-R_5=\qty{4}{\ohm}; \epsilon_1=\qty{118}{\volt}; \epsilon_2 =
-\qty{236}{\volt}; \epsilon_3 = \qty{118}{\volt}$.
+$\; R_1 = R_2 = \qty{1}{\ohm};\; R_3 = \qty{2}{\ohm}; R_4 = \qty{3}{\ohm};\;
+R_5=\qty{4}{\ohm};\; \epsilon_1=\qty{118}{\volt};\; \epsilon_2 =
+\qty{236}{\volt};\; \epsilon_3 = \qty{118}{\volt}$
 
 \begin{center}
   \includegraphics{figuras/mallas2.pdf}
@@ -321,6 +331,7 @@ cuya solución es:
 Estableciendo las relaciones entre las corrientes de rama y las
 corrientes de malla, y sustituyendo, se llega a la conclusión de que:
 
+\vspace{-4mm}
 \begin{align*}
   I_1 &= -I_a=\qty{32}{\ampere}\\
   I_2 &= I_a - I_b=-32-54=\qty{-86}{\ampere}\\
@@ -333,6 +344,7 @@ corrientes de malla, y sustituyendo, se llega a la conclusión de que:
   los nudos del circuito, para asegurarse de que la resolución es
   correcta.}
 
+\vspace{4mm}
 La diferencia de potencial entre A y B es:
 \begin{equation*}
   U_{AB} = I_3 \cdot R_3 + I_4 \cdot R_4 = 54\cdot 2+14\cdot 3= \qty{150}{\volt}
@@ -340,6 +352,7 @@ La diferencia de potencial entre A y B es:
 
 La potencia entregada por los generadores del circuito es:
 
+\vspace{-4mm}
 \begin{align*}
   P_{\epsilon_1} &= \epsilon_1 \cdot (-I_1) = -\qty{3,776}{\kilo\watt}\\
   P_{\epsilon_2} &= \epsilon_2 \cdot (-I_2) = \qty{20,296}{\kilo\watt}\\
@@ -349,8 +362,10 @@ La potencia entregada por los generadores del circuito es:
 
 Es importante recordar que el criterio de signos de un generador considera que la potencia entregada es positiva cuando la corriente sale del generador por su terminal positivo. Por tanto, $I_1$ e $I_2$ son empleadas con un signo negativo. En consecuencia, la potencia del generador $\epsilon_1$ es negativa, lo que quiere decir que este generador funciona como receptor (absorbe potencia). Ahora bien, dado que $I_2$ tiene valor negativo (es decir, circula en sentido contrario al indicado en la figura), la potencia del generador $\epsilon_2$ es positiva, de forma que este generador actúa como tal.
 
+\vspace{3mm}
 La potencia disipada por las resistencias es:
 
+\vspace{-3mm}
 \begin{align*}
   P_{R_1} &= I_1^2 \cdot R_1 = \qty{1,024}{\kilo\watt}\\
   P_{R_2} &= I_2^2 \cdot R_2 = \qty{7,396}{\kilo\watt}\\
@@ -364,18 +379,19 @@ Comprobamos que se cumple el balance de potencias.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Enunciado}
-En el circuito de la figura, determinar:
+En el circuito de la figura, se debe determinar:
 \begin{itemize}
-\item Todas las intensidades de rama señaladas
-\item Carga, polaridad y energía almacenada en los condensadores
-\item Balance de potencias
+\item Todas las intensidades de rama señaladas.
+\item Carga, polaridad y energía almacenada en los condensadores.
+\item Balance de potencias.
 \end{itemize}
+
+  Datos: $ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; \; $E_1 = \qty{8}{\volt}$; \; $E_2 = \qty{6}{\volt}$; \; $E_3 = \qty{4}{\volt}$
 
 \begin{center}
   \includegraphics{figuras/BT1_09.pdf}
 \end{center}
 
-  Datos: $ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; \; $E_1 = \qty{8}{\volt}$; \; $E_2 = \qty{6}{\volt}$; \; $E_3 = \qty{4}{\volt}$
 
 \subsection*{Solución}
 Al tratarse de un circuito alimentado por corriente continua, los
@@ -394,7 +410,7 @@ quedando una única malla por la que circula la misma corriente
 $I_1=I_2=I_3=-I_4=I$. Por la 2LK, considerando que $I$ va en sentido
 horario, se obtiene que:
 \begin{equation*}
-  -8+1\, I+2\,I-6+3\,I+4+4\,I=0\Rightarrow {I = \dfrac{8+6-4}{1+2+3+4}=\qty{1}{\ampere}=I_1=I_2=I_3=-I_4}
+  -8+1\, I+2\,I-6+3\,I+4+4\,I=0 \quad \Rightarrow \quad {I = \dfrac{8+6-4}{1+2+3+4}=\qty{1}{\ampere}=I_1=I_2=I_3=-I_4}
 \end{equation*}
 
 Para determinar la carga de los condensadores hay que calcular las
@@ -406,16 +422,16 @@ tensiones en los diferentes nudos. Considerando $E$ como tierra:
 \end{align*}
 Con estas tensiones, se determina la carga de los condensadores:
 \begin{align*}
-  Q_{1\mu F} &= C_{1\mu F} \cdot U_{AE} = 1\cdot 10^{-6}\cdot (-7)=\qty{-7}{\micro\coulomb}\\
-  Q_{2\mu F} &= C_{2\mu F} \cdot U_{CE} = 2\cdot 10^{-6}\cdot (-2)=\qty{-4}{\micro\coulomb}\\
-  Q_{3\mu F} &= C_{3\mu F} \cdot U_{DE} = 3\cdot 10^{-6}\cdot 1=\qty{3}{\micro\coulomb}
+  Q_{1\si{\micro\farad}} &= C_{1\si{\micro\farad}} \cdot U_{AE} = 1\cdot 10^{-6}\cdot (-7)=\qty{-7}{\micro\coulomb}\\
+  Q_{2\si{\micro\farad}} &= C_{2\si{\micro\farad}} \cdot U_{CE} = 2\cdot 10^{-6}\cdot (-2)=\qty{-4}{\micro\coulomb}\\
+  Q_{3\si{\micro\farad}} &= C_{3\si{\micro\farad}} \cdot U_{DE} = 3\cdot 10^{-6}\cdot 1=\qty{3}{\micro\coulomb}
 \end{align*}
 Aquellos condensadores en los que la carga es negativa, significa que
 tienen la polaridad contraria a la considerada. La energía es:
 \begin{align*}
-  E_{1\mu F}&=\dfrac{1}{2}\,C_{1\mu F}\cdot U_{AE}^2 = \dfrac{1}{2}\cdot 1\cdot 10^{-6}\cdot (-7)^2 = \qty{24.5}{\micro\joule}\\
-  E_{2\mu F}&=\dfrac{1}{2}\,C_{2\mu F}\cdot U_{CE}^2 = \dfrac{1}{2}\cdot 2\cdot 10^{-6}\cdot (-2)^2 = \qty{4}{\micro\joule}\\
-  E_{3\mu F}&=\dfrac{1}{2}\,C_{3\mu F}\cdot U_{DE}^2 = \dfrac{1}{2}\cdot 3\cdot 10^{-6}\cdot 1^2 = \qty{1.5}{\micro\joule}
+  E_{1\si{\micro\farad}}&=\dfrac{1}{2}\,C_{1\si{\micro\farad}}\cdot U_{AE}^2 = \dfrac{1}{2}\cdot 1\cdot 10^{-6}\cdot (-7)^2 = \qty{24.5}{\micro\joule}\\
+  E_{2\si{\micro\farad}}&=\dfrac{1}{2}\,C_{2\si{\micro\farad}}\cdot U_{CE}^2 = \dfrac{1}{2}\cdot 2\cdot 10^{-6}\cdot (-2)^2 = \qty{4}{\micro\joule}\\
+  E_{3\si{\micro\farad}}&=\dfrac{1}{2}\,C_{3\si{\micro\farad}}\cdot U_{DE}^2 = \dfrac{1}{2}\cdot 3\cdot 10^{-6}\cdot 1^2 = \qty{1.5}{\micro\joule}
 \end{align*}
 
 Se calculan las potencias de los elementos activos y las potencias consumidas por las resistencias:
@@ -434,7 +450,7 @@ Se calculan las potencias de los elementos activos y las potencias consumidas po
       P_{R,4}&= R_4 \cdot I_4^2=4\cdot (-1)^2 = \qty{4}{\watt}
     \end{align*}
 \end{itemize}
-donde se cumple que la potencia total aportada por los generadores es igual a la potencia consumida por las resistencias.
+Donde se cumple que la potencia total aportada por los generadores es igual a la potencia consumida por las resistencias.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -448,8 +464,8 @@ determinar:
   supuestos sin carga inicial.
 \end{itemize}
 Datos:
-$ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; \; $E_1 = \qty{6}{\volt}$; \; $E_2 =
-\qty{18}{\volt}$; \; $E_3 = \qty{6}{\volt}$
+$ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$; \; $\epsilon_1 = \qty{6}{\volt}$; \; $\epsilon_2 =
+\qty{18}{\volt}$; \; $\epsilon_3 = \qty{6}{\volt}$
 
 \begin{center}
   \includegraphics[]{figuras/nudos_condensadores.pdf}
@@ -457,14 +473,44 @@ $ \; R_i = \qty[parse-numbers=false]{i}{\ohm}$; \; $C_i = \qty[parse-numbers=fal
 
 \subsection*{Solución}
 
-Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente. En particular:
+Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente:
 
-\begin{align*}
-  I_1 &= \qty{0}{\ampere}\\
-  I_6 &= \qty{0}{\ampere}
-\end{align*}
+\vspace{2mm}
+\begin{minipage}{0.65\linewidth}
+  \includegraphics[scale=1]{figuras/nudos_condensadores2.pdf}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+    \begin{align*}
+      I_1 &= \qty{0}{\ampere}\\
+      I_6 &= \qty{0}{\ampere}
+    \end{align*}    
+\end{minipage}
 
-Para aplicar el método de los nudos transformamos las fuentes $\epsilon_2$ y $\epsilon_3$ en fuentes de corriente. Las ecuaciones del método de los nudos son:
+\vspace{6mm}
+Luego el circuito equivalente es:
+
+\vspace{2mm}
+\begin{minipage}{0.32\linewidth}
+    \begin{center}
+        \includegraphics[scale=1]{figuras/nudos_condensadores3.pdf}
+    \end{center}
+\end{minipage}
+\begin{minipage}[c]{0.08\linewidth}
+    \begin{center}
+    $\LARGE \xrightarrow{\hspace*{0.5cm}}$ % https://latex.org/forum/viewtopic.php?t=3894
+    \end{center}
+\end{minipage}    
+\begin{minipage}{0.6\linewidth}
+    \begin{center}
+        \includegraphics[scale=1]{figuras/nudos_condensadores4.pdf}
+    \end{center}
+\end{minipage}
+
+\vspace{4mm}
+Donde hemos transformado las fuentes de tensión en fuentes de corriente, para poder aplicar el método de los nudos.
+
+\vspace{3mm}
+Formulando la ecuación general del método de los nudos:
 
 \begin{equation*}
   \begin{bmatrix}
@@ -481,17 +527,21 @@ Para aplicar el método de los nudos transformamos las fuentes $\epsilon_2$ y $\
   \end{bmatrix}
 \end{equation*}
 
-Sustituimos valores y resolvemos:
+\vspace{4mm}
+Sustituyendo valores y resolviendo:
 
 \begin{align*}
   V_A &= \qty{15}{\volt}\\
   V_B &= \qty{11}{\volt}
 \end{align*}
 
-Además, $V_D = 0$, dado que está conectado a tierra. Por otra parte, la caída de tensión en la resistencia $R_1$ es 0 porque $I_1 = 0$, luego $V_C = V_D$.
+Además, $V_D = \qty{0}{\volt}$ , dado que está conectado a tierra. Por otra parte, la caída de tensión en la resistencia $R_1$ es de $\qty{0}{\volt}$, dado que $I_1 = \qty{0}{\ampere}$, luego $V_C = V_D = \qty{0}{\volt}$.
+
+\vspace{4mm}
 
 Con estos resultados podemos obtener los valores de las corrientes de rama. Volvemos al circuito original para plantear las ecuaciones de rama:
 
+\vspace{-4mm}
 \begin{align*}
   V_A &= I_2 \cdot R_3 + \epsilon_2\\
   V_B &= I_3 \cdot R_5 + \epsilon_3
@@ -499,14 +549,17 @@ Con estos resultados podemos obtener los valores de las corrientes de rama. Volv
 
 De estas ecuaciones despejamos $I_2$ e $I_3$. Además, teniendo en cuenta que $I_1 = I_6 = 0$, tenemos:
 
+\vspace{-3mm}
 \begin{align*}
   I_5 &= I_3\\
   I_4 &= I_2\\
   I_2 &= -I_3
 \end{align*}
 
+\vspace{-3mm}
 En definitiva:
 
+\vspace{-3mm}
 \begin{align*}
   I_1 &= \qty{0}{\ampere}\\
   I_2 &= \qty{-1}{\ampere}\\
@@ -520,31 +573,37 @@ Finalmente, calculamos las diferencias de potencial en los
 condensadores. En $C_1$ asignamos la polaridad positiva en A, y
 tenemos:
 
+\vspace{-2mm}
 \begin{equation*}
-  U_{AC} = U_{C1} + \epsilon_1 \rightarrow U_{C1} = \qty{9}{\volt}
+  U_{AC} = U_{C_1} + \epsilon_1 \quad \rightarrow \quad U_{C_1} = \qty{9}{\volt}
 \end{equation*}
 
-Para $C_2$ y $C_3$ el cálculo es directo, asignando la polaridad positiva en A y B, respectivamente:
+\vspace{2mm}
+Para $C_2$ y $C_3$, el cálculo es directo. Asignando la polaridad positiva en A y B, respectivamente:
 
+\vspace{-4mm}
 \begin{align*}
-  U_{C2} &=  U_{AC} = \qty{15}{\volt}\\
-  U_{C3} &=  U_{BD} = \qty{11}{\volt}
+  U_{C_2} &=  U_{AC} = \qty{15}{\volt}\\
+  U_{C_3} &=  U_{BD} = \qty{11}{\volt}
 \end{align*}
 
+\vspace{2mm}
 En consecuencia, las cargas almacenadas en cada condensador son:
 
+\vspace{-4mm}
 \begin{align*}
-  q_1 &= C_1 \cdot U_{C1} = \qty{9}{\micro\coulomb}\\
-  q_2 &= C_2 \cdot U_{C2} = \qty{30}{\micro\coulomb}\\
-  q_3 &= C_3 \cdot U_{C3} = \qty{33}{\micro\coulomb}
+  q_1 &= C_1 \cdot U_{C_1} = \qty{9}{\micro\coulomb}\\
+  q_2 &= C_2 \cdot U_{C_2} = \qty{30}{\micro\coulomb}\\
+  q_3 &= C_3 \cdot U_{C_3} = \qty{33}{\micro\coulomb}
 \end{align*}
 
-Y las energías:
+Y las energías almacenadas:
 
+\vspace{-4mm}
 \begin{align*}
-  E_{C1} &= \frac{1}{2} \cdot C_1 \cdot U^2_{C1} = \qty{40.5}{\micro\joule}\\
-  E_{C2} &= \frac{1}{2} \cdot C_2 \cdot U^2_{C2} = \qty{225}{\micro\joule}\\
-  E_{C3} &= \frac{1}{2} \cdot C_3 \cdot U^2_{C3} = \qty{181.5}{\micro\joule}
+  E_{C_1} &= \frac{1}{2} \cdot C_1 \cdot (U_{C_1})^2 = \qty{40.5}{\micro\joule}\\
+  E_{C_2} &= \frac{1}{2} \cdot C_2 \cdot (U_{C_2})^2 = \qty{225}{\micro\joule}\\
+  E_{C_3} &= \frac{1}{2} \cdot C_3 \cdot (U_{C_3})^2 = \qty{181.5}{\micro\joule}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -553,29 +612,30 @@ Y las energías:
 
 En el circuito de la figura, donde se sabe que la carga inicial de los
 condensadores era de $\qty{10}{\micro\coulomb}$ para $C_1$ y de
-$\qty{20}{\micro\coulomb}$ para $C_2$ con las polaridades indicadas,
+$\qty{20}{\micro\coulomb}$ para $C_2$, con las polaridades indicadas,
 se pide determinar:
 \begin{itemize}
-\item Intensidades de corriente señaladas
-\item Potenciales en los puntos A, B, C, D, E y F
+\item Intensidades de corriente señaladas.
+\item Potenciales en los puntos A, B, C, D, E y F.
 \end{itemize}
 
 Datos:
-$\epsilon_1=\qty{90}{\volt};\quad \epsilon_2=\qty{60}{\volt};\quad
-\epsilon_3=\qty{30}{\volt};\quad R_{1}= R_2 = R_3 =
-\qty{10}{\ohm};\quad R_{4}= R_5 = \qty{30}{\ohm};\quad C_{1}=
-\qty{10}{\micro\farad};\quad C_{2}= \qty{20}{\micro\farad};\quad L_1 =
+$\; \epsilon_1=\qty{90}{\volt};\; \epsilon_2=\qty{60}{\volt};\;
+\epsilon_3=\qty{30}{\volt};\; R_{1}= R_2 = R_3 =
+\qty{10}{\ohm};\; R_{4}= R_5 = \qty{30}{\ohm};\; C_{1}=
+\qty{10}{\micro\farad};\; C_{2}= \qty{20}{\micro\farad};\; L_1 =
 \qty{1}{\micro\henry}$
 
 \begin{center}
-  \includegraphics[scale = 0.8]{figuras/mallas_carga_inicial.pdf}
+  \includegraphics[scale = 0.9]{figuras/mallas_carga_inicial.pdf}
 \end{center}
 
 
 \subsection*{Solución}
 
-Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente. En particular:
+Sustituimos los condensadores por circuitos abiertos, lo que implica que por las ramas correspondientes no puede circular corriente:
 
+\vspace{-4mm}
 \begin{align*}
   I_5 &= \qty{0}{\ampere}\\
   I_7 &= \qty{0}{\ampere}
@@ -585,17 +645,22 @@ Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las r
   \includegraphics[width=\linewidth]{figuras/BT1_10_mod.pdf}
 \end{center}
 
-En consecuencia,
+En consecuencia:
 
+\vspace{-4mm}
 \begin{align*}
   I_3 &= -I_8\\
   I_4 &= I_6
 \end{align*}
 
-Además, la bobina $L_1$ es un cortocircuito.
+\vspace{2mm}
+Además, la bobina $L_1$ se sustituye por un cortocircuito.
 
-En el circuito de la izquierda se tienen dos mallas, considerando las
-corrientes mostradas en la figura.
+\vspace{3mm}
+Dado que el circuito original está ``partido'' en dos porciones inconexas, podemos analizar de manera independiente cada una de las dos porciones. Si aplicáramos la ecuación general de mallas al circuito en su conjunto, obtendríamos una matriz con ceros en los elementos comunes entre la malla 3 (malla en la que se incluye el generador 3), y las mallas 1 y 2, por lo que el sistema de ecuaciones $3\times 3$ sería separable en dos partes (de dimensiones $2\times 2$ y $1\times 1$).
+
+\vspace{5mm}
+Por lo tanto, en el circuito de la izquierda se tienen dos mallas, considerando las corrientes de malla mostradas en la siguiente figura:
 
 \begin{center}
   \includegraphics{figuras/BT1_10_izq_mallas.pdf}
@@ -617,14 +682,19 @@ corrientes mostradas en la figura.
   \end{bmatrix}
 \end{equation*}
 
+\vspace{2mm}
 La solución de este sistema es:
 
+\vspace{-4mm}
 \begin{align*}
   I_a &= \qty{4}{\ampere}\\
   I_b &= \qty{-1}{\ampere}
 \end{align*}
+
+\vspace{-4mm}
 siendo,
 
+\vspace{-4mm}
 \begin{align*}
   I_1 &= I_a\\
   I_2 &= I_a - I_b\\
@@ -632,13 +702,13 @@ siendo,
   I_8 &= -I_b
 \end{align*}
 
-Para el circuito de la derecha tenemos una única malla:
+En el circuito de la derecha tenemos una única malla:
 
 \begin{equation*}
   \epsilon_3 = I_4 \cdot R_4 \rightarrow I_4 = \qty{1}{\ampere}
 \end{equation*}
 
-Por tanto,
+Por tanto:
 
 \begin{align*}
   I_1 &= \qty{4}{\ampere}\\
@@ -651,27 +721,31 @@ Por tanto,
   I_8 &= \qty{1}{\ampere}\\
 \end{align*}
 
-Los potenciales en los puntos A y B se calculan así:
+Para calcular los potenciales en los puntos A y B:
 
+\vspace{-3mm}
 \begin{align*}
   V_A &= \epsilon_3 = \qty{30}{\volt}\\
   V_B &= R_5 \cdot I_5 = \qty{0}{\volt}
 \end{align*}
 
-Para calcular el potencial en el punto C debemos tener en cuenta que el condensador $C_1$ conserva su carga inicial porque el circuito no está cerrado en la parte superior. Por tanto,
+Para calcular el potencial en el punto C, debemos tener en cuenta que el condensador $C_1$ conserva su carga inicial porque el circuito no está cerrado en la parte superior. Por tanto:
 
 \begin{equation*}
-  U_{CB} = U_{C1} = \frac{q^0_{C1} }{C_1} = \qty{1}{\volt}
+  U_{CB} = U_{C_1} = \frac{q_{C_1,0}}{C_1} = \qty{1}{\volt}
 \end{equation*}
 
-Por tanto,
+Luego:
 
+\vspace{-3mm}
 \begin{equation*}
   U_C = U_{CB} + U_B = \qty{1}{\volt}
 \end{equation*}
 
-A partir de este resultado podemos calcular el resto de potenciales:
+\vspace{2mm}
+A partir de este resultado, podemos calcular el resto de potenciales:
 
+\vspace{-3mm}
 \begin{align*}
   U_D &= U_{DC} + U_C = \epsilon_2 + U_C = \qty{61}{\volt}\\
   U_E &= U_{ED} + U_D = I_1 \cdot R_1 + U_D = \qty{101}{\volt}\\
@@ -681,14 +755,14 @@ A partir de este resultado podemos calcular el resto de potenciales:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Enunciado}
 En el circuito de la figura, los condensadores se conectaron sin
-carga. Mediante el método de las mallas determina:
+carga. Mediante el método de las mallas, se pide determinar:
 \begin{itemize}
-\item Intensidades de corriente señaladas
-\item Potenciales en los puntos A, B, C y D
-\item Polaridades, cargas, y energías de los condensadores
-\item Balance de potencias
+\item Intensidades de corriente señaladas.
+\item Potenciales en los puntos A, B, C y D.
+\item Polaridades, cargas, y energías de los condensadores.
+\item Balance de potencias.
 \end{itemize}
-\begin{minipage}[c]{0.3\linewidth}
+\begin{minipage}[c]{0.2\linewidth}
   \begin{align*}
     \epsilon_{1}&=\qty{118}{\volt}\\
     \epsilon_{2}&=\qty{236}{\volt}\\
@@ -701,7 +775,7 @@ carga. Mediante el método de las mallas determina:
     L_1 &= L_2 = L_3 = \qty{1}{\milli\henry}\\
   \end{align*}
 \end{minipage}
-\begin{minipage}[c]{0.7\linewidth}
+\begin{minipage}[c]{0.8\linewidth}
   \includegraphics{figuras/mallas_condensadores.pdf}
 \end{minipage}
 
@@ -753,6 +827,7 @@ Usamos la ecuación general del método de mallas:
 
 Cuya solución es:
 
+\vspace{-6mm}
 \begin{eqnarray*}
 I_a & = & \qty{40}{\ampere}\\
 I_b & = & \qty{54}{\ampere}\\
@@ -761,6 +836,7 @@ I_c & = & -\qty{32}{\ampere}
 
 Por tanto, las corrientes indicadas en el circuito son:
 
+\vspace{-4mm}
 \begin{eqnarray*}
 I_1 & = & \qty{40}{\ampere}\\
 I_2 & = & \qty{-86}{\ampere}\\
@@ -769,8 +845,9 @@ I_4 & = &  \qty{14}{\ampere}\\
 I_5 & = &  \qty{54}{\ampere}
 \end{eqnarray*}
 
-Las tensiones en los puntos indicados son:
+Los potenciales en los puntos indicados son:
 
+\vspace{-4mm}
 \begin{align*}
 V_A &= \qty{0}{\volt}\\
 V_B &= \qty{0}{\volt}\\
@@ -780,57 +857,72 @@ V_D &= I_5 \cdot R_5 + V_C = \qty{150}{\volt}\\
 
 Por tanto, las polaridades de los condensadores y sus valores de tensión son los siguientes:
 
+\vspace{-3mm}
 \begin{eqnarray*}
-U_{C1} = U_{BA} & = & \qty{0}{\volt}\\
-q_1 = C_1 \cdot U_{C1} & = & \qty{0}{\coulomb}\\
-E_{C1} = \frac{1}{2} C_1 \cdot U_{C1}^2 & = & \qty{0}{\joule}
+    U_{C_1} = U_{BA} & = & \qty{0}{\volt}\\
+    q_1 = C_1 \cdot U_{C_1} & = & \boxed{\qty{0}{\coulomb}}\\
+    E_{C_1} = \frac{1}{2} C_1 \cdot (U_{C_1})^2 & = & \boxed{\qty{0}{\joule}}
 \end{eqnarray*}
 
+\vspace{-4mm}
 \begin{eqnarray*}
-U_{C2} = U_{CA} & = & \qty{42}{\volt}\\
-q_2 = C_2 \cdot U_{C2} & = & \qty{84}{\micro\coulomb}\\
-E_{C2} = \frac{1}{2} C_2 \cdot U_{C2}^2 & = & \qty{1.76}{\milli\joule}
+    U_{C_2} = U_{CA} & = & \qty{42}{\volt}\\
+    q_2 = C_2 \cdot U_{C_2} & = & \boxed{\qty{84}{\micro\coulomb}}\\
+    E_{C_2} = \frac{1}{2} C_2 \cdot (U_{C_2})^2 & = & \boxed{\qty{1.76}{\milli\joule}}
 \end{eqnarray*}
 
+\vspace{-4mm}
 \begin{eqnarray*}
-U_{C3} = U_{CB} & = & \qty{42}{\volt}\\
-q_3 = C_3 \cdot U_{C3} & = & \qty{84}{\micro\coulomb}\\
-E_{C3} = \frac{1}{2} C_3 \cdot U_{C3}^2 & = & \qty{1.76}{\milli\joule}
+    U_{C_3} = U_{CB} & = & \qty{42}{\volt}\\
+    q_3 = C_3 \cdot U_{C_3} & = & \boxed{\qty{84}{\micro\coulomb}}\\
+    E_{C_3} = \frac{1}{2} C_3 \cdot (U_{C_3})^2 & = & \boxed{\qty{1.76}{\milli\joule}}
 \end{eqnarray*}
 
-Finalmente, el balance de potencias calcula la potencia entregada por los elementos activos y la potencia consumida por los elementos pasivos.
+\vspace{5mm}
+Finalmente, podemos formular el balance de potencias como potencia entregada por los elementos activos frente a potencia consumida por los elementos pasivos:
 
-La potencia total entregada por los elementos activos es $\qty{21240}{\watt}$:
+\vspace{1mm}
+\begin{itemize}
+    \item La potencia total entregada por los elementos activos es $\qty{21240}{\watt}$:
+\end{itemize}
+
+\vspace{-7mm}
 \begin{eqnarray*}
-P_{E1} = E_1 \cdot I_1 & = & \qty{4720}{\watt}\\
-P_{E2} = E_2 \cdot (-I_2) & = & \qty{20296}{\watt}\\
-P_{E3} = E_3 \cdot (-I_3) & = & \qty{-3776}{\watt}
+P_{\epsilon_1} = \epsilon_1 \cdot I_1 & = & \qty{4720}{\watt}\\
+P_{\epsilon_2} = \epsilon_2 \cdot (-I_2) & = & \qty{20296}{\watt}\\
+P_{\epsilon_3} = \epsilon_3 \cdot (-I_3) & = & \qty{-3776}{\watt}
 \end{eqnarray*}
 
-La potencia total consumida por los elementos pasivos también es $\qty{21240}{\watt}$:
+\vspace{1mm}
+\begin{itemize}
+    \item La potencia total consumida por los elementos pasivos también es $\qty{21240}{\watt}$:
+\end{itemize}
+
+\vspace{-6mm}
 \begin{eqnarray*}
-P_{R1} = R_1 \cdot I_1^2 & = & \qty{6400}{\watt}\\
-P_{R2} = R_2 \cdot I_2^2 & = & \qty{7396}{\watt}\\
-P_{R3} = R_3 \cdot I_3^2 & = & \qty{1024}{\watt}\\
-P_{R4} = R_4 \cdot I_4^2 & = & \qty{588}{\watt}\\
-P_{R5} = R_5 \cdot I_5^2 & = & \qty{5832}{\watt}
+P_{R_1} = R_1 \cdot (I_1)^2 & = & \qty{6400}{\watt}\\
+P_{R_2} = R_2 \cdot (I_2)^2 & = & \qty{7396}{\watt}\\
+P_{R_3} = R_3 \cdot (I_3)^2 & = & \qty{1024}{\watt}\\
+P_{R_4} = R_4 \cdot (I_4)^2 & = & \qty{588}{\watt}\\
+P_{R_5} = R_5 \cdot (I_5)^2 & = & \qty{5832}{\watt}
 \end{eqnarray*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Enunciado}
 En el circuito de la figura, determinar:
 \begin{itemize}
-\item Las ecuaciones para el cálculo de las intensidades
-\item Todas las intensidades indicadas
-\item Potenciales en todos los nudos
-\item Carga y energía almacenada en los condensadores
+\item Las ecuaciones para el cálculo de las intensidades.
+\item Todas las intensidades indicadas.
+\item Potenciales en todos los nudos.
+\item Carga y energía almacenada en los condensadores.
 \end{itemize}
+
+\vspace{2mm}
+  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{4}{\ohm}$; $R_3 = \qty{2}{\ohm}$; $R_4 = \qty{1}{\ohm}$; $R_5 = \qty{2}{\ohm}$; $R_6 = \qty{1}{\ohm}$; $E_1 = \qty{8}{\volt}$; $E_2 = \qty{8}{\volt}$; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$
 
 \begin{center}
   \includegraphics{figuras/BT1_11.pdf}
 \end{center}
-
-  Datos: $R_1 = \qty{2}{\ohm}$; $R_2 = \qty{4}{\ohm}$; $R_3 = \qty{2}{\ohm}$; $R_4 = \qty{1}{\ohm}$; $R_5 = \qty{2}{\ohm}$; $R_6 = \qty{1}{\ohm}$; $E_1 = \qty{8}{\volt}$; $E_2 = \qty{8}{\volt}$; $C_i = \qty[parse-numbers=false]{i}{\micro\farad}$
 
 \subsection*{Solución}
 Al tratarse de alimentación en CC, se sustituyen los condensadores por
@@ -858,38 +950,41 @@ plantea el sistema de ecuaciones en forma matricial:
     8
   \end{bmatrix}
 \end{equation*}
+
+\vspace{2mm}
 Las ecuaciones completas para calcular las intensidades son:
 \begin{align*}
   2\,I_a&-2\,I_b = -8\\
   -2\,I_a&+8\,I_b-2\,I_c = -8\\
   -2\,I_b&+ 6\,I_c = 8
 \end{align*}
-cuya solución es:
+Cuya solución es:
 \begin{align*}
   I_a&=\qty{-6.5}{\ampere}\\
   I_b&=\qty{-2.5}{\ampere}\\
   I_c&=\qty{0.5}{\ampere}\\
 \end{align*}
 
-Estableciendo las relaciones entre las corrientes de malla y las de
-rama del circuito:
+Estableciendo las relaciones entre las corrientes de malla y las de rama del circuito:
 \begin{align*}
-  I_1&=I_8=I_a=\qty{-6.5}{\ampere}\\
-  I_2&=I_a-I_b=-6.5-(-2.5)=\qty{-4}{\ampere}\\
-  I_3&=I_7=I_b=\qty{-2.5}{\ampere}\\
-  I_4&=I_c-I_b=0.5-(-2.5)=\qty{3}{\ampere}\\
-  I_5&=I_6=I_c=\qty{0.5}{\ampere}\\
+  I_1&=I_8=I_a= \boxed{\qty{-6.5}{\ampere}}\\
+  I_2&=I_a-I_b=-6.5-(-2.5)= \boxed{\qty{-4}{\ampere}}\\
+  I_3&=I_7=I_b= \boxed{\qty{-2.5}{\ampere}}\\
+  I_4&=I_c-I_b=0.5-(-2.5)= \boxed{\qty{3}{\ampere}}\\
+  I_5&=I_6=I_c= \boxed{\qty{0.5}{\ampere}}\\
 \end{align*}
 
+\vspace{-2mm}
 Una forma alternativa de resolver el circuito consiste en reparar en que $E_1$ es generador dominante, por lo que puede determinarse directamente el valor de $I_2 = - E_1 / R_1 = -4\si{\ampere}$. Esto permite usar únicamente 2 mallas, lo que reduce el sistema de ecuaciones a $2\times 2$: 
 
-\vspace{2mm}
+\vspace{4mm}
 \begin{minipage}{0.6\linewidth}
     \begin{center}
-    \includegraphics{figuras/BT1_11_mod2.pdf}
+    \includegraphics[scale=1]{figuras/BT1_11_mod2.pdf}
     \end{center}
 \end{minipage}
-\begin{minipage}{0.4\linewidth}
+\hfill
+\begin{minipage}{0.3\linewidth}
     \begin{equation*}
       \begin{bmatrix}
         6 & -2  \\
@@ -904,32 +999,40 @@ Una forma alternativa de resolver el circuito consiste en reparar en que $E_1$ e
         8
       \end{bmatrix}
     \end{equation*}
-\end{minipage}
-Cuya solución es la misma que la obtenida anteriormente.
 
-Conociendo las corrientes y teniendo el nudo de tierra como
-referencia, se calculan los potenciales:
+    \vspace{6mm}
+    
+    Cuya solución es la misma que 
+    
+    la obtenida anteriormente.
+\end{minipage}
+
+\vspace{4mm}
+Conociendo las corrientes y teniendo el nudo de tierra como referencia, se calculan los potenciales:
 \begin{align*}
-  U_A&=-U_{8V}=\qty{-8}{\volt}\\
-  U_B&=-U_{R2\Omega}+U_{8V}=-2\cdot 3+8=\qty{2}{\volt}\\
-  U_C&=U_{R1\Omega}=1\cdot 0.5=\qty{0.5}{\volt}\\
-  U_D&=\qty{0}{\volt}
+  U_A&=-U_{8\si{\volt}}= \boxed{\qty{-8}{\volt}}\\
+  U_B&=-U_{R2\Omega}+U_{8\si{\volt}}=-2\cdot 3+8= \boxed{\qty{2}{\volt}}\\
+  U_C&=U_{R1\Omega}=1\cdot 0.5= \boxed{\qty{0.5}{\volt}}\\
+  U_D&= \boxed{\qty{0}{\volt}}
 \end{align*}
 
+\vspace{4mm}
 Con los potenciales, se determina la carga de los condensadores:
 \begin{align*}
-  Q_{1\mu F}&=C_{1\mu F}\, (-U_{A}) = 1\cdot 10^{-6}\cdot (-(-8))=\qty{8}{\micro\coulomb}\\
-  Q_{2\mu F}&=C_{2\mu F} \cdot \qty{0}{\volt} = \qty{0}{\micro\coulomb}\\
-  Q_{3\mu F}&=C_{3\mu F} \cdot \qty{0}{\volt} = \qty{0}{\micro\coulomb}\\
-  Q_{4\mu F}&=C_{4\mu F}\, (-U_C) = 4\cdot 10^{-6}\cdot (-0.5)=\qty{-2}{\micro\coulomb}
+  Q_{1\si{\micro\farad}}&=C_{1\si{\micro\farad}}\, (-U_{A}) = 1\cdot 10^{-6}\cdot (-(-8))= \boxed{\qty{8}{\micro\coulomb}}\\
+  Q_{2\si{\micro\farad}}&=C_{2\si{\micro\farad}} \cdot \qty{0}{\volt} = \boxed{\qty{0}{\micro\coulomb}}\\
+  Q_{3\si{\micro\farad}}&=C_{3\si{\micro\farad}} \cdot \qty{0}{\volt} = \boxed{\qty{0}{\micro\coulomb}}\\
+  Q_{4\si{\micro\farad}}&=C_{4\si{\micro\farad}}\, (-U_C) = 4\cdot 10^{-6}\cdot (-0.5)= \boxed{\qty{-2}{\micro\coulomb}}
 \end{align*}
-Aquellos condensadores en los que la carga es negativa, significa que
-tienen la polaridad contraria a la considerada. La energía es:
+
+\vspace{4mm}
+Aquellos condensadores en los que la carga es negativa, significa que tienen polaridad contraria a la considerada. La energía almacenada en cada uno de ellos es:
+
 \begin{align*}
-  E_{1\mu F}&=\dfrac{1}{2}\,C_{1\mu F}\cdot (-U_{A})^2 = \dfrac{1}{2}\cdot 1\cdot 10^{-6}\cdot (-(-8))^2=\qty{32}{\micro\joule}\\
-  E_{2\mu F}&=0\,\text{J}\\
-  E_{3\mu F}&=0\,\text{J}\\
-  E_{4\mu F}&=\dfrac{1}{2}\,C_{4\mu F}\cdot (-U_{C})^2 = \dfrac{1}{2}\cdot 4\cdot 10^{-6}\cdot (-0.5)^2=\qty{0.5}{\micro\joule}
+  E_{1\si{\micro\farad}}&=\dfrac{1}{2}\,C_{1\si{\micro\farad}}\cdot (-U_{A})^2 = \dfrac{1}{2}\cdot 1\cdot 10^{-6}\cdot (-(-8))^2= \boxed{\qty{32}{\micro\joule}}\\
+  E_{2\si{\micro\farad}}&= \boxed{\qty{0}{\micro\joule}}\\
+  E_{3\si{\micro\farad}}&= \boxed{\qty{0}{\micro\joule}}\\
+  E_{4\si{\micro\farad}}&=\dfrac{1}{2}\,C_{4\si{\micro\farad}}\cdot (-U_{C})^2 = \dfrac{1}{2}\cdot 4\cdot 10^{-6}\cdot (-0.5)^2= \boxed{\qty{0.5}{\micro\joule}}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1234,11 +1337,13 @@ en forma matricial es:
      corriente señaladas mediante un análisis por el método de las
      mallas y mediante un análisis por el método de los nudos.
 
+     \vspace{2mm}
+     Datos: $\; R_1 = \qty{9}{\ohm}$;\; $R_2 = \qty{4}{\ohm}$;\; $R_3 = \qty{18}{\ohm}$;\; $R_4 = R_5 = R_6 = \qty{20}{\ohm}$;\; $E_1 = \qty{16}{\volt}$;\; $I_g = \qty{2}{\ampere}$
+
      \begin{center}
        \includegraphics{figuras/BT1_12.pdf}
      \end{center}
 
-     Datos: $R_1 = \qty{9}{\ohm}$; $R_2 = \qty{4}{\ohm}$; $R_3 = \qty{18}{\ohm}$; $R_4 = R_5 = R_6 = \qty{20}{\ohm}$; $E_1 = \qty{16}{\volt}$; $I_g = \qty{2}{\ampere}$
 
      \subsection*{Solución}
 
@@ -1355,11 +1460,13 @@ en forma matricial es:
      $\Omega$ del circuito de la figura aplicando el principio de
      superposición.
 
+  \vspace{2mm}   
+  Datos: $\; R_1 = \qty{20}{\ohm}$;\; $R_2 = \qty{30}{\ohm}$;\; $R_3 = \qty{20}{\ohm}$;\; $E_1 = \qty{32}{\volt}$;\; $E_2 = \qty{64}{\volt}$;\; $I_g = \qty{4}{\ampere}$
+  
 \begin{center}
   \includegraphics{figuras/BT1_16.pdf}
 \end{center}
 
-  Datos: $R_1 = \qty{20}{\ohm}$; $R_2 = \qty{30}{\ohm}$; $R_3 = \qty{20}{\ohm}$; $E_1 = \qty{32}{\volt}$; $E_2 = \qty{64}{\volt}$; $I_g = \qty{4}{\ampere}$
 
 \subsection*{Solución}
 El circuito es equivalente a la suma de tres circuitos en los que
