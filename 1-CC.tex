@@ -943,7 +943,7 @@ En el circuito de la figura se debe determinar:
 \item La carga y polaridad en los condensadores, supuestos sin carga
   inicial.
 \end{itemize}
-\begin{minipage}[c]{0.3\linewidth}
+\begin{minipage}[c]{0.25\linewidth}
   \begin{align*}
     \epsilon_1&=\qty{1}{\volt}\\
     \epsilon_2&=\qty{7}{\volt}\\
@@ -951,19 +951,20 @@ En el circuito de la figura se debe determinar:
     C_i &= \qty[parse-numbers=false]{i}{\micro\farad}
   \end{align*}
 \end{minipage}
-\begin{minipage}[c]{0.7\linewidth}
+\begin{minipage}[c]{0.75\linewidth}
   \includegraphics{figuras/mallas_agrupacion_condensadores.pdf}
 \end{minipage}
 
 \subsection*{Solución}
-Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente. En particular:
+Sustituimos los condensadores por circuitos abiertos. En consecuencia, por las ramas correspondientes no puede circular corriente:
 
+\vspace{-4mm}
 \begin{align*}
-  I_3 &= \qty{0}{\ampere}\\
-  I_4 &= \qty{0}{\ampere}
+  I_3 &= \boxed{\qty{0}{\ampere}}\\
+  I_4 &= \boxed{\qty{0}{\ampere}}
 \end{align*}
 
-Tenemos dos mallas, y definimos dos corrientes de malla dextrógiras:
+Tenemos dos mallas, y definimos dos corrientes de malla dextrógiras (sentido horario):
 
 \begin{equation*}
   \begin{bmatrix}
@@ -980,81 +981,100 @@ Tenemos dos mallas, y definimos dos corrientes de malla dextrógiras:
   \end{bmatrix}
 \end{equation*}
 
+\vspace{3mm}
 La solución de este sistema es:
 
+\vspace{-5mm}
 \begin{align*}
   I_a &= \qty{1}{\ampere}\\
   I_b &= \qty{2}{\ampere}
 \end{align*}
+
+\vspace{-1mm}
 siendo,
 
+\vspace{-5mm}
 \begin{align*}
-  I_1 &= I_a = \qty{1}{\ampere}\\
-  I_2 &= I_b - I_a = \qty{1}{\ampere}\\
-  I_5 &= -I_b = \qty{-2}{\ampere}
+  I_1 &= I_a = \boxed{\qty{1}{\ampere}}\\
+  I_2 &= I_b - I_a = \boxed{\qty{1}{\ampere}}\\
+  I_5 &= -I_b = \boxed{\qty{-2}{\ampere}}
 \end{align*}
 
+\vspace{2mm}
 La potencia de los dos elementos activos es:
 
+\vspace{-4mm}
 \begin{align*}
   P_{\epsilon1} = \epsilon_1 \cdot I_1 = \qty{1}{\watt}\\
   P_{\epsilon2} = \epsilon_2 \cdot (-I_5) = \qty{14}{\watt}
 \end{align*}
 
-En total, $P_\epsilon = \qty{15}{\watt}$.
+En total, $P_\epsilon = \boxed{\qty{15}{\watt}}$
 
-Aplicando la ley de Joule en cada resistencia comprobaríamos que la potencia total disipada en las resistencias del circuito coincide con esta cantidad.
+\vspace{3mm}
+Aplicando la ley de Joule en cada resistencia comprobaríamos que la potencia total disipada en las resistencias del circuito coincide con los $\qty{15}{\watt}$.
 
+\vspace{4mm}
 Los potenciales en los puntos indicados son:
 
+\vspace{-3mm}
 \begin{align*}
   V_A &= -I_2 \cdot R_3 = \qty{-1}{\volt}\\
   V_B &= -\epsilon_2 - I_5 \cdot R_7 = \qty{-5}{\volt}\\
   V_C &= U_{CB} + V_B = -I_5 \cdot R_6 + V_B = \qty{-3}{\volt}
 \end{align*}
 
+\vspace{2mm}
 La carga almacenada en el condensador $C_4$ se calcula con la ecuación:
 \begin{equation*}
   q_4 = C_4 \cdot U_{C4} = C_4 \cdot (-U_C) = \qty{12}{\micro\coulomb}
 \end{equation*}
 donde se ha asignado la polaridad positiva en la conexión a tierra.
 
+\vspace{4mm}
 Los condensadores $C_1$, $C_2$ y $C_3$ forman parte de una asociación. Los condensadores $C_1$ y $C_2$ están asociados en paralelo:
 \begin{equation*}
   C_{12} = C_1 \parallel C_2 = C_1 + C_2 = \qty{3}{\micro\farad}
 \end{equation*}
 
+\vspace{2mm}
 A su vez, están conectados en serie con el condensador $C_3$:
 
 \begin{equation*}
   C_T = \frac{C_{12} \cdot C_3}{C_{12} + C_3} = \qty{1.5}{\micro\farad}
 \end{equation*}
 
+\vspace{2mm}
 Este condensador equivalente está conectado entre A y tierra, y asignamos la polaridad positiva a la conexión a tierra. Por tanto:
 
+\vspace{-2mm}
 \begin{equation*}
-  U_{C_T} = -U_A = \qty{1}{\volt} \rightarrow q_T = C_T \cdot U_{C_T} = \qty{1.5}{\micro\coulomb}
+  U_{C_T} = -U_A = \qty{1}{\volt} \quad \rightarrow \quad q_T = C_T \cdot U_{C_T} = \qty{1.5}{\micro\coulomb}
 \end{equation*}
 
+\vspace{2mm}
 Al tratarse de una conexión serie, esta carga es la misma que tienen el condensador $C_3$ y el condensador equivalente $C_{12}$.
 
+\vspace{-7mm}
 \begin{align*}
-  q_3 &=  \qty{1.5}{\micro\coulomb}\\
+  q_3 &=  \boxed{\qty{1.5}{\micro\coulomb}}\\
   q_{12} &=  \qty{1.5}{\micro\coulomb}
 \end{align*}
 
 Con estas cargas podemos calcular las diferencias de potencial en estos condensadores:
 
+\vspace{-4mm}
 \begin{align*}
   U_{C3} &=  \frac{q_3}{C_3} = \qty{0.5}{\volt}\\
   U_{C12} &=  \frac{q_{12}}{C_{12}} = \qty{0.5}{\volt}
 \end{align*}
 
-Por tanto,
+Por tanto:
 
+\vspace{-5mm}
 \begin{align*}
-  q_1 &= C_1 \cdot U_{C12} = \qty{0.5}{\micro\coulomb}\\
-  q_2 &= C_2 \cdot U_{C12} = \qty{1}{\micro\coulomb}
+  q_1 &= C_1 \cdot U_{C12} = \boxed{\qty{0.5}{\micro\coulomb}}\\
+  q_2 &= C_2 \cdot U_{C12} = \boxed{\qty{1}{\micro\coulomb}}
 \end{align*}
 
 Comprobamos que $q_1 + q_2 = q_{12}$.
@@ -1405,11 +1425,12 @@ $30\Omega$ es:
 \section{Enunciado}
 Obtener el generador equivalente de Thévenin del circuito de la figura
 respecto de A y B. A partir de este generador, calcula la resistencia
-a colocar en AB para obtener la máxima potencia, calculando esta
+a colocar en A-B para obtener la máxima potencia, calculando esta
 potencia y la potencia entregada por el generador $\epsilon$.
 
+\vspace{2mm}
 Datos:
-$\epsilon = \qty{54}{\volt};\quad R_1 = R_4 = \qty{8}{\ohm};\quad R_2
+$\; \epsilon = \qty{54}{\volt};\; R_1 = R_4 = \qty{8}{\ohm};\; R_2
 = R_3 = \qty{10}{\ohm}$
 
 \begin{center}
@@ -1418,27 +1439,30 @@ $\epsilon = \qty{54}{\volt};\quad R_1 = R_4 = \qty{8}{\ohm};\quad R_2
 
     
 \subsection*{Solución}
-Para obtener la tensión $U_{AB}$ aplicamos divisor de tensión en ambas
-ramas:
+Para obtener la tensión $U_{AB}$, aplicamos divisor de tensión en ambas ramas:
 
+\vspace{-3mm}
 \begin{align*}
-  U_A &= \epsilon \cdot \frac{R_2}{R_1 + R_2}\\
+  U_A &= \epsilon \cdot \frac{R_2}{R_1 + R_2}\\[5pt]
   U_B &= \epsilon \cdot \frac{R_4}{R_3 + R_4}\\
-  U_{AB} &= \epsilon \cdot (\frac{R_2}{R_1 + R_2} -  \frac{R_4}{R_3 + R_4}) = \qty{6}{\volt} = \epsilon_{th}
+  U_{AB} &= U_A - U_B = \epsilon \cdot (\frac{R_2}{R_1 + R_2} -  \frac{R_4}{R_3 + R_4}) = \boxed{\qty{6}{\volt} = \epsilon_{th}}
 \end{align*}
 
-Para calcular la resistencia equivalente apagamos la fuente de
-tensión. En el circuito resultante obtenemos:
+\vspace{2mm}
+Para calcular la resistencia equivalente apagamos la fuente de tensión (es decir, la cortocircuitamos). En el circuito resultante obtenemos:
 
+\vspace{-3mm}
 \begin{equation*}
-  R_{th} = (R_1 \parallel R_2) + (R_3 \parallel R_4) = 80/9 \, \si{\ohm}
+  R_{th} = (R_1 \parallel R_2) + (R_3 \parallel R_4) = \boxed{\frac{80}{9} \, \si{\ohm}}
 \end{equation*}
 
-Para obtener la máxima potencia hay que conectar una resistencia
+\vspace{2mm}
+Para obtener la máxima potencia, hay que conectar una resistencia
 $R_L = R_{th}$. Con esta resistencia el balance de potencias es:
 
+\vspace{-5mm}
 \begin{align*}
-  P_L &= \frac{\epsilon_{th}^2}{4R_{th}} = \qty{1.0125}{\watt}\\
+  P_L &= \frac{\epsilon_{th}^2}{4R_{th}} = \qty{1.0125}{\watt}\\[8pt]
   P_\epsilon &= 2 \cdot P_L = \qty{2.025}{\watt}
 \end{align*}
 
@@ -1446,14 +1470,16 @@ $R_L = R_{th}$. Con esta resistencia el balance de potencias es:
 
 \section{Enunciado}
 Determinar el equivalente Thévenin del circuito de la figura entre los
-nudos $A-B$. ¿Qué resistencia habría que conectar en dichos terminales
+nudos A-B. ¿Qué resistencia habría que conectar en dichos terminales
 para transferir la máxima potencia? ¿Cuál sería dicha potencia?
+
+\vspace{2mm}
+Datos: $\; R_1 = R_2 = \qty{4}{\ohm}$;\; $R_3 = \qty{2}{\ohm}$;\; $E = \qty{10}{\volt}$;\; $I_g = \qty{8}{\ampere}$
 
 \begin{center}
   \includegraphics{figuras/BT1_17.pdf}
 \end{center}
 
-Datos: $R_1 = R_2 = \qty{4}{\ohm}$; $R_3 = \qty{2}{\ohm}$; $E = \qty{10}{\volt}$; $I_g = \qty{8}{\ampere}$
 
 \subsection*{Solución}
 Se transforma la fuente de corriente en paralelo con la resistencia de
@@ -1520,44 +1546,56 @@ siendo la máxima potencia transferida:
 \section{Enunciado}
 Obtener el generador equivalente de Thévenin del circuito de la figura respecto de A y B.
 
-Datos: $I_g=\qty{10}{\ampere}; R_1=\qty{1}{\ohm}; \alpha=5$
+\vspace{2mm}
+Datos: $\; I_g=\qty{10}{\ampere};\; R_1=\qty{1}{\ohm};\; \alpha=5$
 \begin{center}
   \includegraphics{figuras/Thevenin1.pdf}
 \end{center}
 
 \subsection*{Solución}
-Por una parte:
+Para calcular $\epsilon_{th}$, es necesario calcular $U_{AB}$ en circuito abierto. 
+
+\vspace{2mm}
+Aplicando 2LK desde A hasta B, pasando necesariamente por la fuente dependiente de tensión y la resistencia (dado que no conocemos la tensión en el generador de corriente):
 \begin{equation*}
   U_{AB} = \alpha U + U = (1 + \alpha) U=(1+5)U=6\,U
 \end{equation*}
-Además:
+Además, dado que los terminales A-B están en circuito abierto, toda la corriente del generador $I_g$ circula por la resistencia, luego:
 \begin{equation*}
   U = I_g \cdot R_1=10\cdot 1 = \qty{10}{\volt}
 \end{equation*}
-Por tanto, el generador de Thévenin tiene una fem de:
+\vspace{2mm}
+Por tanto, el generador de Thévenin tiene una \textit{fem} de:
 \begin{equation*}
-  U_{AB} = 6\, U= 6\cdot 10=\qty{60}{\volt} = \epsilon_{th}
+  U_{AB} = 6\, U = 6\cdot 10 = \boxed{\qty{60}{\volt} = \epsilon_{th}}
 \end{equation*}
 
-Para calcular la impedancia, se apaga la fuente independiente. Como la
-fuente dependiente permanece, es necesario aplicar un generador de
-prueba a la salida:
+Para calcular la resistencia Thévenin, se apaga la fuente independiente. Como la fuente dependiente permanece, es necesario aplicar un generador de prueba a la salida:
 
-\begin{center}
-  \includegraphics{figuras/Thevenin1_fuenteprueba.pdf}
-\end{center}
+\vspace{3mm}
 
-\begin{align*}
-  \epsilon_0 &= \alpha U + U = U(1+\alpha)=6\,U\\
-  U &= I_0\,R_1=I_0\cdot 1=I_0
-\end{align*}
-Por tanto,
+\begin{minipage}[c]{0.5\linewidth}
+    \begin{center}
+        \includegraphics[width=0.65\linewidth]{figuras/Thevenin1_fuenteprueba.pdf}
+    \end{center}
+\end{minipage}
+\begin{minipage}[c]{0.5\linewidth}    
+    \begin{align*}
+      \epsilon_0 &= \alpha U + U = U(1+\alpha) = 6\,U\\[5pt]
+      U &= I_0\cdot R_1 = I_0\cdot 1 = I_0
+    \end{align*}
 
-\begin{equation*}
-  R_{th} = \dfrac{\epsilon_0}{I_0}=\dfrac{6\,U}{U} = \qty{6}{\ohm}
-\end{equation*}
+    \vspace{3mm}
+    Por tanto:
+
+    \begin{equation*}
+      R_{th} = \dfrac{\epsilon_0}{I_0}=\dfrac{6\,U}{U} = \boxed{\qty{6}{\ohm}}
+    \end{equation*}
+\end{minipage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 
 \section{Enunciado}
 
@@ -1572,57 +1610,174 @@ En el circuito de la figura, calcular:
   potencia.
 \end{itemize}
 
-Datos: $R = \qty{1}{\ohm};\; \epsilon_g = \qty{10}{\volt};\; \alpha = \qty{2}{\ohm};\; \beta = 1$
+Datos: $\; R = \qty{1}{\ohm};\; \epsilon_g = \qty{10}{\volt};\; \alpha = \qty{2}{\ohm};\; \beta = 1$
 
 \begin{center}
+  
+  \vspace{-3mm} 
   \includegraphics{figuras/norton.pdf}
 \end{center}
 
+\vspace{-5mm} 
 \subsection*{Solución}
-Para calcular el equivalente de Norton cortocircuitamos la salida del circuito. Podemos escribir las siguientes ecuaciones:
+Para calcular el equivalente de Norton, cortocircuitamos la salida del circuito. 
+
+\vspace{2mm}
+Para calcular $I_{SC}$, podríamos aplicar el método de las mallas, pero la presencia de fuentes dependientes hace que su aplicación no sea directa. Es más sencillo aplicar 1LK y 2LK para obtener las siguientes ecuaciones:
 
 \begin{minipage}{0.5\linewidth}
-  \includegraphics[width=.9\linewidth]{figuras/norton_corto.pdf}
+  \includegraphics[width=.95\linewidth]{figuras/norton_corto.pdf}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
+
+    \vspace{-3mm}
   \begin{align*}
-    U_R &= R \cdot I_{sc}\\
-    I_g+ I_R &= I_{sc}\\
+    I_g+ I_R &= I_{SC}\\    
     U_{CD} &= \epsilon_g - 2 \cdot R \cdot I_g\\
     U_{CD} &= \beta \cdot U_R - I_R \cdot R\\
-    U_{CD} &= U_R + \alpha \cdot I_R
+    U_{CD} &= U_R + \alpha \cdot I_R\\
+    U_R &= R \cdot I_{SC}
   \end{align*}
+
+    Combinando estas ecuaciones obtenemos:
+    
+    \begin{equation*}
+      I_{SC} = \boxed{\frac{10}{3}\,\si{\ampere} = I_N}
+    \end{equation*}
 \end{minipage}
 
-Combinando estas ecuaciones obtenemos:
-
-\begin{equation*}
-  I_{sc} = 10/3\si{\ampere} = I_N
-\end{equation*}
-
-Para obtener la resistencia equivalente apagamos la fuente independiente y conectamos un generador de prueba en AB:
-
+\vspace{4mm}
+Para obtener la resistencia equivalente Norton, apagamos la fuente independiente (la cortocircuitamos) y conectamos un generador de prueba en AB:
 
 \begin{minipage}{0.5\linewidth}
-  \includegraphics[width=.9\linewidth]{figuras/norton_fuenteprueba.pdf}
+  \hspace{6mm}\includegraphics[width=.9\linewidth]{figuras/norton_fuenteprueba.pdf}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
+  
+  \vspace{-3mm}
   \begin{align*}
-    U_R &= -I_0 \cdot R\\
     I_2 + I_R + I_0 &= 0\\
-    U_{CD} &= -2R\cdot I_2\\
+    U_{CD} &= U_R + \alpha \cdot I_R + \epsilon_0\\
     U_{CD} &= \beta \cdot U_R - I_R \cdot R\\
-    U_{CD} &= U_R + \alpha \cdot I_R + \epsilon_0
+    U_{CD} &= -2R\cdot I_2\\
+    U_R &= -I_0 \cdot R
   \end{align*}
+
+  Combinando estas ecuaciones obtenemos:
+
+  \begin{equation*}
+    R_{th} = \frac{\epsilon_0}{I_0} = \boxed{\qty{3}{\ohm}}
+  \end{equation*}
 \end{minipage}
 
-Combinando estas ecuaciones obtenemos:
+\vspace{2mm}
+Por tanto, hay que conectar una $\boxed{R_L = \qty{3}{\ohm}}$ para obtener la máxima potencia disponible.
+
+\newpage
+
+Una opción alternativa para resolver el problema es aplicar el método de las mallas dos veces. Definiendo corrientes de malla en sentido horario en el primer ciruito de la página anterior, tenemos:
 
 \begin{equation*}
-  R_{th} = \frac{\epsilon_0}{I_0} = \qty{2}{\ohm}
+  \begin{bmatrix}
+    3R & -R\\[4pt]
+    -R & 2R
+  \end{bmatrix} \cdot %
+  \begin{bmatrix}
+    I_a\\[4pt]
+    I_b
+  \end{bmatrix} = %
+  \begin{bmatrix}
+    \epsilon_g - \beta \cdot U_R\\[4pt]
+    \beta \cdot U_R - \alpha \cdot I_R
+  \end{bmatrix}
 \end{equation*}
 
-Por tanto, habrá que conectar una resistencia de $\qty{2}{\ohm}$ para obtener la máxima potencia disponible.
+\vspace{4mm}
+Dado que aparecen incógnitas en el lado derecho del sistema de ecuaciones, expresamos los términos de los generadores dependientes en función de las corrientes de malla:
+
+\vspace{-4mm}
+\begin{align*}
+    U_R &= I_b \cdot R\\[3pt]
+    I_R &= I_b - I_a
+\end{align*}
+
+Reorganizando el sistema de ecuaciones:
+
+\begin{equation*}
+  \begin{bmatrix}
+    3R & -R + \beta \cdot R\\[4pt]
+    -R - \alpha & \quad 2R + \alpha - \beta \cdot R
+  \end{bmatrix} \cdot %
+  \begin{bmatrix}
+    I_a\\[4pt]
+    I_b
+  \end{bmatrix} = %
+  \begin{bmatrix}
+    \epsilon_g\\[4pt]
+    0
+  \end{bmatrix}
+\end{equation*}
+
+\vspace{2mm}
+(observación: todos los elementos de la matriz de coeficientes tienen unidades de resistencia)
+
+\vspace{3mm}
+Resolviendo, se obtiene la misma solución que en la página anterior:
+
+\vspace{-3mm}
+\begin{align*}
+    I_a &= \frac{10}{3}\,\si{\ampere}\\[5pt]
+    I_b &= \frac{10}{3}\,\si{\ampere} = I_{SC}
+\end{align*}
+
+Para obtener la resistencia Norton, podemos aplicar mallas en el segundo circuito de la página anterior. Definiendo corrientes de malla en sentido horario:
+
+\begin{equation*}
+  \begin{bmatrix}
+    3R & -R\\[4pt]
+    -R & 2R
+  \end{bmatrix} \cdot %
+  \begin{bmatrix}
+    I_a'\\[4pt]
+    I_b'
+  \end{bmatrix} = %
+  \begin{bmatrix}
+    - \beta \cdot U_R\\[4pt]
+    \beta \cdot U_R - \alpha \cdot I_R - \epsilon_0
+  \end{bmatrix}
+\end{equation*}
+
+\vspace{2mm}
+Reorganizando términos, de la misma forma que hemos hecho en el sistema anterior:
+
+\begin{equation*}
+  \begin{bmatrix}
+    3R & -R + \beta \cdot R\\[4pt]
+    -R - \alpha & \quad 2R + \alpha - \beta \cdot R
+  \end{bmatrix} \cdot %
+  \begin{bmatrix}
+    I_a'\\[4pt]
+    I_b'
+  \end{bmatrix} = %
+  \begin{bmatrix}
+    0\\[4pt]
+    -\epsilon_0
+  \end{bmatrix}
+\end{equation*}
+
+\vspace{2mm}
+Para poder resolver el sistema de ecs., es necesario asignar un valor a $\epsilon_0$. En la práctica, esto equivale a elegir un valor de fuente de tensión que se conectaría en terminales A-B del circuito, tras lo cual mediríamos la corriente $I_0$ que esta aportaría. 
+
+\vspace{2mm}
+Por ejemplo, elegimos $\epsilon_0=\qty{1}{\volt}$ y resolvemos:
+
+\vspace{-3mm}
+\begin{align*}
+    I_a' &= 0\\[5pt]
+    I_b' &= -\frac{1}{3}\,\si{\ampere} = -I_0
+\end{align*}
+
+Luego $R_{th} = \dfrac{\epsilon_0}{I_0} = \boxed{\qty{3}{\ohm}} \,$, mismo resultado que en la página anterior.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
