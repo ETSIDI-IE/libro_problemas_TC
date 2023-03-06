@@ -1,8 +1,7 @@
 \chapter{Corriente alterna monofásica}
 
 \section{Enunciado}
-En un circuito serie RL con $R=5\Omega$ y $L=0.06H$, la tensión en
-bornes de la bobina es $u_L(t)=15\sin(200\,t)$ V. Determinar:
+En un circuito serie RL con $R=\qty{5}{\ohm}$ y $L=\qty{0.06}{\henry}$, la tensión en bornes de la bobina es $u_L(t)=15\sin(200\,t)\,\si{\volt}$. Determinar:
 \begin{itemize}
 \item La tensión total
 \item Intensidad de corriente
@@ -12,55 +11,54 @@ bornes de la bobina es $u_L(t)=15\sin(200\,t)$ V. Determinar:
 
 \subsection*{Solución}
 
-De la expresión temporal de $u_L(t)$ se tiene que $\omega=200$ rad/s,
-por lo que:
+De la expresión temporal de $u_L(t)$ se tiene que $\omega=\qty{200}{\radian\per\second}$, por lo que:
 \begin{equation*}
-  \overline{X}_L=\mathrm{j}\,\omega\,L=\mathrm{j}\,200\cdot0.06=\mathrm{j}\,12\Omega
+  \overline{X}_L=\mathrm{j}\,\omega L=\mathrm{j}\,200\cdot0.06=\mathrm{j}\,\qty{12}{\ohm}
 \end{equation*}
 siendo la impedancia del circuito:
 \begin{equation*}
-  \overline{Z}_{eq}=R+\overline{X}_L=5+\mathrm{j}\,12=13\phase{67.3801^\circ}\,\Omega
+  \overline{Z}_{eq}=R+\overline{X}_L= \boxed{5+\mathrm{j}\,12 = 13\phase{67.3801^\circ}\,\si{\ohm}}
 \end{equation*}
 (es preferible usar cuatro decimales en los ángulos, para reducir los errores numéricos por aproximación).
 \vspace{2mm}
 
 \noindent El fasor correspondiente a $u_L(t)$ es:
 \begin{equation*}
-  \overline{U}_L=\dfrac{15}{\sqrt{2}}\phase{0^\circ}V
+  \overline{U}_L=\dfrac{15}{\sqrt{2}}\phase{0^\circ}\,\si{\volt}
 \end{equation*}
 Por la ley de Ohm, la intensidad de corriente en la bobina (igual a la
 total, al estar en serie):
 \begin{equation*}
-  \overline{I}=\dfrac{\overline{U}_L}{\overline{X}_L}=\dfrac{\frac{15}{\sqrt{2}}\phase{0^\circ}}{\mathrm{j}\,12}=0.88\phase{-90^\circ}A
+  \overline{I}=\dfrac{\overline{U}_L}{\overline{X}_L}=\dfrac{\frac{15}{\sqrt{2}}\phase{0^\circ}}{\mathrm{j}\,12}= \boxed{0.88\phase{-90^\circ}\,\si{\ampere}}
 \end{equation*}
 y la tensión total, por la 2LK:
 \begin{equation*}
-  \overline{U}=\overline{U}_R+\overline{U}_L=5\cdot (0.88\phase{-90^\circ})+\dfrac{15}{\sqrt{2}}\phase{0^\circ}=11.48\phase{-22.5304^\circ} V
+  \overline{U}=\overline{U}_R+\overline{U}_L=5\cdot (0.88\phase{-90^\circ})+\dfrac{15}{\sqrt{2}}\phase{0^\circ}= \boxed{11.48\phase{-22.5304^\circ}\,\si{\volt}}
 \end{equation*}
 siendo el ángulo de desfase de la intensidad respecto a la tensión:
 \begin{equation*}
-  \phi=\theta_U-\theta_I=-22.5304-(-90)=67.4696^\circ
+  \phi=\theta_U-\theta_I=-22.5304-(-90)= \boxed{67.4696^\circ}
 \end{equation*}
 (la ligera diferencia en los decimales respecto al ángulo de $\overline{Z}_{eq}$ es debida a las aproximaciones en decimales en operaciones previas).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Enunciado}
 
-Una resistencia de \qty{5}{\ohm} y un condensador se unen en serie. La tensión en la resistencia es : $u_R(t) = 25 \cdot \sin(2000t + \pi/6)$. Si la corriente está adelantada \ang{60} respecto de la tensión aplicada, ¿cuál es el valor de la capacidad C del condensador?.
+Una resistencia de \qty{5}{\ohm} y un condensador se unen en serie. La tensión en la resistencia es $u_R(t) = 25 \cdot \sin(2000t + \pi/6)\,\si{\volt}$. Si la corriente está adelantada \ang{60} respecto de la tensión aplicada, ¿cuál es el valor de la capacidad C del condensador?
 
 \subsection*{Solución}
 
-
+El ángulo de la impedancia total es:
 \begin{equation*}
-    \theta = \theta_V - \theta_I \rightarrow \theta = -\pi/3
+    \theta = \theta_V - \theta_I \quad \rightarrow \quad \theta = -\ang{60} = -\pi/3\,\si{\radian}
 \end{equation*}
-
+Y el fasor de dicha impedancia: 
 \begin{equation*}
-    \overline{Z} = R - j \frac{1}{\omega C R}
+    \overline{Z} = R - \mathrm{j} \frac{1}{\omega C}
   \end{equation*}
-  
+A partir del cual puede calcularse la capacidad del condensador: 
 \begin{equation*}
-  \tan \theta = - \frac{1}{\omega C R} \rightarrow \sqrt{3} = \frac{1}{10000 C}
+  \tan \theta = - \frac{1}{\omega C R} \quad \rightarrow \quad \sqrt{3} = \frac{1}{10^4 C}
 \end{equation*}
 
 \begin{equation*}
@@ -69,7 +67,7 @@ Una resistencia de \qty{5}{\ohm} y un condensador se unen en serie. La tensión 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Enunciado}
-Para determinar las constantes R y L de una bobina, se conecta en serie con una resistencia de \qty{25}{\ohm} y al conjunto se le aplica una fuente de tensión de \qty{120}{\volt} a \qty{60}{\hertz}, se miden las tensiones en bornes de la resistencia y de la bobina, dando los valores $U_R = \qty{70.8}{\volt}$ y $U_B = \qty{86}{\volt}$. ¿ Cuáles son las constantes de la bobina en cuestión?.
+Para determinar las constantes R y L de una bobina, se conecta en serie con una resistencia de \qty{25}{\ohm} y al conjunto se le aplica una fuente de tensión de \qty{120}{\volt} a \qty{60}{\hertz}. Se miden las tensiones en bornes de la resistencia y de la bobina, obteniendo los valores $U_R = \qty{70.8}{\volt}$ y $U_B = \qty{86}{\volt}$. ¿ Cuáles son las constantes de la bobina en cuestión?
 
 \subsection*{Solución}
 
@@ -81,23 +79,23 @@ Por la 2LK, se debe cumplir que:
 
 La tensión en la resistencia de \qty{25}{\ohm}, por la ley de Ohm:
 \begin{equation*}
-  \overline{U}_R = 25 \overline{I} \rightarrow I = \frac{U_R}{25} = \qty{2.83}{\ampere}
+  \overline{U}_R = 25 \cdot \overline{I} \quad \rightarrow \quad I = \frac{U_R}{25} = \qty{2.83}{\ampere}
 \end{equation*}
 Dado que
 \begin{equation*}
-  \overline{Z}_B = R_B + j\omega L_B
+  \overline{Z}_B = R_B + \mathrm{j}\,\omega L_B
 \end{equation*}
 y conocido el módulo de la corriente que circula por el circuito, obtenemos:
 \begin{equation*}
-  \overline{U}_B = \overline{I} \cdot \overline{Z}_B \rightarrow 86 = 2.83 Z_B \rightarrow Z_B = \qty{30.37}{\ohm}
+  \overline{U}_B = \overline{I} \cdot \overline{Z}_B \quad \rightarrow \quad 86 = 2.83 \, Z_B \quad \rightarrow \quad Z_B = \qty{30.37}{\ohm}
 \end{equation*}
 La impedancia equivalente total del circuito es:
 \begin{equation*}
-  \overline{Z} = (25 + R_B) + j\omega L_B
+  \overline{Z} = (25 + R_B) + \mathrm{j}\,\omega L_B
 \end{equation*}
 y por la ley de Ohm:
 \begin{equation*}
-  \overline{U} = \overline{I} \cdot \overline{Z} \rightarrow 120 = 2.83 Z \rightarrow Z = \qty{42.37}{\ohm}
+  \overline{U} = \overline{I} \cdot \overline{Z} \quad \rightarrow \quad 120 = 2.83 \, Z \quad \rightarrow \quad Z = \qty{42.37}{\ohm}
 \end{equation*}
 Planteamos el sistema de ecuaciones resultantes:
 \begin{align*}
@@ -106,8 +104,8 @@ Planteamos el sistema de ecuaciones resultantes:
 \end{align*}
 cuyas soluciones son:
 \begin{align*}
-  R &= \qty{5}{\ohm}\\
-  L &= \qty{79.5}{\milli\henry}
+  \Aboxed{R &= \qty{5}{\ohm}}\\
+  \Aboxed{L &= \qty{79.5}{\milli\henry}}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,57 +122,57 @@ Un circuito serie RLC con $R = \qty{5}{\ohm}$ , $L = \qty{0.02}{\henry}$ y $C=\q
 La impedancia equivalente del sistema es:
 
 \begin{equation*}
-  \overline{Z} = R + j (\omega L - \frac{1}{\omega C})
+  \overline{Z} = R + \mathrm{j}\, (\omega L - \frac{1}{\omega C})
 \end{equation*}
 
 La tangente del ángulo es:
 \begin{equation*}
-  \tan \theta = \frac{\omega L - 1/\omega C}{R} = \frac{0.02\omega^2 - 12500}{5\omega}
+  \tan \theta = \frac{\omega L - 1/\omega C}{R} = \frac{0.02\,\omega^2 - 12.5\cdot 10^3}{5\,\omega}
 \end{equation*}
 
-En esta ecuación planteamos las condiciones particulares del enunciado.
+En esta ecuación, planteamos las condiciones particulares del enunciado:
 
 \begin{enumerate}
-\item Adelanta \qty{45}{\degree} a la tensión.
+\item Adelanta \qty{45}{\degree} a la tensión:
   \begin{equation*}
-    \theta = -\pi/4 \rightarrow \tan \omega = -1
+    \theta = -\pi/4 \quad \rightarrow \quad \tan \theta = -1
   \end{equation*}
 
   \begin{equation*}
-    \frac{0.02\omega^2 - 12500}{5\omega} = -1
+    \frac{0.02\,\omega^2 - 12.5\cdot 10^3}{5\,\omega} = -1
   \end{equation*}
 
   \begin{equation*}
-    \omega^2 + 250\omega - 625000 = 0 \rightarrow \boxed{\omega = \qty{675}{\radian\per\second}}
+    \omega^2 + 250\,\omega - 62.5\cdot 10^4 = 0 \quad \rightarrow \quad \boxed{\omega = \qty{675.4}{\radian\per\second}}
   \end{equation*}
 
   
-\item Está en fase con ella.
+\item Está en fase con ella:
 
   \begin{equation*}
-    \theta = 0 \rightarrow \tan \omega = 0
+    \theta = 0 \quad \rightarrow \quad \tan \theta = 0
   \end{equation*}
 
   \begin{equation*}
-    0.02\omega = \frac{12500}{\omega}
+    0.02\,\omega = \frac{12.5\cdot 10^3}{\omega}
   \end{equation*}
 
   \begin{equation*}
-    \omega = \qty{790.6}{\radian\per\second}
+    \boxed{\omega = \qty{790.6}{\radian\per\second}}
   \end{equation*}
   
-\item Retrasa \qty{45}{\degree}.
+\item Retrasa \qty{45}{\degree}:
 
   \begin{equation*}
-    \theta = +\pi/4 \rightarrow \tan \omega = +1
+    \theta = +\pi/4 \quad \rightarrow \quad \tan \theta = +1
   \end{equation*}
 
   \begin{equation*}
-    \frac{0.02\omega^2 - 12500}{5\omega} = 1
+    \frac{0.02\,\omega^2 - 12.5\cdot 10^3}{5\omega} = 1
   \end{equation*}
 
   \begin{equation*}
-    \omega^2 - 250\omega - 625000 = 0 \rightarrow \boxed{\omega = \qty{925.4}{\radian\per\second}}
+    \omega^2 - 250\,\omega - 62.5\cdot 10^4 = 0 \quad \rightarrow \quad \boxed{\omega = \qty{925.4}{\radian\per\second}}
   \end{equation*}
 
 \end{enumerate}
