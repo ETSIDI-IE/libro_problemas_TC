@@ -287,7 +287,7 @@ W_1 &= W_2 + P_l = \qty{19024.3}{\watt}
 En el circuito de la figura, los amperímetros $A_1$ y $A_2$ marcan $\qty{4.5}{\ampere}$ y $\qty{6}{\ampere}$, respectivamente, el voltímetro, $\qty{150}{\volt}$, y el
 vatímetro, $\qty{900}{\watt}$.
 
-Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. de la impedancia $Z$ es de 0.8 en retraso, calcula:
+Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. de la impedancia $Z$ es de $0.8$ en retraso, calcula:
 
 \begin{itemize}
 \item Valores de R, C y Z en forma compleja.
@@ -307,17 +307,14 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
 \begin{equation*}
     R = \frac{U_{BC}}{A_1} = \frac{150}{4.5} = \qty{33.3}{\ohm}
   \end{equation*}
-
   \begin{equation*}
     X_c = \frac{U_{BC}}{A_2} = \frac{150}{6} = \qty{25}{\ohm}
   \end{equation*}
-
   \begin{equation*}
     C = \frac{1}{X_c\omega} = \frac{1}{25 \cdot 2 \pi \cdot 250} = \qty{25.46}{\micro\farad}
   \end{equation*}
 
   Tomando $\overline{U}_{BC}$ como origen de fases, $\overline{U}_{BC} = \qty[parse-numbers=false]{150\phase{0}}{\volt}$, obtenemos:
-
   \begin{align*}
     \overline{I}_1 &= \qty[parse-numbers=false]{4.5\phase{0}}{\ampere}\\
     \overline{I}_2 &= \qty[parse-numbers=false]{6\phase{\pi/2}}{\ampere}
@@ -325,33 +322,29 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
 
   Por tanto,
   \[
-    \overline{I} = \overline{I}_1 + \overline{I}_2 = \qty[parse-numbers=false]{4.5+6j}{\ampere} = \qty[parse-numbers=false]{7.5\phase{\ang{53.13}}}{\ampere}
+    \overline{I} = \overline{I}_1 + \overline{I}_2 = \qty[parse-numbers=false]{4.5+6j}{\ampere} = 7.5\phase{\ang{53.13}}\;\si{\ampere}
   \]
+  
   El vatímetro está midiendo $P_Z = U_Z \cdot I \cos \theta_Z$, y por tanto:
-
   \[
     U_Z = \frac{900}{7.5 \cdot 0.8} = \qty{150}{\volt}
   \]
-
   \[
     Z = \frac{U_Z}{I} = \qty{20}{\ohm}
   \]
 
     También puede obtenerse este resultado calculando primero la parte resistiva de la impedancia:
-
   \[
     R_Z = \frac{P_Z}{I^2} = \qty{16}{\ohm}
   \]
-  y a continuación el módulo teniendo en cuenta que $R = Z \cdot \cos \theta$:
-
+  y a continuación el módulo, teniendo en cuenta que $R = Z \cdot \cos \theta$:
   \[
     Z = \frac{R}{\cos \theta} = \frac{16}{0.8} = \qty{20}{\ohm}
   \]
 
   Con su factor de potencia obtenemos el ángulo (teniendo en cuenta que es inductiva al ser en retraso), $\theta_Z = \arccos(0.8) = \ang{36.87}$:
-
   \[
-    \overline{Z} = 16 + 12j  = \qty[parse-numbers=false]{20\phase{\ang{36.87}}}{\ohm}
+    \overline{Z} = 16 + 12j  = 20\phase{\ang{36.87}}\;\si{\ohm}
   \]
 
   
@@ -360,24 +353,20 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
   \[
     \overline{U}_{AC} = \overline{U}_{AB} + \overline{U}_{BC}
   \]
-
   \[
-    \overline{U}_{AB} = \overline{Z} \cdot \overline{I} = \qty[parse-numbers=false]{150\phase{\ang{90}}}{\volt}
+    \overline{U}_{AB} = \overline{Z} \cdot \overline{I} = 150\phase{\ang{90}}\;\si{\volt}
   \]
-
   \[
-    \overline{U}_{AC} = 150 + 150j = \qty[parse-numbers=false]{150\sqrt{2}\phase{\ang{45}}}{\volt}
+    \overline{U}_{AC} = 150 + 150j = 150\sqrt{2}\phase{\ang{45}}\;\si{\volt}
   \]
 
 \item Triángulo de potencias totales en forma compleja.
 
   Podemos calcular a partir de la tensión y la corriente:
-
-
   \begin{align*}
     \overline{S}_T &= \overline{U}_{AC} \overline{I}^* =\\
                    &= 150\sqrt{2}\phase{\ang{45}} \cdot 7.5\phase{\ang{-53.13}} =\\
-                   &= \qty[parse-numbers=false]{1591\phase{\ang{-8.13}}}{\voltampere}=\\
+                   &= 1591\phase{\ang{-8.13}}\;\si{\voltampere}=\\
                    &= \qty[parse-numbers=false]{1575 - j225}{\voltampere}
   \end{align*}
   
@@ -388,13 +377,14 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
     P = P_Z + P_R &= \qty{1575}{\watt}
   \end{align*}
 
+    \vspace{-4mm}
   \begin{align*}
     Q_Z = 7.5^2 \cdot 12 &= \qty{675}{\voltampere_r}\\
     Q_c = - 6^2 \cdot 25 &= \qty{-900}{\voltampere_r}\\
     Q = Q_Z + Q_c &= \qty{-225}{\voltampere_r}
   \end{align*}
+  
   Por tanto:
-
   \[
     \overline{S} = P + jQ = \qty[parse-numbers=false]{1575 - j225}{\voltampere}
   \]
@@ -474,15 +464,15 @@ Se debe calcular:
 
 \begin{enumerate}
 
-\item \textbf Potencia activa y reactiva consumida por $Z$.
+\item Potencia activa y reactiva consumida por $Z$.
 
-\item  \textbf Expresiones complejas de las intensidades medidas por los
+\item Expresiones complejas de las intensidades medidas por los
   amperímetros, $I$, $I_1$, $I_2$ e $I_3$. 
 
-\item  \textbf Expresiones complejas de las tensiones $U_{AB}$, $U_{AC}$ y
+\item Expresiones complejas de las tensiones $U_{AB}$, $U_{AC}$ y
   $U_{CB}$.
 
-\item  \textbf Valores de $R_1$, $X_1$, $R_2$, $R_3$ y $X_3$.
+\item Valores de $R_1$, $X_1$, $R_2$, $R_3$ y $X_3$.
 
 \end{enumerate}
 
