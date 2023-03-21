@@ -325,7 +325,7 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
     \overline{I} = \overline{I}_1 + \overline{I}_2 = \qty[parse-numbers=false]{4.5+6j}{\ampere} = 7.5\phase{\ang{53.13}}\;\si{\ampere}
   \]
   
-  El vatímetro está midiendo $P_Z = U_Z \cdot I \cos \theta_Z$, y por tanto:
+  El vatímetro está midiendo $P_Z = U_Z \cdot I \cdot \cos \theta_Z$, y por tanto:
   \[
     U_Z = \frac{900}{7.5 \cdot 0.8} = \qty{150}{\volt}
   \]
@@ -396,8 +396,8 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
 \section{Enunciado}
 
 En el circuito de la figura, determinar las lecturas de los aparatos de medida y el balance de potencias activas y reactivas, así como el triángulo global de potencias.\\
-Datos: $e(t)=100\sqrt{2}\cos(\omega\,t)$; $R_1=2\Omega$;
-$R_2=4\Omega$; $\omega\,L_1=3\Omega$; $\omega L_2=4\Omega$.
+Datos: $\; e(t)=100\sqrt{2}\cos(\omega\,t)\,\si{\volt}$;\; $R_1=2\,\Omega$;\;
+$R_2=4\,\Omega$;\; $\omega L_1=3\,\Omega$;\; $\omega L_2=4\,\Omega$.
 
 \begin{center}
   \includegraphics{figuras/BT2_11.pdf}
@@ -411,17 +411,15 @@ El voltímetro $V$ mide la tensión eficaz de la fuente, por lo que:
 \end{equation*}
 
 Las impedancias de las dos ramas son:
-
 \begin{align*}
   \overline{Z}_1 &= R_1 + jX_1 = \qty[parse-numbers=false]{2 + j3}{\ohm}\\
   \overline{Z}_2 &= R_2 + jX_2 = \qty[parse-numbers=false]{4 + j4}{\ohm}
 \end{align*}
 
 Calculamos el valor eficaz de las corrientes de rama:
-
 \begin{align*}
-  I_1 &= E/Z_1 = \qty{27.74}{\ampere}\\
-  I_2 &= E/Z_2 = \qty{17.68}{\ampere}\\
+  I_1 &= \frac{E}{Z_1} = \qty{27.74}{\ampere}\\
+  I_2 &= \frac{E}{Z_2} = \qty{17.68}{\ampere}\\
 \end{align*}
 
 El vatímetro $W_2$ mide la potencia de $R_2$:
@@ -441,15 +439,13 @@ Por otra parte, las potencias reactivas de las bobinas son:
 \end{align*}
 
 Por tanto, la potencia reactiva total es $Q = \qty{3558.82}{\voltampere}_r$. Con el valor de la potencia activa podemos obtener la potencia aparente total:
-
 \begin{equation*}
   S = \sqrt{P^2 + Q^2} = \qty{4521.69}{\voltampere}
 \end{equation*}
 
 Y, finalmente, la corriente medida por el amperímetro:
-
 \begin{equation*}
-  I = S/V = \qty{45.2}{\ampere}
+  I = \frac{S}{V} = \qty{45.2}{\ampere}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -460,8 +456,8 @@ linea es $Z=\qty[parse-numbers=false]{10\sqrt{2}}{\ohm}$ con
 f.d.p. $\sqrt{2}/2$ en retraso. Tómese como referencia de fases la
 intensidad total, $I$
 
+\vspace{3mm}
 Se debe calcular:
-
 \begin{enumerate}
 
 \item Potencia activa y reactiva consumida por $Z$.
@@ -808,125 +804,111 @@ S'_g &= S' = \qty{8}{\kilo\voltampere}\\
 
 \section{Enunciado}
                                               
-Un generador de corriente alterna monofásica ($f=50$ Hz) alimenta a dos
-cargas a través de una línea de cobre. Esta línea, de resistividad
-$\rho=21$ m$\Omega$ mm$^2$/m, tiene una longitud de 100 m y una sección
-de 16 mm$^2$. Las dos cargas, cuya tensión de alimentación es de 230 V,
-son dos motores, uno con potencia de 7 kW y f.d.p. de $0.65$, y otro con
-una potencia de 5 kW y f.d.p. de $0.85$. Con esta información, se pide
-calcular:
+Un generador de corriente alterna monofásica ($f=\qty{50}{\hertz}$) alimenta a dos cargas a través de una línea de cobre. Esta línea, de resistividad $\rho=\qty{21}{\milli\ohm\milli\meter\squared\per\meter}$, tiene una longitud de $\qty{100}{\meter}$ y una sección de $\qty{16}{\milli\meter\squared}$. Las dos cargas, cuya tensión de alimentación es de $\qty{230}{\volt}$, son dos motores, uno con potencia de $\qty{7}{\kilo\watt}$ y f.d.p. de $0.65$, y otro con una potencia de $\qty{5}{\kilo\watt}$ y f.d.p. de $0.85$. Con esta información, se pide calcular:
 \begin{itemize}
-\item Triángulo de potencias de cada carga y del conjunto de ambas
-\item Valor eficaz de las corrientes en cada carga y de la corriente
-  total
-\item Triángulo de potencias del generador
-\item Valor eficaz de la tensión en bornes del generador
-\item Capacidad del condensador a instalar en bornes de las cargas para
-  mejorar el factor de potencia a $0.95$
-\item Valor eficaz de la corriente entregada por el generador una vez
-  instalado el condensador
-\item Triángulo de potencias del generador una vez instalado el
-  condensador
+    \item Triángulo de potencias de cada carga y del conjunto de ambas.
+    \item Valor eficaz de las corrientes en cada carga y de la corriente   total.
+    \item Triángulo de potencias del generador.
+    \item Valor eficaz de la tensión en bornes del generador.
+    \item Capacidad del condensador a instalar en bornes de las cargas para mejorar el factor de potencia a $0.95$.
+    \item Valor eficaz de la corriente entregada por el generador una vez instalado el condensador.
+    \item Triángulo de potencias del generador una vez instalado el condensador.
 \end{itemize}
 
 \subsection*{Solución}
 
 Las potencias del motor 1 son:
 \begin{align*}
-  P_1&=7000W\\ Q_1&=P_1\,\tan(\phi_1)=7000\cdot
-                    \tan(\arccos(0.65))=8183.91VAr\\
-  S_1&=\dfrac{P_1}{\cos(\phi_1)}=\dfrac{7000}{0.65}=10769.23VA
+  P_1&=\qty{7000}{\watt}\\ 
+  Q_1&=P_1\,\tan(\phi_1)=7000\cdot
+                    \tan(\arccos(0.65))=\qty{8183.91}{\voltampere_r}\\
+  S_1&=\dfrac{P_1}{\cos(\phi_1)}=\dfrac{7000}{0.65}=\qty{10769.23}{\voltampere}
 \end{align*}
 
 y las del motor 2:
 \begin{align*}
-  P_2&=5000W\\ Q_2&=P_5\,\tan(\phi_2)=5000\cdot
-                    \tan(\arccos(0.85))=3098.72VAr\\
-  S_2&=\dfrac{P_2}{\cos(\phi_2)}=\dfrac{5000}{0.85}=5882.53VA
+  P_2&=\qty{5000}{\watt}\\ 
+  Q_2&=P_5\,\tan(\phi_2)=5000\cdot
+                    \tan(\arccos(0.85))=\qty{3098.72}{\voltampere_r}\\
+  S_2&=\dfrac{P_2}{\cos(\phi_2)}=\dfrac{5000}{0.85}=\qty{5882.53}{\voltampere}
 \end{align*}
 
-Por el T. Boucherot, la potencia total de las cargas es:
-
+Por el teorema de Boucherot, la potencia total de las cargas es:
 \begin{align*}
-  P_T&=P_1+P_2 = 12000W\\
-  Q_T&=Q_1+Q_2 = 11282.63VAr\\
-  S_T&=\sqrt{P_T^2+Q_T^2}=16471.12VA
+  P_T&=P_1+P_2 = \qty{12000}{\watt}\\
+  Q_T&=Q_1+Q_2 = \qty{11282.63}{\voltampere_r}\\
+  S_T&=\sqrt{P_T^2+Q_T^2}=\qty{16471.12}{\voltampere}
 \end{align*}
 
 por lo que la instalación conjunta tiene un f.d.p. de:
 \begin{equation*}
-  f.d.p._T=\dfrac{P_T}{S_T}=\dfrac{12000}{16471.12}=0.7285
+  \mbox{f.d.p.}_{total}=\dfrac{P_T}{S_T}=\dfrac{12000}{16471.12}=0.7285
 \end{equation*}
 
-Por definición de potencia activa, se obtienen los valores eficaces de
-las corrientes:
+Usando la definición de potencia activa, se obtienen los valores eficaces de las corrientes:
 \begin{align*}
   I_1&=\dfrac{P_1}{U\,\cos(\phi_1)}=\dfrac{7000}{230\cdot
-       0.65}=46.82\,A\\
+       0.65}=\qty{46.82}{\ampere}\\
   I_2&=\dfrac{P_2}{U\,\cos(\phi_2)}=\dfrac{5000}{230\cdot
-       0.85}=25.58\,A\\
+       0.85}=\qty{25.58}{\ampere}\\
   I_T&=\dfrac{P_T}{U\,\cos(\phi_T)}=\dfrac{12000}{230\cdot
-       0.7285}=71.62\,A
+       0.7285}=\qty{71.62}{\ampere}
 \end{align*}
 
 La resistencia de cada conductor de la línea es:
 \begin{equation*}
-  R_l=\rho\,\dfrac{L}{S}=\dfrac{21}{1000}\cdot
-  \dfrac{100}{16}=0.13\Omega
+  R_l=\rho\,\dfrac{l}{S}=21\cdot 10^{-3}\cdot
+  \dfrac{100}{16}=\qty{0.13}{\ohm}
 \end{equation*}
 
-Así, la potencia perdida en la línea:
+Así, las pérdidas en la línea son:
 \begin{equation*}
-  P_L= 2 \cdot R_L \cdot I^2=1346.2W
+  P_l= 2 \cdot R_l \cdot I^2=\qty{1346.2}{\watt}
 \end{equation*}
 
-y el triángulo de potencias del generador, por el T. Boucherot:
+y el triángulo de potencias del generador, por el teorema de Boucherot:
 \begin{align*}
-  P_g&=P_L+P_T= 13346.23 W\\ Q_g&=Q_T=11282.63 VAr\\
-  S_g&=\sqrt{P_g^2+Q_g^2}=17476.26 VA
-\end{align*} por lo que
-la tensión a la salida del generador es:
+  P_g&=P_l+P_T= \qty{13346.23}{\watt}\\ Q_g&=Q_T=\qty{11282.63}{\voltampere_r}\\
+  S_g&=\sqrt{P_g^2+Q_g^2}=\qty{17476.26}{\voltampere}
+\end{align*} 
+por lo que la tensión a la salida del generador es:
 \begin{equation*}
-  U_g=\dfrac{S_g}{I}=244.4 V
+  U_g=\dfrac{S_g}{I}=\qty{244.4}{\volt}
 \end{equation*}
 
-Para mejorar el factor de potencia, se sabe que la potencia reactiva
-inicial es 11282.63 VAr. Puesto que se quiere un f.d.p.' de $0.95$, la
-potencia reactiva final:
+Para mejorar el factor de potencia, se sabe que la potencia reactiva inicial es $\qty{11282.63}{\voltampere_r}$. Puesto que se quiere un f.d.p.' de $0.95$, la potencia reactiva final será:
 \begin{equation*}
-  Q_T'=P_T\,\tan(\phi')=12000\cdot \tan(\arccos(0.95))=3944.21 VAr
-\end{equation*} siendo
-la potencia reactiva restante la generada por la batería de
-condensadores ($Q_C=Q_T'-Q_T=3944.21-11282.63=-7338.42$ VAr). Por
-tanto, la capacidad del condensador:
+  Q_T'=P_T\,\tan(\phi')=12000\cdot \tan(\arccos(0.95))=\qty{3944.21}{\voltampere_r}
+\end{equation*} 
+siendo la potencia reactiva restante la generada por la batería de condensadores ($Q_C=Q_T'-Q_T=3944.21-11282.63=\qty{-7338.42}{\voltampere_r}$). Por tanto, la capacidad del condensador equivalente a instalar es:
 \begin{equation*}
-  Q_c=X_c\,I^2=\dfrac{U^2}{X_c}\Rightarrow
+  Q_c=X_c\,I^2=\dfrac{U^2}{X_c} \quad \Rightarrow \quad
   C=\dfrac{Q}{\omega\,U^2}=\dfrac{7338.42}{2\cdot\pi\cdot 50\cdot
-    230^2}=441.57 \mu F
-\end{equation*} A este
-mismo resultado se llegaría a partir de la fórmula:
+    230^2}=\qty{441.57}{\micro\farad}
+\end{equation*} 
+A este mismo resultado se llegaría a partir de la expresión:
 \begin{equation*}
   C=\frac{P_T \left[\tan (\phi) - \tan (\phi')\right]}{\omega
     U^2}=\dfrac{12000\left[\tan (\arccos(0.7285)) - \tan
-      (\arccos(0.95))\right]}{2\cdot\pi\cdot 50\cdot 230^2}=441.66 \mu F
+      (\arccos(0.95))\right]}{2\cdot\pi\cdot 50\cdot 230^2}=\qty{441.66}{\micro\farad}
 \end{equation*}
 
 Una vez instalado el condensador, la potencia aparente es:
 \begin{equation*}
-  S_T'=\sqrt{P_T^2+Q_T'^2}=\sqrt{12000^2+3944.21^2}=12631.58\,VA
-\end{equation*} siendo
-la corriente total en las cargas (entregada por el generador):
+  S_T'=\sqrt{P_T^2+Q_T'^2}=\sqrt{12000^2+3944.21^2}=\qty{12631.58}{\voltampere}
+\end{equation*} 
+siendo la corriente total en las cargas (entregada por el generador):
 \begin{equation*}
-  I'=\dfrac{S'}{U}=\dfrac{12631.58}{230}=54.92 A
-\end{equation*} Con esta
-corriente, la potencia perdida en la línea:
+  I'=\dfrac{S'}{U}=\dfrac{12631.58}{230}=\qty{54.92}{\ampere}
+\end{equation*} 
+Con esta corriente, las pérdidas en la línea se reducen a:
 \begin{equation*}
-  P_L'=2 \cdot R_L \cdot I'^2= 791.76W
-\end{equation*} y el
-triángulo de potencias del generador, por el T. Boucherot:
+  P_l'=2 \cdot R_l \cdot I'^2= \qty{791.76}{\watt}
+\end{equation*} 
+y el triángulo de potencias del generador, por el teorema de Boucherot:
 \begin{align*}
-  P_g'&=P_L+P_T=12791.75 W\\ Q_g'&=Q_T'=3944.21 VAr\\
-  S_g'&=\sqrt{P_g'^2+Q_g'^2}=13386.02 VA
+  P_g'&=P_l'+P_T=\qty{12791.75}{\watt}\\ Q_g'&=Q_T'=\qty{3944.21}{\voltampere_r}\\
+  S_g'&=\sqrt{P_g'^2+Q_g'^2}=\qty{13386.02}{\voltampere}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
