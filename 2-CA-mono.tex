@@ -1244,8 +1244,8 @@ siendo su expresión temporal:
 \section{Enunciado}
 Del circuito de la figura, obtener:
 \begin{itemize}
-\item Expresiones analíticas de las intensidades $i_1(t)$ e $i_2(t)$
-\item Potencia disipada por todas las resistencias
+\item Expresiones analíticas de las intensidades $i_1(t)$ e $i_2(t)$.
+\item Potencia disipada por todas las resistencias.
 \end{itemize}
 Datos: $e_g(t)=50\sqrt{2} \cos(1000\,t)$ V; $i_g(t)=10$ A;
 $R_1=R_2=2\Omega$; $R_3=7\Omega$; $L_1=L_2=1$ mH; $L_3=2$ mH
@@ -1258,66 +1258,66 @@ $R_1=R_2=2\Omega$; $R_3=7\Omega$; $L_1=L_2=1$ mH; $L_3=2$ mH
 
 En el circuito hay dos fuentes funcionando a diferentes frecuencias. Por tanto, hay que resolver mediante el principio de superposición.
 
-\textbf{Circuito cuando solo actúa $i_g(t)$}
-    
+\vspace{2mm}
+\underline{Circuito cuando solo actúa $i_g(t)$}
+
+\vspace{2mm}
 La fuente $e_g(t)$ se cortocircuita y se deja únicamente la fuente
 $i_g(t)$. Al ser una fuente de continua, las bobinas se
 cortocircuitan. Queda un circuito de dos mallas, donde se sabe que
-$I_3'=10$ A. Resolviendo el circuito (por leyes básicas, mallas o
-nudos), se obtiene que:
+$I_3'=10$ A. Resolviendo el circuito (dos opciones: 1) por nudos; 2) aplicando directamente divisor de corriente), se obtiene que:
 \begin{align*}
-  I_1'&=-5\,A\\
-  I_2'&=5\,A
+  I_1'&= \qty{-5}{\ampere}\\
+  I_2'&= \qty{5}{\ampere}
 \end{align*}
     
 Las potencias en este caso:
 \begin{align*}
-  P_{R1}'&=R_1\,I_1'^2=2\cdot (-5)^2=50\,W\\
-  P_{R2}'&=R_2\,I_2'^2=2\cdot 5^2=50\,W\\
-  P_{R3}'&=R_3\,I_3'^2=7\cdot 10^2=700\,W\\
+  P_{R1}'&=R_1\cdot I_1'^2=2\cdot (-5)^2=\qty{50}{\watt}\\
+  P_{R2}'&=R_2\cdot I_2'^2=2\cdot 5^2=\qty{50}{\watt}\\
+  P_{R3}'&=R_3\cdot I_3'^2=7\cdot 10^2=\qty{700}{\watt}\\
 \end{align*}
-    
-\textbf{Circuito cuando solo actúa $e_g(t)$}
-    
+
+\vspace{-2mm}
+\underline{Circuito cuando solo actúa $e_g(t)$}
+
+\vspace{2mm}    
 La fuente $i_g(t)$ queda como un circuito abierto; por tanto, queda un
 circuito de una malla e $I_3''=0$ A. Se calculan las reactancias de
 las bobinas $L_1$ y $L_2$, sabiendo que $\omega=1000$ rad/s:
 \begin{equation*}
-  \overline{X_{L1}}=\overline{X_{L2}}=\mathrm{j}\omega L=\mathrm{j}\, 1000\cdot 0.001 = \mathrm{j}\Omega
+  \overline{X}_{L1}=\overline{X}_{L2}=\mathrm{j}\omega L=\mathrm{j}\, 1000\cdot 0.001 = \mathrm{j}\,\Omega
 \end{equation*}
 Por la ley de Ohm, tomando valores eficaces, se obtiene el valor de
-$\overline{I_1''}=\overline{I_2''}$:
+$\overline{I}_1''=\overline{I}_2''$:
 \begin{equation*}
-  \overline{I_1''}=\overline{I_2''}=\dfrac{\overline{U}}{\overline{Z_{eq}}}=\dfrac{50\phase{0^\circ}}{2+\mathrm{j}+2+\mathrm{j}}=\underbrace{5\sqrt{5}}_{11.18}\phase{-26.57^\circ} A
+  \overline{I}_1''=\overline{I}_2''=\dfrac{\overline{U}}{\overline{Z}_{eq}}=\dfrac{50\phase{0^\circ}}{2+\mathrm{j}+2+\mathrm{j}}=\underbrace{5\sqrt{5}}_{11.18}\phase{-26.57^\circ} \,\si{\ampere}
 \end{equation*}
     
 Las potencias en este caso:
 \begin{align*}
-  P_{R1}''&=R_1\,I_1''^2=2\cdot (5\sqrt{5})^2=250\,W\\
-  P_{R2}''&=R_2\,I_2''^2=2\cdot (5\sqrt{5})^2=250\,W\\
-  P_{R3}''&=R_3\,I_3''^2=7\cdot 0^2=0\,W\\
+  P_{R1}''&=R_1\cdot I_1''^2=2\cdot (5\sqrt{5})^2=\qty{250}{\watt}\\
+  P_{R2}''&=R_2\cdot I_2''^2=2\cdot (5\sqrt{5})^2=\qty{250}{\watt}\\
+  P_{R3}''&=R_3\cdot I_3''^2=7\cdot 0^2=\qty{0}{\watt}\\
 \end{align*}
     
-\textbf{Expresiones temporales}
-    
-Por tanto, las expresiones de $i_1(t)$, $i_2(t)$ e $i_3(t)$ son:
+\vspace{-2mm} 
+Por tanto, las expresiones de $i_1(t)$ e $i_2(t)$ son:
 \begin{align*}
-  i_1(t)&= -5+5\sqrt{10}\cos(1000t-0.46) A \\
-  i_2(t)&= 5+5\sqrt{10}\cos(1000t-0.46) A \\
-  i_3(t)&= 10 A 
+  i_1(t)&= -5+5\sqrt{10}\cos(1000t-0.46) \,\si{\ampere} \\
+  i_2(t)&= 5+5\sqrt{10}\cos(1000t-0.46) \,\si{\ampere}
 \end{align*}
-    
-\textbf{Cálculo de $P_T$}
-    
-La potencia activa total consumida por las resistencias es:
+
+Y la potencia activa total disipada por las resistencias, debido a la ortogonalidad de las señales implicadas (continua y alterna senoidal), es:
 \begin{align*}
   P_T&=R_1\,(I_1'^2+I_1''^2)+R_2\,(I_2'^2+I_2''^2)+R_3\,(I_3'^2+I_3''^2)=\\
-     &=2\cdot((-5)^2+(5\sqrt{5})^2)+2\cdot(5^2+(5\sqrt{5})^2)+7\cdot (10^2+0^2)={1300\,W}
+     &=2\cdot((-5)^2+(5\sqrt{5})^2)+2\cdot(5^2+(5\sqrt{5})^2)+7\cdot (10^2+0^2)= \qty{1300}{\watt}
 \end{align*}
-que coincide con el valor obtenido al sumar las potencias de cada
-circuito (debido a la ortogonalidad de las señales implicadas):
+
+\vspace{2mm} 
+Dado que ya habíamos calculado las potencias disipadas por cada componente de la corriente, y dada la ortogonalidad de estas señales, podemos obtener el mismo valor como: 
 \begin{equation*}
-  P_T=P_{R1}'+P_{R2}'+P_{R3}'+P_{R1}''+P_{R2}''+P_{R3}''=50+50+700+250+250+0=1300\,W
+  P_T=P_{R1}'+P_{R2}'+P_{R3}'+P_{R1}''+P_{R2}''+P_{R3}''=50+50+700+250+250+0= \qty{1300}{\watt}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
