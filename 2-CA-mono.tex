@@ -1470,7 +1470,7 @@ Además, como las señales son ortogonales, podemos hacer el balance de potencia
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Enunciado}
 Obtén el equivalente de Thévenin del circuito de la figura
-  respecto de A y B.
+  respecto de A y B, así como la impedancia a conectar en estos terminales para obtener la máxima potencia posible.
 
 \vspace{3mm}
 Datos: $\; \overline{\epsilon}_g = \qty[parse-numbers=false]{12 - 16j}{\volt};\;
@@ -1532,7 +1532,7 @@ P_L = \frac{\epsilon_{th}^2}{4 \cdot R_{th}} = \qty{53.11}{\watt}
 
 \section{Enunciado}
 
-Obtén el generador equivalente de Thévenin del circuito de la figura respecto de A y B. A partir de este generador, calcula la impedancia a colocar en AB para obtener la máxima potencia, calculando esta potencia.
+Obtén el generador equivalente de Thévenin del circuito de la figura respecto de A y B. A partir de este equivalente, calcula la impedancia a colocar en AB para obtener la máxima potencia, calculando también dicha potencia.
 
 \begin{minipage}{0.5\textwidth}
 \begin{center}
@@ -1540,9 +1540,11 @@ Obtén el generador equivalente de Thévenin del circuito de la figura respecto 
 \end{center}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
+
+\hspace{20mm}Datos:
   \begin{align*}
-    \overline{\epsilon_1} &= \SI[parse-numbers=false]{10\phase{0}}{\volt}\\
-    \overline{\epsilon_2} &= \SI[parse-numbers=false]{10j}{\volt}\\
+    \overline{\epsilon}_1 &= \SI[parse-numbers=false]{10\phase{0}}{\volt}\\
+    \overline{\epsilon}_2 &= \SI[parse-numbers=false]{10j}{\volt}\\
     \overline{Z}_1 &= \SI[parse-numbers=false]{4 - 3j}{\ohm}\\
     \overline{Z}_2 &= \SI[parse-numbers=false]{3 + 4j}{\ohm}\\
     \alpha &= 2
@@ -1555,26 +1557,25 @@ La tensión en circuito abierto es:
 \begin{equation*}
   \overline{U}_{AB} = \alpha \overline{I} \cdot \overline{Z}_1 + \overline{\epsilon}_1 + \overline{\epsilon}_2
 \end{equation*}
-siendo $\epsilon_1 = \overline{Z}_2 \cdot \overline{I}$. Por tanto,
+siendo $\overline{\epsilon}_1 = \overline{Z}_2 \cdot \overline{I}$. Por tanto:
 
 \begin{equation*}
-  \epsilon_{th}  = \alpha \cdot \overline{\epsilon}_1 \cdot \frac{\overline{Z}_1}{\overline{Z}_2} + \overline{\epsilon}_1 + \overline{\epsilon}_2 = 10 - 10j \si{\volt}
+  \overline{\epsilon}_{th}  = \alpha \cdot \overline{\epsilon}_1 \cdot \frac{\overline{Z}_1}{\overline{Z}_2} + \overline{\epsilon}_1 + \overline{\epsilon}_2 = 10 - 10j \,\si{\volt}
 \end{equation*}
 
-Para obtener la impedancia apagamos las fuentes independientes. Al apagar la fuente $\epsilon_1$, la impedancia $Z_2$ queda cortocircuitada y, por tanto, $I = 0$. En consecuencia, la fuente dependiente también queda apagada y obtenemos:
+Para obtener la impedancia equivalente, apagamos las fuentes independientes. Al apagar la fuente $\epsilon_1$, la impedancia $Z_2$ queda cortocircuitada y, por tanto, $I = 0$. En consecuencia, la fuente dependiente también queda apagada y obtenemos:
 
 \begin{equation*}
-  \overline{Z}_{th} = \overline{Z}_1 = 4 - 3j \si{\ohm}
+  \overline{Z}_{th} = \overline{Z}_1 = 4 - 3j \,\si{\ohm}
 \end{equation*}
 
 Para obtener la máxima potencia debemos conectar la impedancia:
 
 \begin{equation*}
-  \overline{Z}_{L} = \overline{Z}^*_{th} = 4 + 3j \si{\ohm}
+  \overline{Z}_{L} = \overline{Z}^*_{th} = 4 + 3j \,\si{\ohm}
 \end{equation*}
 
 El balance de potencias es:
-
 \begin{align*}
   P_L &= \frac{\epsilon_{th}^2}{4 \cdot R_{th}} = \SI{12.5}{\watt}\\
   P_{\epsilon} &= 2 \cdot P_L = \SI{25}{\watt} 
