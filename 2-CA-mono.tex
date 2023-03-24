@@ -1387,17 +1387,17 @@ Además, dado que las dos señales de los generadores son ortogonales, podemos s
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Enunciado}
-El circuito de la figura se encuentra en régimen permanente. Determinar analíticamente la expresión de $i(t)$, así como las potencias entregadas por los generadores y disipadas por las resistencias $R_1$ y $R_2$.
+El circuito de la figura se encuentra en régimen permanente. Determinar analíticamente la expresión de $i(t)$, así como las potencias activas entregadas por los generadores y disipadas por las resistencias $R_1$ y $R_2$.
 
+\vspace{2mm}
 Datos:
-\begin{align*}
-  e_1(t) = \qty[parse-numbers=false]{50 \sin(1000 t)}{\volt};
-  e_2(t) = \qty{30}{\volt};
-  R_1 = \qty{6}{\ohm};
-  R_2 = \qty{6}{\ohm};
-  L = \qty{8}{\milli\henry};
+  $\; e_1(t) = \qty[parse-numbers=false]{50 \sin(1000 t)}{\volt};\;
+  e_2(t) = \qty{30}{\volt};\;
+  R_1 = \qty{6}{\ohm};\;
+  R_2 = \qty{6}{\ohm};\;
+  L = \qty{8}{\milli\henry};\;
   C = \qty{10}{\micro\farad}
-\end{align*}
+  $
 
 \begin{center}
   \includegraphics{figuras/superposicion1_ej.pdf}
@@ -1469,38 +1469,36 @@ Además, como las señales son ortogonales, podemos hacer el balance de potencia
 \end{align*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Enunciado}
-Obtén el generador equivalente de Thévenin del circuito de la figura respecto de A y B.
+Obtén el equivalente de Thévenin del circuito de la figura
+  respecto de A y B.
+
+\vspace{3mm}
+Datos: $\; \overline{\epsilon}_g = \qty[parse-numbers=false]{12 - 16j}{\volt};\;
+  \overline{Z}_1 = \qty[parse-numbers=false]{1 - j}{\ohm};\;
+  \overline{Z}_2 = \qty[parse-numbers=false]{1 + j}{\ohm};\;
+  \overline{Z}_3 = \qty[parse-numbers=false]{5 + 3j}{\ohm};\;
+  \alpha = 2 $
 
 \begin{center}
 \includegraphics{figuras/Thevenin4}
 \end{center}
 
-Datos:
-\begin{equation*}
-  \overline{\epsilon_g} = \qty[parse-numbers=false]{12 - 16j}{\volt};
-  \overline{Z}_1 = \qty[parse-numbers=false]{1 - j}{\ohm};
-  \overline{Z}_2 = \qty[parse-numbers=false]{1 + j}{\ohm};
-  \overline{Z}_3 = \qty[parse-numbers=false]{5 + 3j}{\ohm}
-  \alpha = 2
-\end{equation*}
-
 
 \subsection*{Solución}
 
 Dejamos el circuito en abierto y calculamos la tensión en AB:
-
 \begin{align*}
-  \overline{U}_{AB} &= \overline{\epsilon}_g + (1 + \alpha) \overline{I} \cdot \overline{Z}_2\\
+  \overline{U}_{AB} &= \overline{\epsilon}_g + (1 + \alpha) \overline{I} \cdot \overline{Z}_2\\[3pt]
   \overline{U}_{AB} &= - \overline{I} \cdot \overline{Z}_3
 \end{align*}
 
 Combinando estas ecuaciones obtenemos la tensión:
 
 \begin{equation*}
-  \overline{\epsilon}_{th} = \overline{U}_{AB} = \frac{\overline{\epsilon}_g}{1 + (1 + \alpha) \frac{\overline{Z}_2}{\overline{Z}_3}} = 6 - 10j = 11.66\phase{\ang{-59.04}}\si{\volt}
+  \overline{\epsilon}_{th} = \overline{U}_{AB} = \frac{\overline{\epsilon}_g}{1 + (1 + \alpha) \dfrac{\overline{Z}_2}{\overline{Z}_3}} = 6 - 10j = 11.66\phase{\ang{-59.04}}\,\si{\volt}
 \end{equation*}
 
-Para obtener la impedancia apagamos las fuentes independientes. Como hay fuentes dependientes debemos aplicar una fuente de prueba a la salida del circuito, con fuerza electromotriz $\overline{\epsilon}_0$ y corriente inyectada $\overline{I}_0$.
+Para obtener la impedancia equivalente, apagamos las fuentes independientes. Como hay fuentes dependientes, debemos aplicar una fuente de prueba a la salida del circuito, con fuerza electromotriz $\overline{\epsilon}_0$ y corriente inyectada $\overline{I}_0$:
 
 \begin{minipage}{0.5\linewidth}
   \begin{center}
@@ -1509,7 +1507,7 @@ Para obtener la impedancia apagamos las fuentes independientes. Como hay fuentes
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
   \begin{align*}
-    \overline{\epsilon}_0 &= [(1 + \alpha) \overline{I} + \overline{I}_0] \cdot \overline{Z}_2\\
+    \overline{\epsilon}_0 &= [(1 + \alpha) \overline{I} + \overline{I}_0] \cdot \overline{Z}_2\\[3pt]
     \overline{\epsilon}_0 &= - \overline{I}\cdot \overline{Z}_3
   \end{align*}
 \end{minipage}
@@ -1517,12 +1515,12 @@ Para obtener la impedancia apagamos las fuentes independientes. Como hay fuentes
 Combinando ambas expresiones obtenemos:
 
 \begin{equation*}
-  \overline{Z}_{th} = \frac{\overline{\epsilon}_0}{\overline{I}_0} = \frac{\overline{Z}_2 \cdot \overline{Z}_3}{(1 + \alpha) \overline{Z}_2 + \overline{Z}_3} = 0.64 + 0.52j\si{\ohm}
+  \overline{Z}_{th} = \frac{\overline{\epsilon}_0}{\overline{I}_0} = \frac{\overline{Z}_2 \cdot \overline{Z}_3}{(1 + \alpha) \overline{Z}_2 + \overline{Z}_3} = 0.64 + 0.52j\,\si{\ohm}
 \end{equation*}
 
-Para obtener la máxima potencia disponible hay que conectar una impedancia:
+Para obtener la máxima potencia disponible hay que conectar una impedancia igual a:
 \begin{equation*}
-\overline{Z}_L = \overline{Z}^*_{th} = 0.64-0.52j\si{\ohm}
+\overline{Z}_L = \overline{Z}^*_{th} = 0.64-0.52j\,\si{\ohm}
 \end{equation*}
 
 Esta impedancia disipará una potencia:
