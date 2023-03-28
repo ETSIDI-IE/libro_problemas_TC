@@ -452,9 +452,9 @@ Y, finalmente, la corriente medida por el amperímetro:
 
 \section{Enunciado}
 El circuito de la figura tiene carácter inductivo.  La impedancia de
-linea es $Z=\qty[parse-numbers=false]{10\sqrt{2}}{\ohm}$ con
+línea es $Z=\qty[parse-numbers=false]{10\sqrt{2}}{\ohm}$ con
 f.d.p. $\sqrt{2}/2$ en retraso. Tómese como referencia de fases la
-intensidad total, $I$
+intensidad total, $I$.
 
 \vspace{3mm}
 Se debe calcular:
@@ -472,8 +472,8 @@ Se debe calcular:
 
 \end{enumerate}
 
-Datos: $A = \qty[parse-numbers = false]{5\sqrt{5}}{\ampere}$; $A_1 = \qty[parse-numbers = false]{5\sqrt{2}}{\ampere}$; $A_2 = \qty{5}{\ampere}$;  $A_3 = \qty[parse-numbers = false]{\sqrt{10}}{\ampere}$;  $U_{AB} = \qty{247}{\volt}$;  $W_1 = \qty{2350}{\watt}$;
-$R_1 = R_3$.
+Datos: $\;A = \qty[parse-numbers = false]{5\sqrt{5}}{\ampere}$;\; $A_1 = \qty[parse-numbers = false]{5\sqrt{2}}{\ampere}$;\; $A_2 = \qty{5}{\ampere}$;\;  $A_3 = \qty[parse-numbers = false]{\sqrt{10}}{\ampere}$;\;  $U_{AB} = \qty{247}{\volt}$;\;  $W_1 = \qty{2350}{\watt}$;\;
+$R_1 = R_3$
 
 \begin{center}
   \includegraphics[width=0.8\linewidth]{figuras/BT2_17.pdf}
@@ -484,37 +484,33 @@ $R_1 = R_3$.
 
 Dado que disponemos de la potencia y corriente total y la tensión a
 la entrada, podemos calcular el factor de potencia del circuito:
-
 \[
-\cos \phi = \frac{P_1}{U_{AB} I} = 0,851
+\cos \phi = \frac{P_1}{U_{AB} \cdot I} = 0.851
 \]
 
 Teniendo en cuenta que la corriente total es la referencia de fases, 
-
 \[
-\overline{U}_{AB} = \qty[parse-numbers=false]{247 \phase{\ang{31.68}}}{\V}
+\overline{U}_{AB} = {247 \phase{\ang{31.68}}}\,\si{\volt}
 \]
 
 También podemos calcular la potencia reactiva del circuito
 (positiva dado que el circuito es inductivo):
 \[
-Q = P \tan \phi = \qty{1450.4}{VA}r
+Q = P_1 \tan \phi = \qty{1450.2}{\voltampere_r}
 \]
 
 
 En cuanto a la impedancia $Z$, sabemos que la tensión en sus bornes
 es:
-
 \[
 \overline{U}_{AC} = \overline{I} \cdot \overline{Z} =
-5\sqrt{5}\phase{\ang{0}} \cdot 10\sqrt{2}\phase{\ang{45}} = \qty[parse-numbers=false]{50\sqrt{10}\phase{\ang{45}}}{\V}
+5\sqrt{5}\phase{\ang{0}} \cdot 10\sqrt{2}\phase{\ang{45}} = {50\sqrt{10}\phase{\ang{45}}}\,\si{\volt}
 \]
 
 Se cumple que $\overline{U}_{AB} = \overline{U}_{AC} +
 \overline{U}_{CB}$, y por tanto:
-
 \[
-\overline{U}_{CB} = \qty[parse-numbers=false]{100\phase{\ang{10.3}}}{\V}
+\overline{U}_{CB} = {100\phase{\ang{10.32}}}\,\si{\volt}
 \]
 
 Por otra parte, podemos descomponer esta impedancia en:
@@ -524,91 +520,77 @@ Por otra parte, podemos descomponer esta impedancia en:
 \end{align*}
 
 y por tanto,
-
 \begin{align*}
 P_z &= I^2 \cdot R_z = \qty{1250}{\watt}\\
-Q_z &= I^2 \cdot X_z = \qty{1250}{VA}r
+Q_z &= I^2 \cdot X_z = \qty{1250}{\voltampere_r}
 \end{align*}
 
-Aplicando el teorema de Boucherot podemos calcular la potencia activa
+Aplicando el teorema de Boucherot, podemos calcular la potencia activa
 y la potencia reactiva del circuito paralelo:
-
 \begin{align*}
 P_{CB} &= P - P_z = \qty{1100}{\watt}\\
-Q_{CB} &= Q - Q_z = \qty{200}{VA}r\\
-\overline{S}_{CB} &= P_{CB} + i Q_{CB} = \qty[parse-numbers=false]{1118.03\phase{\ang{10.3}}}{VA}
+Q_{CB} &= Q - Q_z = \qty{200.2}{\voltampere_r}\\
+\overline{S}_{CB} &= P_{CB} + \mathrm{j}\, Q_{CB} = {1118.07\phase{\ang{10.32}}}\,\si{\voltampere}
 \end{align*}
 
 Podemos comprobar que estos resultados son coherentes con los
-resultados anteriores usando $\overline{S}_{CB} = \overline{U}_{CB}
+resultados anteriores, usando $\overline{S}_{CB} = \overline{U}_{CB}
 \cdot \overline{I}^*$.
 
-
-Ahora podemos obtener $R_2$, $Z_1$ y $Z_3$:
-
+\vspace{2mm}
+Ahora podemos obtener los módulos de $R_2$, $Z_1$ y $Z_3$:
 \begin{align*}
   R_2 &= \frac{U_{CB}}{I_2} = \qty{20}{\ohm}\\
   Z_1 &= \frac{U_{CB}}{I_1} = \qty[parse-numbers=false]{10\sqrt{2}}{\ohm}\\
   Z_3 &= \frac{U_{CB}}{I_3} = \qty[parse-numbers=false]{10\sqrt{10}}{\ohm}
 \end{align*}
 
-Con los valores de $Z_1$ y $Z_3$ podemos escribir:
-
-\begin{align*}
-  Z_1^2 &= R_1^2 + X_1^2 = 200\\
-  Z_3^2 &= R_3^2 + X_3^2 = 1000\\
-\end{align*}
-
 Por otra parte, la potencia activa del circuito paralelo es:
 \begin{align*}
-  P_{CB} &= P_1 + P_2 + P_2 =\qty{1100}{\watt}\\
+  P_{CB} &= P_1 + P_2 + P_3 =\qty{1100}{\watt}\\
   P_1 &= I_1^2 \cdot R_1 = 50 \cdot R_1\\
   P_2 &= I_2^2 \cdot R_2 = \qty{500}{\watt}\\
   P_3 &= I_3^2 \cdot R_3 = 10 \cdot R_3
 \end{align*}
 
-Por tanto, 
+Dado que sabemos que $R_1 = R_3$: 
 \[
-   R_1 = R_3 = \qty{10}{\ohm}              
+   P_1 + P_3 = (50+10) \cdot R_1 = \qty{600}{\watt} \quad \rightarrow \quad R_1 = R_3 = \qty{10}{\ohm}              
 \]
 
-Con este resultado, teniendo en cuenta el módulo de $Z_1$ y $Z_3$,
-podemos calcular las reactancias respectivas.
-
+Con este resultado, y teniendo en cuenta el módulo de $Z_1$ y $Z_3$,
+podemos calcular las respectivas reactancias:
 \begin{align*}
   R_1 &= \qty{10}{\ohm}\\
-  X_1 &= \qty{10}{\ohm}\\
-  \overline{Z}_1 &= 10 + 10i = \qty[parse-numbers=false]{10\sqrt{2}\phase{\ang{45}}}{\ohm}
+  X_1 &= \sqrt{(10\sqrt2)^2 - 10^2} = \qty{10}{\ohm}\\
+  \overline{Z}_1 &= 10 + 10j = {10\sqrt{2}\phase{\ang{45}}}\,\si{\ohm}
 \end{align*}
-
 \begin{align*}
   R_3 &= \qty{10}{\ohm}\\
-  X_3 &= \qty{30}{\ohm}\\
-  \overline{Z}_3 &= 10 - 30i = \qty[parse-numbers=false]{10\sqrt{10}\phase{\ang{-71.56}}}{\ohm}
+  X_3 &= \sqrt{(10\sqrt{10})^2 - 10^2} = \qty{30}{\ohm}\\
+  \overline{Z}_3 &= 10 - 30j = {10\sqrt{10}\phase{\ang{-71.56}}}\,\si{\ohm}
 \end{align*}
 
 Podemos comprobar que estas soluciones concuerdan con la potencia
-reactiva de cada impedancia y con la total.
-
+reactiva de cada impedancia y con la total del circuito paralelo:
 \begin{align*}
-  Q_1 &= I_1^2 \cdot X_1 = \qty{500}{VA}r\\
-  Q_3 &= - I_3^2 \cdot X_3 = \qty{-300}{VA}r\\
-  Q_{CB} &= Q_1 + Q_3 =\qty{200}{VA}r
+  Q_1 &= I_1^2 \cdot X_1 = \qty{500}{\voltampere_r}\\
+  Q_3 &= - I_3^2 \cdot X_3 = \qty{-300}{\voltampere_r}\\
+  Q_{CB} &= Q_1 + Q_3 =\qty{200}{\voltampere_r}
 \end{align*}
 
 Con estos resultados, recordando que  $\overline{U}_{CB} =
-100\phase{\ang{10.3}}$ podemos calcular las corrientes en forma
+100\phase{\ang{10.32}}$ podemos calcular las corrientes de rama en forma
 compleja:
-
 \begin{align*}
-  \overline{I}_1 &=  \qty[parse-numbers=false]{5\sqrt{2}\phase{\ang{-34.7}}}{\ampere}\\
-  \overline{I}_2 &=  \qty[parse-numbers=false]{5\phase{\ang{10.3}}}{\ampere}\\
+  \overline{I}_1 &=  {5\sqrt{2}\phase{\ang{-34.68}}}\,\si{\ampere}\\
+  \overline{I}_2 &=  {5\phase{\ang{10.32}}}\,\si{\ampere}\\
   \overline{I}_3 &=
-  \qty[parse-numbers=false]{\sqrt{10}\phase{\ang{81.9}}}{\ampere}
+  {\sqrt{10}\phase{\ang{81.89}}}\,\si{\ampere}
 \end{align*}
 
-Para terminar, podemos comprobar que $\overline{I} = \overline{I_1}
-+ \overline{I_2} + \overline{I_3}$.
+Para terminar, podemos comprobar que $\overline{I} = \overline{I}_1
++ \overline{I}_2 + \overline{I}_3$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -770,7 +752,7 @@ Calcula:
 \end{align*}
 
 \item La potencia aparente del generador.
-Suponemos línea ideal (sin perdidas):
+Suponemos línea ideal (sin pérdidas):
 \[
   S_g = S_m = \qty{10}{\kilo\voltampere} 
 \]
