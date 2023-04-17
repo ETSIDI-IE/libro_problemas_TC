@@ -328,9 +328,9 @@ $W_3=1119/\sqrt{3}=646.05$ W.
  goteo. Estas dos bombas están alimentadas a \SI{400}{\volt} por una
  línea trifásica en secuencia de fases directa y frecuencia
  $\SI{50}{\hertz}$. Una de las bombas funciona con un motor trifásico
- de $\SI{30}{\kilo\watt}$ y factor de potencia de 0.78. La otra bomba
+ de $\SI{30}{\kilo\watt}$ y factor de potencia de $0.78$. La otra bomba
  trabaja con un motor de $\SI{7.5}{\kilo\watt}$ y factor de potencia
- de 0.67.  La línea que alimenta estas dos bombas es resistiva, con
+ de $0.67$.  La línea que alimenta estas dos bombas es resistiva, con
  resistividad $\rho = \SI{0.017}{\ohm\milli\meter\squared\per\meter}$,
  longitud de \SI{300}{m} y una sección de
  \SI{35}{\milli\meter\squared}.
@@ -339,9 +339,9 @@ $W_3=1119/\sqrt{3}=646.05$ W.
  \item Calcula el triángulo de potencias (potencia activa, reactiva, y
    aparente) de cada carga, y total de las cargas (a la salida de la
    línea).
- \item Calcula el \textbf{valor eficaz} de la corriente de línea de
-   cada carga, y total.
- \item Determine la lectura de los siguientes aparatos de medida
+ \item Calcula el valor eficaz de la corriente de línea de
+   cada carga y de la corriente total.
+ \item Determina la lectura de los siguientes aparatos de medida
    conectados a la entrada de las cargas:
    \begin{itemize}
    \item Un vatímetro en la fase A, midiendo tensión entre las fases A
@@ -351,153 +351,184 @@ $W_3=1119/\sqrt{3}=646.05$ W.
    \item Un vatímetro en la fase C, midiendo tensión entre las fases B
      y A.
    \end{itemize}
- \item Calcule el triángulo de potencias a la entrada de la línea.
- \item Calcule el \textbf{valor eficaz} de la tensión a la entrada de la línea.
- \item Calcule los condensadores que se deben conectar a la salida de
+ \item Calcula el triángulo de potencias a la entrada de la línea.
+ \item Calcula el valor eficaz de la tensión a la entrada de la línea.
+ \item Calcula los condensadores que se deben conectar a la salida de
    la línea para mejorar el factor de potencia del sistema hasta la
-   unidad. Indique el modo de conexión.
+   unidad. Indica modo de conexión más eficiente.
  \end{enumerate}
 
 Una vez conectados los condensadores del último apartado:
 \begin{enumerate}[resume]
-\item Calcule el \textbf{valor eficaz} de la corriente de línea total.
-\item Calcule el triángulo de potencias a la entrada de la línea.
-\item Calcule el \textbf{valor eficaz} de la tensión a la entrada de la línea.
-\item Determine la lectura de los vatímetros descritos anteriormente.
+\item Calcula el valor eficaz de la corriente de línea total.
+\item Calcula el triángulo de potencias a la entrada de la línea.
+\item Calcule el valor eficaz de la tensión a la entrada de la línea.
+\item Determina la lectura de los vatímetros descritos anteriormente.
 \end{enumerate}
 
 \subsection*{Solución}
 
- Las potencias de cada carga son:
- \begin{align*}
-   P_1 &= \SI{30}{\kilo\watt}\\
-   Q_1 &= P_1\tan \theta_1 = \SI{24.06}{\kilo\voltampere}_r\\
-   S_1 &= \SI{38.46}{\kilo\voltampere}\\
-   P_2 &= \SI{7.5}{\kilo\watt}\\
-   Q_2 &= P_2 \tan \theta_2 = \SI{8.31}{\kilo\voltampere}_r\\
-   S_2 &= \SI{11.19}{\kilo\voltampere}
- \end{align*}
+\begin{minipage}{0.32\linewidth}         
+    
+    \vspace{-5mm}
 
+    El esquema del circuito que nos plantean es:
+
+    \vspace{8mm}
+    (donde desconocemos si los motores de las bombas están conectados en $\wye$ o $\triangle$)    
+\end{minipage}
+\hfill%
+\begin{minipage}{0.6\linewidth}  
+
+    \vspace{-3mm}
+    \begin{center}
+        \includegraphics[width=1\textwidth]{figuras/BT3_ej5_bombas.pdf}
+    \end{center}   
+\end{minipage}
+
+\vspace{4mm}
+ Las potencias de cada carga son:
+
+\vspace{-2mm}
+\begin{minipage}{0.5\linewidth}         
+    \begin{align*}
+        P_1 &= \SI{30}{\kilo\watt}\\[4pt]
+        Q_1 &= P_1\tan \theta_1 = \SI{24.06}{\kilo\voltampere}_r\\[4pt]
+        S_1 &= \sqrt{P_1^2 + Q_1^2} = \SI{38.46}{\kilo\voltampere}
+    \end{align*}   
+\end{minipage}
+\hfill%
+\begin{minipage}{0.5\linewidth}  
+    \begin{align*}
+        P_2 &= \SI{7.5}{\kilo\watt}\\[4pt]
+        Q_2 &= P_2 \tan \theta_2 = \SI{8.31}{\kilo\voltampere}_r\\[4pt]
+        S_2 &= \sqrt{P_2^2 + Q_2^2} = \SI{11.19}{\kilo\voltampere}
+    \end{align*} 
+\end{minipage}
+
+\vspace{5mm}
  Aplicando Boucherot, el triángulo de potencias total es:
  \begin{align*}
-   P_T &= \SI{37.5}{\kilo\watt}\\
-   Q_T &= \SI{32.37}{\kilo\voltampere}_r\\
+   P_T &= P_1 + P_2 = \SI{37.5}{\kilo\watt}\\[4pt]
+   Q_T &= Q_1 + Q_2 = \SI{32.37}{\kilo\voltampere}_r\\[4pt]
    S_T &= \sqrt{P_T^2 + Q_T^2} = \SI{49.54}{\kilo\voltampere}
  \end{align*}
 
+\vspace{2mm}
  Por tanto, el ángulo de la impedancia global es:
 
 \[
-  \tan(\theta) = \frac{Q_T}{P_T} = 0.8632 \rightarrow \theta =
+  \tan(\theta) = \frac{Q_T}{P_T} = 0.8632 \quad \rightarrow \quad \theta =
   \ang{40.8}
 \]
 
+\vspace{2mm}
 Las corrientes en cada carga son:
-
 \begin{align*}
-  I_1 &= \frac{S_1}{\sqrt{3} U} = \SI{55.51}{\ampere}\\
-  I_2 &= \frac{S_2}{\sqrt{3} U} = \SI{16.15}{\ampere}
+  I_1 &= \frac{S_1}{\sqrt{3} \,U} = \SI{55.51}{\ampere}\\
+  I_2 &= \frac{S_2}{\sqrt{3} \,U} = \SI{16.15}{\ampere}
 \end{align*}
 
 La corriente total es:
 \[
-  I = S_T /{\sqrt{3} U} = \SI{71.5}{\ampere}
+  I = \frac{S_T}{{\sqrt{3} \,U}} = \SI{71.5}{\ampere}
 \]
 
-Denominaremos con $W_1$ al vatímetro conectado en la fase A midiendo
-tensión entre las fases A y C, y con $W_2$ al vatímetro conectado en
-la fase B midiendo tensión entre las fases B y C. Teniendo en cuenta
-que se trata de una SFD:
- 
+\vspace{4mm}
+Denominaremos $W_1$ al vatímetro conectado en la fase A midiendo
+tensión entre las fases A y C, y $W_2$ al vatímetro conectado en
+la fase B midiendo tensión entre las fases B y C. 
+
+\vspace{2mm}
+Teniendo en cuenta
+que se trata de una SFD: 
 \begin{align*}
-  W_1 + W_2 &= P_T\\
-  W_1 - W_2 &= Q_T/\sqrt{3}
+  W_1 + W_2 &= P_T\\[3pt]
+  W_1 - W_2 &= \frac{Q_T}{\sqrt{3}}
 \end{align*}
 
 Por tanto:
-
 \begin{align*}
-  W_1 &= 1/2 (P_T + Q_T/\sqrt{3}) = \SI{28.09}{\kilo\watt}\\
-  W_2 &= 1/2 (P_T - Q_T/\sqrt{3}) = \SI{9.41}{\kilo\watt}
+  W_1 &= \frac{1}{2} \, \left(P_T + \frac{Q_T}{\sqrt{3}} \right) = \SI{28.09}{\kilo\watt}\\[3pt]
+  W_2 &= \frac{1}{2} \, \left(P_T - \frac{Q_T}{\sqrt{3}} \right) = \SI{9.41}{\kilo\watt}
 \end{align*}
 
-También podemos obtener estos resultados con las siguientes
-ecuaciones:
-
+También podemos obtener estos resultados con las siguientes ecuaciones:
 \begin{align*}
-  W_1 &= U I \cos(\theta - \ang{30}) = \SI{28.09}{\kilo\watt}\\
-  W_2 &= U I \cos(\theta + \ang{30}) = \SI{9.41}{\kilo\watt}
+  W_1 &= U I \cos(\ang{30} - \theta) = \SI{28.09}{\kilo\watt}\\[3pt]
+  W_2 &= U I \cos(\ang{30} + \theta) = \SI{9.41}{\kilo\watt}
 \end{align*}
 
 Por otra parte, el vatímetro de la fase C mide:
-
 \[
   W_{C, BA} = - \frac{Q_T}{\sqrt{3}} = - \SI{18.66}{\kilo\watt}
 \]
 
 La resistencia de la línea (una resistencia por cada conductor) es:
-
 \[
-R_L = \rho L/S = \SI{0.146}{\ohm}
+R_L = \rho \, \frac{l}{S} = \SI{0.146}{\ohm}
 \]
 
 La potencia activa disipada en la línea es:
-
 \[
-P_L = 3 \cdot I^2 R_L = \SI{2234.8}{\watt}
+P_L = 3 \cdot I^2 \, R_L = \SI{2234.8}{\watt}
 \]
 
 Por tanto, la potencia a la entrada de la línea es:
-
 \begin{align*}
-P_g &= P_L + P_T = \SI{39.73}{\kilo\watt}\\
-Q_g &= Q_T = \SI{32.33}{\kilo\voltampere}_r\\
-S_g &= \SI{51.22}{\kilo\voltampere}
+    P_g &= P_L + P_T = \SI{39.73}{\kilo\watt}\\[3pt]
+    Q_g &= Q_T = \SI{32.33}{\kilo\voltampere}_r\\[3pt]
+    S_g &= \sqrt{P_g^2 + Q_g^2} = \SI{51.22}{\kilo\voltampere}
 \end{align*}
 
+\vspace{2mm}
 Y la tensión a la salida del generador (entrada de la línea) es:
-
 \[
-U_g = \frac{S_g}{\sqrt{3} I} = \SI{413.64}{\volt}
+U_g = \frac{S_g}{\sqrt{3} \, I} = \SI{413.64}{\volt}
 \]
 
 Para mejorar el factor de potencia a la unidad en las cargas, se necesita una batería de condensadores conectados en triángulo en las cargas (a la salida de la línea). Cada uno de los tres condensadores debe tener una capacidad de:
-
 \[
-C = \frac{Q_T}{3 \omega U^2} = \SI{214.4}{\micro\farad}
+C_{\triangle} = \frac{Q_T}{3 \, \omega \, U^2} = \SI{214.4}{\micro\farad}
 \]
 
-Una vez instalada la batería de condensadores, la corriente total a la salida de la línea es:
+\begin{center}
+    \includegraphics[width=.9\textwidth]{figuras/BT3_ej5_bombas_condensadores.pdf}
+\end{center}
 
+Una vez instalada la batería de condensadores, la corriente total a la salida de la línea es:
 \[
-I' = \frac{P_T}{\sqrt{3} U} = \SI{54.13}{\ampere}
+I' = \frac{P_T}{\sqrt{3} \, U} = \SI{54.13}{\ampere}
 \]
 
 La potencia disipada en la línea es ahora:
-
 \[
-P'_L = 3 \cdot I'^2 R_L = \SI{1282.9}{\watt} 
+P'_L = 3 \cdot I'^2 \, R_L = \SI{1282.9}{\watt} 
 \]
 
 Por tanto, el triángulo de potencias a la entrada de la línea es:
 \begin{align*}
-P'_g &= \SI{38.78}{\kilo\watt}\\
-Q'_g &= \SI{0}{\kilo\voltampere}_r\\
+P'_g &= P'_L + P_T = \SI{38.78}{\kilo\watt}\\[3pt]
+Q'_g &= Q'_T = \SI{0}{\kilo\voltampere}_r\\[3pt]
 S'_g &= \SI{38.78}{\kilo\voltampere}
 \end{align*}
 
 Consecuentemente, la tensión a la entrada de la línea es:
-
 \[
-U' = \frac{S'_g}{\sqrt{3} I'} = \SI{413.63}{\volt}
+U' = \frac{S'_g}{\sqrt{3} \, I'} = \SI{413.63}{\volt}
 \]
 
-Con la inserción de los condensadores los vatímetros miden:
+Con la inserción de los condensadores, los vatímetros miden:
+\[
+    W'_{C, BA} = - \frac{Q'_T}{\sqrt{3}} = \SI{0}{\watt}
+\]
 
-\begin{align*}
-W'_{A, AC} = W'_{B, BC} &= 1/2 \cdot P'_T = \SI{18.75}{\kilo\watt}\\
-W'_{C, BA} &= \SI{0}{\watt}
-\end{align*}
+\vspace{-2mm}
+Y dado que $\; W'_1 - W'_2 = \dfrac{Q'_T}{\sqrt{3}} = 0 \,$:
+
+\[
+    W'_1 = W'_2 = \frac{1}{2} \, P'_T = \SI{18.75}{\kilo\watt}
+\]
 
 
 
