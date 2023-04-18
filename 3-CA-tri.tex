@@ -445,15 +445,17 @@ Denominaremos $W_1$ al vatímetro conectado en la fase A midiendo
 tensión entre las fases A y C, y $W_2$ al vatímetro conectado en
 la fase B midiendo tensión entre las fases B y C. 
 
-\vspace{2mm}
-Teniendo en cuenta
-que se trata de una SFD: 
+\vspace{3mm}
+La conexión de estos 2 vatímetros corresponde al montaje de Aron.
+
+\vspace{4mm}
+Teniendo en cuenta que se trata de una SFD: 
 \begin{align*}
   W_1 + W_2 &= P_T\\[3pt]
   W_1 - W_2 &= \frac{Q_T}{\sqrt{3}}
 \end{align*}
 
-Por tanto:
+Sumando y restando las dos expresiones anteriores se obtiene, respectivamente:
 \begin{align*}
   W_1 &= \frac{1}{2} \, \left(P_T + \frac{Q_T}{\sqrt{3}} \right) = \SI{28.09}{\kilo\watt}\\[3pt]
   W_2 &= \frac{1}{2} \, \left(P_T - \frac{Q_T}{\sqrt{3}} \right) = \SI{9.41}{\kilo\watt}
@@ -537,8 +539,15 @@ Con la inserción de los condensadores, los vatímetros miden:
 \vspace{-2mm}
 Y dado que $\; W'_1 - W'_2 = \dfrac{Q'_T}{\sqrt{3}} = 0 \,$:
 
+\vspace{2mm}
 \[
-    W'_1 = W'_2 = \frac{1}{2} \, P'_T = \SI{18.75}{\kilo\watt}
+    W'_1 = \frac{1}{2} \, \Bigg(P'_T + \frac{\cancelto{0}{Q'_T}}{\sqrt{3}} \Bigg)
+    \quad = \quad
+    W'_2 = \frac{1}{2} \, \Bigg(P'_T - \frac{\cancelto{0}{Q'_T}}{\sqrt{3}} \Bigg)
+    \quad = \quad
+    \frac{1}{2} \; P'_T 
+    \; = \,
+    \SI{18.75}{\kilo\watt}
 \]
 
 
