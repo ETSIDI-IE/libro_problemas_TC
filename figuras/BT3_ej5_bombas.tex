@@ -18,7 +18,8 @@
   \coordinate (A'') at ($(A') + (3, 0)$) ;
   \coordinate (B'') at ($(B') + (3, 0)$) ;
   \coordinate (C'') at ($(C') + (3, 0)$) ;  
-  
+
+  % Líneas:
   \draw
   [rounded corners]
   (A) node[left] {A} to [R, l = $R_L$] ++(3,0)
@@ -28,7 +29,8 @@
   to [short, -] ($(B'')+(2,0)$)
   (C) node[left] {C} to [R, l = $R_L$] ++(3,0)
   to [short, -] ($(C'')+(2,0)$);
- 
+
+  % Motores (bombas):
   \draw [rounded corners, fill= gray!10] 
   (C') ++(-0.5,-2) rectangle ++(2,1)
   node[midway] {Bomba 1};
