@@ -743,13 +743,13 @@ $W'_B = P/2 = \SI{10412.5}{\watt}$.
 
 Del circuito de la figura se sabe que tiene una secuencia de fases
 directa ABC. El amperímetro indica $\SI{5}{\ampere}$, el voltímetro
-$\SI{400}{\volt}$, y los vatímetros A y C muestran una lectura
+$\SI{400}{\volt}$, y los vatímetros $W_a$ y $W_c$ muestran una lectura
 idéntica. Se pide:
 
 \begin{enumerate}
 \item Valor de la impedancia Z en forma compleja.
 \item Expresión fasorial de todas las intensidades del circuito.
-\item Lecturas de los vatímetros A y C.
+\item Lecturas de los vatímetros $W_a$ y $W_c$.
 \end{enumerate}
 
 Dato: $\; \overline{Z}_L = \SI[parse-numbers = false]{1 + j}{\ohm}$
@@ -766,55 +766,56 @@ circulan por las impedancias del triángulo, tienen un valor de
 $\SI[parse-numbers=false]{5/\sqrt{3}}{\volt}$. La impedancia Z
 tendrá un módulo de valor:
 \[
-  Z = \frac{400}{5\sqrt{3}/3} =
+  Z = \frac{U_L}{I_f} = \frac{400}{5/\sqrt{3}} =
   \SI[parse-numbers=false]{80\sqrt{3}}{\ohm}
 \]
 
-Como los vatímetros $W_a$ y $W_c$ indican el mismo valor, el
-circuito tiene característica resistiva pura y por tanto, la
+Los vatímetros $W_a$ y $W_c$ están conectados según el montaje de Aron. Dado que indican el mismo valor, el
+circuito tiene característica resistiva pura. Por tanto, la
 potencia reactiva consumida por la reactancia inductiva de las
 líneas será igual pero de tipo contrario que la potencia reactiva
-aportada por la reactancia capacitiva de la impedancia Z. Por tanto:
+aportada por la reactancia capacitiva de la impedancia Z:
 \begin{align*}
-  Q_{\textrm{línea}} = 3 \cdot 5^2 \cdot 1 &= \SI{75}{\voltampere}_r\\
-  Q_Z &= -\SI{75}{\voltampere}_r\\
-  X_Z &= \SI{3}{\ohm}
+  Q_{\textrm{línea}} = 3 \cdot Q_{Z_L} = 3 \cdot I_L^2 \cdot X_L = 3 \cdot 5^2 \cdot 1 &= \SI{75}{\voltampere}_r\\[3pt]
+  Q_Z &= -\SI{75}{\voltampere}_r \quad\rightarrow\quad
+  X_Z = \dfrac{Q_Z}{3\cdot I_f^2} = \SI{3}{\ohm}
 \end{align*}
 
 Por tanto:
 \[
-  R_Z = \sqrt{Z^2 - X_c^2} = \SI{138.5}{\ohm} \quad\rightarrow\quad \overline{Z} = \SI[parse-numbers=false]{138.5 - j\,3}{\ohm}
+  R_Z = \sqrt{Z^2 - X_Z^2} = \SI{138.5}{\ohm} \quad\rightarrow\quad \overline{Z} = \SI[parse-numbers=false]{138.5 - j\,3}{\ohm}
 \]
 
+\vspace{2mm}
 Tomando como referencia las tensiones de secuencia directa ABC
-\textbf{en el triángulo de impedancias Z}, se obtienen las siguientes
+en el triángulo de impedancias Z, se obtienen las siguientes
 intensidades de fase:
 \begin{align*}
-  I_{AB} &= {2.88\phase{121.24^\circ}}\,\unit{\ampere}\\
-  I_{BC} &= {2.88\phase{1.24^\circ}}\,\unit{\ampere}\\
-  I_{CA} &= {2.88\phase{-118.75^\circ}}\,\unit{\ampere}\\
+  \overline{I}_{AB} &= \frac{\overline{U}_{AB}}{\overline{Z}} = \frac{400\phase{\ang{120}}}{138.5 - j\,3} = {2.89\phase{121.24^\circ}}\,\unit{\ampere}\\[5pt]
+  \overline{I}_{BC} &= \frac{\overline{U}_{BC}}{\overline{Z}} = \frac{400\phase{\ang{0}}}{138.5 - j\,3} = {2.89\phase{1.24^\circ}}\,\unit{\ampere}\\[5pt]
+  \overline{I}_{CA} &= \frac{\overline{U}_{CA}}{\overline{Z}} = \frac{400\phase{\ang{-120}}}{138.5 - j\,3} = {2.89\phase{-118.76^\circ}}\,\unit{\ampere}
 \end{align*}
 
-A partir de estas corrientes de fase, se obtienen las corrientes de línea:
+A partir de estas corrientes de fase, se obtienen las corrientes de línea aplicando 1LK:
 \begin{align*}
-  I_{A} &= {5\phase{91.24^\circ}}\,\unit{\ampere}\\
-  I_{B} &= {5\phase{-28.75^\circ}}\,\unit{\ampere}\\
-  I_{C} &= {5\phase{-148.75^\circ}}\,\unit{\ampere}
+  \overline{I}_{A} &= \overline{I}_{AB} - \overline{I}_{CA} = {5\phase{91.24^\circ}}\,\unit{\ampere}\\[5pt]
+  \overline{I}_{B} &= \overline{I}_{BC} - \overline{I}_{AB} = {5\phase{-28.76^\circ}}\,\unit{\ampere}\\[5pt]
+  \overline{I}_{C} &= \overline{I}_{CA} - \overline{I}_{BC} = {5\phase{-148.76^\circ}}\,\unit{\ampere}
 \end{align*}
 
 
 
 Dado que ambos vatímetros marcan el mismo valor, el circuito es
-resistivo. Este valor se corresponde con la mitad de la potencia
+de carácter resistivo. Este valor se corresponde con la mitad de la potencia
 activa total consumida por el circuito. Calculamos esta potencia con Boucherot:
 \begin{align*}
-  P_{Z_L} &= 3 \cdot 5^2 \cdot 1\\
-  P_Z &= 3 \cdot 2.88^2 \cdot 138.53\\
-  P &= P_{Z_L} + P_{Z} = \SI{3522.07}{\watt}
+  P_{Z_L} &= 3 \cdot I_L^2 \cdot R_L = 3 \cdot 5^2 \cdot 1\\[1pt]
+  P_Z &= 3 \cdot I_f^2 \cdot R = 3 \cdot \left(\frac{5}{\sqrt3}\right)^2 \cdot 138.5\\[3pt]
+  P &= P_{Z_L} + P_{Z} = \SI{3537.5}{\watt}
 \end{align*}
 
 \[
-  W_a = W_c = 1/2 \cdot P = \SI{1761.04}{\watt}
+  W_a = W_c = \frac{1}{2} \; P = \SI{1768.8}{\watt}
 \]
 
 
@@ -995,7 +996,7 @@ Teniendo en cuenta que es un sistema equilibrado y que es SFI:
 \item Para medir la tensión de línea hay que conectar un voltímetro
   entre dos fases. La medida será $V_{L} = 400\,\mathrm{V}$. Para medir
   la tensión de fase hay que conectar un voltímetro entre una fase y
-  el neutro.$V_{AN} = 400 / \sqrt{3} = 230.9\,\mathrm{V}$
+  el neutro, cuya medida será $V_{AN} = 400 / \sqrt{3} = 230.9\,\mathrm{V}$.
 
 \item Hay que conectar un vatímetro midiendo tensión entre dos fases y
   la corriente por la tercera. Para que la medida coincida en signo
