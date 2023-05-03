@@ -791,9 +791,9 @@ Tomando como referencia las tensiones de secuencia directa ABC
 en el triángulo de impedancias Z, se obtienen las siguientes
 intensidades de fase:
 \begin{align*}
-  \overline{I}_{AB} &= \frac{\overline{U}_{AB}}{\overline{Z}} = \frac{400\phase{\ang{120}}}{138.5 - j\,3} = {2.89\phase{121.24^\circ}}\,\unit{\ampere}\\[5pt]
-  \overline{I}_{BC} &= \frac{\overline{U}_{BC}}{\overline{Z}} = \frac{400\phase{\ang{0}}}{138.5 - j\,3} = {2.89\phase{1.24^\circ}}\,\unit{\ampere}\\[5pt]
-  \overline{I}_{CA} &= \frac{\overline{U}_{CA}}{\overline{Z}} = \frac{400\phase{\ang{-120}}}{138.5 - j\,3} = {2.89\phase{-118.76^\circ}}\,\unit{\ampere}
+  \overline{I}_{AB} &= \frac{\overline{U}_{AB}}{\overline{Z}} = \frac{400\phase{\ang{120}}}{138.5 - j\,3} = {2.89\phase{121.24^\circ}} = {\frac{5 \sqrt3}{3}\phase{121.24^\circ}}\,\unit{\ampere}\\[5pt]
+  \overline{I}_{BC} &= \frac{\overline{U}_{BC}}{\overline{Z}} = \frac{400\phase{\ang{0}}}{138.5 - j\,3} = {2.89\phase{1.24^\circ}} = {\frac{5 \sqrt3}{3}\phase{1.24^\circ}}\,\unit{\ampere}\\[5pt]
+  \overline{I}_{CA} &= \frac{\overline{U}_{CA}}{\overline{Z}} = \frac{400\phase{\ang{-120}}}{138.5 - j\,3} = {2.89\phase{-118.76^\circ}} = {\frac{5 \sqrt3}{3}\phase{-118.76^\circ}}\,\unit{\ampere}
 \end{align*}
 
 A partir de estas corrientes de fase, se obtienen las corrientes de línea aplicando 1LK:
@@ -803,8 +803,7 @@ A partir de estas corrientes de fase, se obtienen las corrientes de línea aplic
   \overline{I}_{C} &= \overline{I}_{CA} - \overline{I}_{BC} = {5\phase{-148.76^\circ}}\,\unit{\ampere}
 \end{align*}
 
-
-
+\vspace{2mm}
 Dado que ambos vatímetros marcan el mismo valor, el circuito es
 de carácter resistivo. Este valor se corresponde con la mitad de la potencia
 activa total consumida por el circuito. Calculamos esta potencia con Boucherot:
@@ -1194,18 +1193,18 @@ Un sistema trifásico a cuatro hilos de $\qty{200}{\volt}$, $\qty{50}{\hertz}$ y
 \subsection*{Solución}
 
 \begin{enumerate}
-\item Para calcular la impedancia del motor necesitamos obtener la corriente que lo alimenta. Dado que tenemos la potencia activa y su factor de potencia el cálculo es inmediato:
+\item Para calcular la impedancia del motor, necesitamos obtener la corriente que lo alimenta. Dado que tenemos la potencia activa y su factor de potencia, el cálculo es inmediato:
   \[
-    P_m = \sqrt{3} \cdot U \cdot I_m \cdot \cos(\theta_m) \quad\rightarrow\quad I_m = \qty{10.26}{\ampere}
+    P_m = \sqrt{3} \cdot U_ \cdot I_m \cdot \cos(\theta_m) \quad\rightarrow\quad I_m = \qty{10.26}{\ampere}
   \]
   
-Además, el ángulo se obtiene del factor de potencia: $\theta_m = \arccos(0.9) = \ang{25.84}$.
+Donde el ángulo se ha obtenido del factor de potencia: $\theta_m = \arccos(0.9) = \ang{25.84}$.
   Con estos valores podemos calcular la impedancia equivalente en triángulo:
   \[
     \overline{Z}_{m\triangle} = \frac{U}{I_{mf}}\phase{\theta_m} = \frac{200}{10.26/\sqrt{3}}\phase{\ang{25.84}} = 33.76\phase{\ang{25.84}}\,\unit{\ohm}
   \]
 
-  Y en estrella:
+  O en estrella:
 \[
   \overline{Z}_{m\wye} = \frac{U_f}{I_{m}}\phase{\theta_m} = \frac{200/\sqrt{3}}{10.26}\phase{\ang{25.84}} = 11.25\phase{\ang{25.84}}\,\unit{\ohm}
   \]
@@ -1218,14 +1217,14 @@ Además, el ángulo se obtiene del factor de potencia: $\theta_m = \arccos(0.9) 
 
   A continuación, la impedancia. Primer debemos obtener la corriente de esta impedancia:
   \begin{align*}
-    I_{zf} &= \frac{U}{Z_\triangle} = \qty{10}{\ampere}\\[3pt]
-    I_z &= \sqrt{3}\cdot I_{zf} = 10\sqrt{3}\,\unit{\ampere}
+    I_{z,f} &= \frac{U}{Z_\triangle} = \qty{10}{\ampere}\\[3pt]
+    I_z &= \sqrt{3}\cdot I_{z,f} = 10\sqrt{3}\,\unit{\ampere}
   \end{align*}
   
   Y ya podemos obtener las potencias de esta impedancia:
   \begin{align*}
     P_z &= \sqrt{3}\cdot U \cdot I_z \cdot \cos(\ang{30}) = \qty{5196.2}{\watt}\\[3pt]
-    Q_z &= P_m \, \tan(30) = \qty{3000}{\VAr}
+    Q_z &= P_m \, \tan(\ang{30}) = \qty{3000}{\VAr}
   \end{align*}
 
   Aplicando Boucherot:
@@ -1271,28 +1270,28 @@ En el circuito de la figura la tensión es $275\sqrt{3}\,\unit{\volt}$. Los moto
 \subsection*{Solución}
 
 \begin{enumerate}
-\item El sistema está equilibrado y es inductivo. Por tanto, la reactiva total es positiva. Por otra parte:
+\item El sistema está equilibrado y es inductivo (dado que un motor es una carga inductiva). Por tanto, la reactiva total es positiva. Por otra parte, la lectura de $W_a$ corresponde a::
   \[
     W_a = \pm \frac{Q}{\sqrt{3}}
   \]
 
-  Dado que la lectura del vatímetro es positiva y la potencia reactiva total también es positiva, hay que elegir el signo positivo. Este vatímetro está conectado entre B y C, luego se trata de una SFD.
+  Dado que la lectura del vatímetro es positiva y la potencia reactiva total también es positiva, hay que elegir el signo positivo. Este vatímetro está conectado entre B y C, luego se trata de una $\boxed{\, \mathrm{SFD} \,} \;$ ($\mathrm{BC} \in \mathrm{SFD}$).
   
 \item Con la lectura del vatímetro $W_a$ tenemos la potencia reactiva total del sistema. Por Boucherot sería:
   \[
-    Q = Q_1 + Q_2 = \sqrt{3} \cdot U \cdot I_1 (\sen(\theta_1) + \sen(\theta_2))
+    Q = Q_1 + Q_2 = \sqrt{3} \cdot U \cdot I_1 [\sen(\theta_1) + \sen(\theta_2)] \; , \quad \textrm{donde} \;\; \theta_1 = \arccos(\mathrm{fdp}_1) \, , \; \theta_2 = \arccos(\mathrm{fdp}_2)
   \]
   donde se ha tenido en cuenta que las corrientes de los dos motores son iguales, $I_1 = I_2$. De esta expresión podemos obtener el valor de estas corrientes:
   \[
-    I_1 = I_2 = \frac{Q}{\sqrt{3} \cdot U \cdot (\sen(\theta_1) + \sen(\theta_2))} = \qty{10}{\ampere}
+    I_1 = I_2 = \frac{Q}{\sqrt{3} \cdot U \cdot [\sen(\theta_1) + \sen(\theta_2)]} = \qty{10}{\ampere}
   \]
 
   Con una operación similar para la potencia activa:
   \[
-    P = P_1 + P_2 = \sqrt{3} \cdot U \cdot I_1 (\cos(\theta_1) + \cos(\theta_2)) = \qty{14520}{\watt}
+    P = P_1 + P_2 = \sqrt{3} \cdot U \cdot I_1 [\cos(\theta_1) + \cos(\theta_2)] = \qty{14520}{\watt}
   \]
 
-  Con este resultado podemos calcular la lectura del vatímetro $W_b$. Este vatímetro forma parte de un montaje Aron. Si añadimos un vatímetro ficticio en la fase A, $W_x$ , tendríamos:
+  Con este resultado podemos calcular la lectura del vatímetro $W_b$. Este vatímetro forma parte de un montaje Aron. Si añadimos un vatímetro ficticio en la fase A, $W_x$, tendríamos:
   \begin{align*}
     W_x + W_b &= P\\
     W_x - W_b &= Q/\sqrt{3} = W_a
@@ -1305,8 +1304,8 @@ En el circuito de la figura la tensión es $275\sqrt{3}\,\unit{\volt}$. Los moto
   
 \item Las impedancias de los dos motores podemos calcularlas con la tensión del sistema y las corrientes que los alimentan, calculadas en el apartado anterior, $I_1 = I_2 = \qty{10}{\ampere}$:
     \begin{align*}
-      \overline{Z}_{1\wye} &= \frac{U_f}{I_1}\phase{\theta_1} = 27.5\phase{\ang{16.26}}\,\unit{\ohm}\\
-      \overline{Z}_{2\wye} &= \frac{U_f}{I_2}\phase{\theta_2} = 27.5\phase{\ang{36.87}}\,\unit{\ohm}
+      \overline{Z}_{1\wye} &= \frac{U_f}{I_1}\phase{\theta_1} = \frac{U_L / \sqrt3}{I_1}\phase{\theta_1} = 27.5\phase{\ang{16.26}}\,\unit{\ohm}\\
+      \overline{Z}_{2\wye} &= \frac{U_f}{I_2}\phase{\theta_2} = \frac{U_L / \sqrt3}{I_2}\phase{\theta_2} = 27.5\phase{\ang{36.87}}\,\unit{\ohm}
   \end{align*}
 
   Para calcular la impedancia equivalente del conjunto necesitamos la corriente total y el ángulo, que se obtienen del triángulo de potencias:
