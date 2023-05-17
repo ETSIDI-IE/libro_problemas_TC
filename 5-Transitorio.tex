@@ -434,7 +434,7 @@ permanente, en el que la bobina se comportará como un cortocircuito:
 Obtenemos la respuesta natural apagando la fuente $\epsilon_1$. La ec. diferencial correspondiente a este circuito es:
 
 \[
-  R_1 \cdot i_{L,n}(t) \,+\, L \; \diff{\,i_{L,n}(t)}{t} \, = \,  0
+  (R_1 + R_3) \cdot i_{L,n}(t) \,+\, L \; \diff{\,i_{L,n}(t)}{t} \, = \,  0
 \]
 
 \vspace{2mm}
@@ -503,16 +503,18 @@ obtener:
 \begin{enumerate}
 \item
 
-  En $t < 0$, dado que el circuito lleva funcionando un tiempo
-  indefinido, el condensador se comporta como un circuito
-  abierto. Además, el interruptor está abierto y, por tanto, la fuente
-  está aislada del circuito. En estas condiciones
-  $u_c(0^-) = \qty{0}{\volt}$. Debido a las condiciones de
+  En $t < 0$, dado que el interruptor lleva abierto un tiempo largo, la fuente
+  está aislada del circuito, por lo que el condensador se comporta como un circuito
+  abierto.
+
+  \vspace{3mm}
+  En estas condiciones
+  $u_c(0^-) = \qty{0}{\volt}$. Debido a la condición de
   continuidad, $u_c(0^+) = u_c(0^-) = \qty{0}{\volt}$.
 
 \begin{minipage}{0.4\linewidth}
   Con este resultado podemos determinar el resto de tensiones del
-  circuito en $t = 0^+$, teniendo en cuenta que para $t > 0$ el
+  circuito en $t = 0^+$, teniendo en cuenta que el
   interruptor está cerrado y el condensador es equivalente a un
   cortocircuito ($u_c(0^+) = \qty{0}{\volt}$).
 \end{minipage}
@@ -521,22 +523,21 @@ obtener:
   \center{\includegraphics{figuras/BT4_CondicionesIniciales_condensador0+.pdf}}
 \end{minipage}
 
-En este circuito $R_2$ y $R_3$ están en paralelo entre sí, siendo
+En este circuito, $R_2$ y $R_3$ están en paralelo entre sí, siendo
 $R_{23} = \frac{R_2 \cdot R_3}{R_2 + R_3}$. Esta resistencia paralelo
 está en serie con $R_1$, formando un divisor de tensión. Por tanto:
 \begin{align*}
   u_2(0^+) = u_3(0^+) &= e(t) \cdot \frac{R_{23}}{R_1 + R_{23}} = \qty{4}{\volt}\\
-  u_1(0^+) &= e(t) - u_2(0^+) = \qty{6}{\volt}
+  \textrm{Por 2LK:}\qquad u_1(0^+) &= e(t) - u_2(0^+) = \qty{6}{\volt}
 \end{align*}
 
 \item
 
-  Analizamos ahora el circuito para $t > 0$, en el que el interruptor
-  está abierto.
+  Analizamos ahora el circuito para $t > 0$, obteniendo la respuesta forzada y la respuesta natural:
 
 
   \begin{minipage}{0.5\linewidth}
-    La resistencia vista por el condensador es
+    Planteamos el equivalente de Thévenin (apagando la fuente de tensión) para calcular la resistencia vista por el condensador:
 
   \[
     R_{th} = R_3 + \frac{R_1 \cdot R_2}{R_1 + R_2} = \qty{5}{\ohm}
@@ -556,38 +557,38 @@ permanente, en el que el condensador se comportará como un circuito
 abierto:
 
 \begin{equation*}
-  u_{C}(\infty) = e(t) \cdot \frac{R_2}{R_1 + R_2} = \qty{5}{\volt}
+  u_{C,\infty}(t) = e(t) \cdot \frac{R_2}{R_1 + R_2} = \qty{5}{\volt}
 \end{equation*}
 
-Obtenemos la respuesta natural apagando la fuente $e(t)$:
-
+Obtenemos la respuesta natural resolviendo la ec. homogénea (apagando la fuente $e(t)$). Su solución es:
 \begin{equation*}
-  u_{Cn}(t) = A \cdot e^{-0.2t}
+  u_{C,n}(t) = A \cdot e^{-t/\tau} = A \cdot e^{-0.2\, t}
 \end{equation*}
 
-Para obtener la constante $A$ recurrimos a la condición inicial
+Para obtener la constante $A$, recurrimos a la condición inicial
 $u_C(0^+) = \qty{0}{\volt}$:
 
 \begin{equation*}
-  A = u_C(0^+) - u_C(\infty) = \qty{-5}{\volt}
+  A = u_{C,n}(t=0^+) = u_C(0^+) - u_{C,\infty}(0^+) = 0 - 5 = \qty{-5}{\volt}
 \end{equation*}
 
 Por tanto:
 \begin{equation*}
-  u_C(t) = 5 \cdot (1 - e^{-0.2t}) \,\unit{\volt}
+  u_C(t) = u_{C,n}(t) + u_{C,\infty}(t) = 5 \cdot (1 - e^{-0.2\, t}) \;\unit{\volt}
 \end{equation*}
 
+\vspace{2mm}
 \item Con este resultado podemos obtener la corriente que circula por
   el condensador:
 
 \begin{equation*}
-  i_C(t) = C \cdot \diff{\,u_C}{t} = e^{-0.2t} \,\unit{\ampere}
+  i_C(t) = C \cdot \diff{\,u_C}{t} = (-5)\cdot(-0.2)\cdot e^{-0.2\, t} = e^{-0.2\, t} \,\unit{\ampere}
 \end{equation*}
 
-y las tensiones en las resistencias:
+y a partir de esta, las tensiones en las resistencias:
 \begin{align*}
-  u_{R3}(t) &=  R_3 \cdot i_C(t) = 4 \cdot e^{-0.2t} \,\unit{\volt}\\[3pt]
-  u_{R2}(t) &=  u_{R3}(t) + u_C(t) = 5 - e^{-0.2t} \,\unit{\volt}
+  u_{R3}(t) &=  R_3 \cdot i_C(t) = 4 \cdot e^{-0.2\, t} \;\unit{\volt}\\[3pt]
+  u_{R2}(t) &=  u_{R3}(t) + u_C(t) = 5 - e^{-0.2\, t} \;\unit{\volt}
 \end{align*}
     
   
@@ -883,11 +884,11 @@ por la bobina para $t > 0$.
 
 \vspace{4mm}
 
-\begin{minipage}{0.7\textwidth}
+\begin{minipage}{0.6\textwidth}
   \includegraphics[scale=1]{figuras/FM_4_8}
 \end{minipage}
 \hfill
-\begin{minipage}{0.3\textwidth}
+\begin{minipage}{0.4\textwidth}
   Datos:
   \begin{align*}
     \epsilon_g &= \SI{10}{\volt}\\
@@ -914,7 +915,7 @@ Calculamos las condiciones iniciales ($t = 0^-$). Dibujamos el circuito para $t 
 \end{minipage}
 
 \vspace{4mm}
-Por tanto, $u_c(0^+) = u_c(0^-) = \SI{10}{\volt}$ y
+Por tanto, $u_C(0^+) = u_C(0^-) = \SI{10}{\volt}$ \;y\;
 $i_L(0^+) = i_L(0^-) = \SI{1}{\ampere}$.
 
 \vspace{3mm}
@@ -955,7 +956,7 @@ condiciones iniciales:
   \begin{align*}
     u_R(t) + u_L(t) &= u_C(t)\\
     u_L(0^+) &= u_C(0^+) - u_R(0^+)\\
-    u_R(0^+) &= R \cdot i_L(0^+) = \SI{15}{\volt}\\
+    u_R(0^+) &= (R_1 + R_2) \cdot i_L(0^+) = \SI{15}{\volt}\\
     u_L(0^+) &= 10 - 15 = \SI{-5}{\volt}
   \end{align*}
 \end{minipage}
@@ -972,7 +973,7 @@ Con estos resultados, particularizamos la ecuación de $i_L(t)$ para
 $t = 0$ y así planteamos las ecuaciones para obtener $A_1$ y $A_2$:
 \begin{align*}
   i_L(0^+) &= A_1 + A_2 = 1\\[3pt]
-  \diff{i_L(t)}{t}[t = 0^+] &= A_1 \cdot s_1 + A_2 \cdot s_2 = -2
+  \diff{\, i_L(t)}{t}[t = 0^+] &= A_1 \cdot s_1 + A_2 \cdot s_2 = -2
 \end{align*}
 
 Por tanto:
@@ -990,8 +991,8 @@ Finalmente:
 Para obtener la tensión en el condensador recurrimos a la LKV:
 \begin{align*}
   u_C(t) &= u_R(t) + u_L(t) = \\
-         &= R \cdot i_L(t) + L \diff{i_L(t)}{t} = \\
-         &= 9.7275 \cdot e^{-0.354 \cdot t} + 0.275 \cdot e^{-5.645 \cdot t} \;\si{\volt}
+         &= (R_1 + R_2) \cdot i_L(t) + L \; \diff{\, i_L(t)}{t} = \\
+         &= 9.728 \cdot e^{-0.354 \cdot t} + 0.275 \cdot e^{-5.645 \cdot t} \;\si{\volt}
 \end{align*}
 
 \section{Enunciado}
@@ -1024,17 +1025,18 @@ circuito para $t < 0$ y obtenemos:
 \end{minipage}
 \begin{minipage}{0.7\textwidth}
   \begin{align*}
-    u_C(t) &= \SI{2}{\volt}\\
-    i_L(t) &= \frac{\epsilon_g}{R_1 + R_2} = \SI{1}{\ampere}
+    i_L(t) &= \frac{\epsilon_g}{R_1 + R_2} = \SI{1}{\ampere}\\[10pt]
+    u_C(t) &= R_1 \cdot i_L(t) = \SI{2}{\volt}    
   \end{align*}
 \end{minipage}
 
 \vspace{3mm}
-Por tanto, $u_c(0^+) = u_c(0^-) = \SI{2}{\volt}$ y
+Por tanto, $u_C(0^+) = u_C(0^-) = \SI{2}{\volt}$ \; y
+\;
 $i_L(0^+) = i_L(0^-) = \SI{1}{\ampere}$.
 
 \vspace{3mm}
-A continuación dibujamos el circuito para $t > 0$ para obtener la
+A continuación dibujamos el circuito para $t > 0$, para obtener la
 respuesta natural y la respuesta forzada. En el circuito resultante no
 hay fuentes, por lo que no habrá respuesta forzada.
 
@@ -1054,7 +1056,7 @@ hay fuentes, por lo que no habrá respuesta forzada.
 Dado que $\alpha < \omega_0$, se trata de un transitorio
 subamortiguado:
 \begin{align*}
-  \omega_d &= \sqrt{\omega_0^2 - \alpha^2} = \sqrt{3}\si{\radian\per\second}\\
+  \omega_d &= \sqrt{\omega_0^2 - \alpha^2} = \sqrt{3}\;\si{\radian\per\second}\\
   u_C(t) &= [B_1 \cdot \cos(\sqrt{3} \cdot t) + B_2 \cdot \sin(\sqrt{3} \cdot t)] \cdot e^{-t}
 \end{align*}
 
@@ -1117,17 +1119,15 @@ En el circuito de la figura el interruptor ha estado cerrado durante un tiempo e
 \begin{minipage}{0.3\linewidth}
   Datos:
 
-  $E_g = \SI{500}{\volt}$
 
-  $R_{1}= \SI{375}{\ohm}$%
-
-  $R_{2}=\SI{125}{\ohm}$%
-
-  $L_1 = \SI{40}{\milli\henry}$%
-
-  $L_2 = \SI{40}{\milli\henry}$%
-
-  $C = \SI{1}{\micro\farad}$%
+  \begin{align*}
+    E_g &= \SI{500}{\volt}\\   
+    R_{1} &= \SI{375}{\ohm}\\ 
+    R_{2} &=\SI{125}{\ohm}\\ 
+    L_1 &= \SI{40}{\milli\henry}\\ 
+    L_2 &= \SI{40}{\milli\henry}\\ 
+    C &= \SI{1}{\micro\farad}
+  \end{align*}
 \end{minipage}
 \begin{minipage}{0.7\linewidth}
   \includegraphics{figuras/E1_RLC.pdf}
@@ -1199,7 +1199,7 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
 
   La expresión genérica de la corriente es:
   \[
-    i_L(t) = i(\infty) + e^{-\alpha t} \left(A_1 \sen(\omega_d t) + A_2 \cos(\omega_d t)\right)
+    i_L(t) = i_L(\infty) + e^{-\alpha t} \left(A_1 \sen(\omega_d t) + A_2 \cos(\omega_d t)\right)
   \]
 
   siendo $\omega_d = \sqrt{\omega_o^2 - \alpha^2} = \SI{1739.9}{\radian\per\second}$.
@@ -1208,7 +1208,7 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
   Teniendo en cuenta las condiciones iniciales y el valor en régimen permanente obtenemos:
   \begin{align*}
     i_L(0^+) = 1 &= A_2\\
-    \diff*{i_L}{t}{0^+} = \frac{1}{L}u_L(0^+) = 0 &= -\alpha A_2 + A_1 \omega_d
+    \diff{\, i_L(t)}{t}[t = 0^+] = \frac{1}{L} \; u_L(0^+) = 0 &= -\alpha A_2 + A_1 \omega_d
   \end{align*}
 
   La solución de este sistema es:
@@ -1226,23 +1226,19 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
 
 \vspace{2mm}
 
-\item Expresión de $u_c(t)$
+\item Expresión de $u_C(t)$
 
-  A partir de esta expresión podemos calcular la correspondiente a la tensión en el condensador, teniendo en cuenta que:
-  \[
-    u_c(t) = E_g - R_1 i(t) - L_1 \diff{i}{t} 
-  \]
-  
-  Realizando la operación indicada obtenemos:
+  A partir de la expresión anterior podemos calcular la correspondiente a la tensión en el condensador, teniendo en cuenta que:
   \begin{align*}
-    u_C(t) &= 500 - e^{-4687.5 t} \left[435.9 \sen(1739.9t) + 375 \cos(1739.9 t)\right]\\
+    u_C(t) &= E_g - R_1 \cdot i_L(t) - L_1 \; \diff{\; i_L(t)}{t} \\[10pt]
+    u_C(t) &= 500 - e^{-4687.5 t} \left[435.9 \sen(1739.9t) + 375 \cos(1739.9 t)\right]\\[5pt]
            &= 500 - 575.01 \cdot e^{-4687.5 t} \cdot  \sen(1739.9t + 0.7104)\;\si{\volt}
   \end{align*}
 
   Este resultado se puede comprobar mediante las condiciones iniciales:
     \begin{align*}
-    u_C(0^+) &= \qty{125}{\volt}\\
-    \diff*{u_c}{t}{0^+} &= \frac{1}{C}i_C(0^+) = 10^6\,\si{\volt\per\second}\\
+    u_C(0^+) &= \qty{125}{\volt}\\[4pt]
+    \diff{\, u_C(t)}{t}[t = 0^+] &= \frac{1}{C} \; i_C(0^+) = 10^6\,\si{\volt\per\second}\\
   \end{align*}
 
 \end{enumerate}
