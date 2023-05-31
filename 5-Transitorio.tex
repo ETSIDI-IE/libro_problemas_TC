@@ -846,27 +846,27 @@ hay fuentes, por lo que únicamente tendremos respuesta natural.
     L_{eq} &= L_1 + L_2||L_3 = \SI{2.2}{\milli\henry}\\
     R_{th} &= (R_1 + R_2) || R_3 + R_4  = \SI{110}{\ohm}\\
     \tau &= L_{eq}/R_{th} = \SI{20}{\micro\second}\\
-    i_{Ln}(t) &= A \cdot e^{-\frac{t}{\tau}} = A \cdot e^{-5 \cdot 10^{-4} \cdot t}
+    i_{Ln}(t) &= A \cdot e^{-\frac{t}{\tau}} = A \cdot e^{-5 \cdot 10^{4} \cdot t}
   \end{align*}
 
   Queda por determinar la constante de integración. Dado que la
   respuesta forzada es 0 podemos calcular directamente esta constante
   con la respuesta natural y las condiciones iniciales:
 \begin{align*}
-  i_L(t) &= i_{Ln}(t) = A \cdot e^{-5 \cdot 10^{-4} \cdot t}\\
+  i_L(t) &= i_{Ln}(t) = A \cdot e^{-5 \cdot 10^{4} \cdot t}\\
   i_L(0^+) &= A = 0.36
 \end{align*}
 
 Por tanto:
 \begin{equation*}
-  i_L(t) = 0.36 \cdot e^{-5 \cdot 10^{-4} \cdot t}\;\si{\ampere}
+  i_L(t) = 0.36 \cdot e^{-5 \cdot 10^{4} \cdot t}\;\si{\ampere}
 \end{equation*}
 
 \vspace{2mm}
 Para calcular la corriente $i_1(t)$ usamos un divisor de corriente a
 partir de $i_L(t)$:
 \begin{equation*}
-  i_1(t) = -i_L(t) \cdot \frac{1/R_3}{1/R_3 + 1/(R_1 + R_2)} = -0.24 \cdot e^{-5 \cdot 10^{-4} \cdot t}\;\si{\ampere}
+  i_1(t) = -i_L(t) \cdot \frac{1/R_3}{1/R_3 + 1/(R_1 + R_2)} = -0.24 \cdot e^{-5 \cdot 10^{4} \cdot t}\;\si{\ampere}
 \end{equation*}
 
 \vspace{3mm}
@@ -978,8 +978,8 @@ $t = 0$ y así planteamos las ecuaciones para obtener $A_1$ y $A_2$:
 
 Por tanto:
 \begin{align*}
-  A_1 &= 0.689\\
-  A_2 &= 0.311
+  A_1 &= \qty{0.689}{\ampere}\\
+  A_2 &= \qty{0.311}{\ampere}
 \end{align*}
 
 Finalmente:
@@ -1148,7 +1148,7 @@ Al apagar las fuentes en este circuito comprobamos que se trata de un RLC serie.
   \alpha &= \frac{R_1}{2L_1} = \SI{4687.5}{\second}^{-1}\\[3pt]
   \omega_0 &= \frac{1}{\sqrt{L_1C}} = \SI{5000}{\radian\per\second}\\[3pt]
   \xi &= \frac{\alpha}{\omega_0} = 0.9375\\[3pt]
-  \omega_d &= \sqrt{\omega_0^2 - \alpha^2} = \SI{1739.93}{\radian\per\second}
+  \omega_d &= \sqrt{\omega_0^2 - \alpha^2} = \SI{1740}{\radian\per\second}
 \end{align*}
 
 \vspace{1mm}
@@ -1169,18 +1169,18 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
     u_C(0^+) = u_C(0^-) &= \SI{125}{\volt}
   \end{align*}
 
-  Además:
+  Además, considerando el circuito en $t=0^+$:
   \[
     E_g = u_R(0^+) + u_L(0^+) + u_C(0^+)
   \]
 
   Por tanto:
   \[
-    u_L(0^+) = E_g - Ri_L(0^+) - u_C(0^+) = \SI{0}{\volt} 
+    u_L(0^+) = E_g - R_1 \cdot i_L(0^+) - u_C(0^+) = \SI{0}{\volt} 
   \]
 
     \vspace{2mm}
-  Finalmente, $i_c(0^+) = i_L(0^+) = \SI{1}{\ampere}$.
+  Finalmente, $\quad i_C(0^+) = i_L(0^+) = \SI{1}{\ampere}$.
   
   \vspace{2mm}
 
@@ -1202,7 +1202,7 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
     i_L(t) = i_L(\infty) + e^{-\alpha t} \left(A_1 \sen(\omega_d t) + A_2 \cos(\omega_d t)\right)
   \]
 
-  siendo $\omega_d = \sqrt{\omega_o^2 - \alpha^2} = \SI{1739.9}{\radian\per\second}$.
+  siendo $\omega_d = \sqrt{\omega_o^2 - \alpha^2} = \SI{1740}{\radian\per\second}$.
 
   \vspace{3mm}
   Teniendo en cuenta las condiciones iniciales y el valor en régimen permanente obtenemos:
@@ -1213,15 +1213,15 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
 
   La solución de este sistema es:
   \begin{align*}
-    A_1 &= \frac{\alpha}{\omega_d} = \qty{2.69}\ampere\\
+    A_1 &= \frac{\alpha}{\omega_d} = \qty{2.7}\ampere\\
     A_2 &= \qty{1}{\ampere}\\
   \end{align*}
   
   Por tanto:
   \begin{align*}
-        i_L(t) &= e^{-\alpha t} \left(\frac{\alpha}{\omega_d} \sen(\omega_d t) + \cos(\omega_d t)\right)\\
-    i_L(t) &= e^{-4687.5 t} \left(2.69 \sen(1739.9t) + \cos(1739.9 t)\right)\\
-               &= 2.87 \cdot e^{-4687.5 t} \cdot \sen(1739.9t + 0.3559) \;\si{\ampere}
+        i_L(t) &= e^{-\alpha \cdot t} \left(\frac{\alpha}{\omega_d} \sen(\omega_d t) + \cos(\omega_d t)\right)\\
+    i_L(t) &= e^{-4687.5 \cdot t} \left(2.7 \sen(1740\cdot t) + \cos(1740 \cdot t)\right)\\
+               &= 2.88 \cdot e^{-4687.5 \cdot t} \cdot \sen(1740\cdot t + 0.3559) \;\si{\ampere}
   \end{align*}
 
 \vspace{2mm}
@@ -1231,8 +1231,8 @@ Dado que $\alpha < \omega_0$ ($\xi < 1$), el transitorio es subamortiguado.
   A partir de la expresión anterior podemos calcular la correspondiente a la tensión en el condensador, teniendo en cuenta que:
   \begin{align*}
     u_C(t) &= E_g - R_1 \cdot i_L(t) - L_1 \; \diff{\; i_L(t)}{t} \\[10pt]
-    u_C(t) &= 500 - e^{-4687.5 t} \left[435.9 \sen(1739.9t) + 375 \cos(1739.9 t)\right]\\[5pt]
-           &= 500 - 575.01 \cdot e^{-4687.5 t} \cdot  \sen(1739.9t + 0.7104)\;\si{\volt}
+    u_C(t) &= 500 - e^{-4687.5 \cdot t} \left[435.9 \sen(1740\cdot t) + 375 \cos(1740 \cdot t)\right]\\[5pt]
+           &= 500 - 575.01 \cdot e^{-4687.5 \cdot t} \cdot  \sen(1740\cdot t + 0.7104)\;\si{\volt}
   \end{align*}
 
   Este resultado se puede comprobar mediante las condiciones iniciales:
