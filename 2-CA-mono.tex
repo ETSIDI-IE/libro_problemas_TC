@@ -1172,22 +1172,21 @@ Datos: $i_g(t) = 10\sqrt{2}\sin(100t)\unit{\ampere}$; $R_1 = R_2 = \qty{1}{\ohm}
 En primer lugar, se deben indicar las dos expresiones de tensión y
 corriente en una misma función senoidal. En este caso, se opta por
 pasar la corriente a función coseno:
-
 \begin{align*}
-  u(t)&=\sqrt{2}\,10\,\cos(100\,t) V\Rightarrow \overline{U}=10\phase{\ang{0}} V\\
-  i(t)&=\sqrt{2}\,10\,\cos(100\,t-\frac{\pi}{2}) A\Rightarrow \overline{I}=10\phase{\ang{-90}} A
+  u(t)=\sqrt{2}\,10\,\cos(100\,t) \;\si{\volt}  &\quad\Rightarrow\quad \overline{U}=10\phase{\ang{0}} V\\
+  i_g(t)=\sqrt{2}\,10\,\cos(100\,t-\frac{\pi}{2}) \;\si{\ampere} &\quad\Rightarrow\quad \overline{I}_g=10\phase{\ang{-90}} A
 \end{align*}
 Se transforma la fuente de corriente en una fuente de tensión en serie
-con la resistencia de 1$\Omega$:
+con la resistencia $R_1$:
 \begin{equation*}
-  \overline{U_{Ig}}=\overline{I}\, R_{1}=(10\phase{\ang{-90}})\cdot 1=10\phase{\ang{-90}} V
+  \overline{U}_{I_g}=\overline{I}_g \cdot R_{1}=(10\phase{\ang{-90}})\cdot 1=10\phase{\ang{-90}} V
 \end{equation*}
 y estableciendo corrientes de malla como se muestra en la siguiente
 figura, se puede plantear el sistema de ecuaciones en forma matricial
-tras determinar el valor de las imepdancias:
+tras determinar el valor de las impedancias:
 \begin{align*}
-  \overline{X_L}&=\mathrm{j}\omega\,L=\mathrm{j} 100\cdot 0.01= \mathrm{j}\Omega\\
-  \overline{X_C}&=-\mathrm{j}\dfrac{1}{\omega\,C}=-\mathrm{j} \dfrac{1}{100\cdot 0.01}= -\mathrm{j}\Omega
+  \overline{X}_L&=\mathrm{j}\,\omega\,L=\mathrm{j}\, 100\cdot 0.01= \mathrm{j}\,\Omega\\
+  \overline{X}_C&=-\mathrm{j}\,\dfrac{1}{\omega\,C}=-\mathrm{j}\, \dfrac{1}{100\cdot 0.01}= -\mathrm{j}\,\Omega
 \end{align*}
 
 \begin{center}
@@ -1212,17 +1211,17 @@ tras determinar el valor de las imepdancias:
 \end{equation*}
 cuya solución es:
 \begin{align*}
-  \overline{I_a}&=0\,A\\
-  \overline{I_b}&=-10\,A
+  \overline{I}_a&=0\;\si{\ampere}\\
+  \overline{I}_b&=-10\;\si{\ampere}
 \end{align*}
 Dado que la corriente $i(t)$ se relaciona con las corrientes de malla
 por:
 \begin{equation*}
-  \overline{I}=\overline{I_a}-\overline{I_b}=0-(-10)=10\,A
+  \overline{I}=\overline{I}_a-\overline{I}_b=0-(-10)=10\;\si{\ampere}
 \end{equation*}
 siendo su expresión temporal:
 \begin{equation*}
-  i(t)=\sqrt{2}\,10\,\cos(100\,t) A
+  i(t)=\sqrt{2}\,10\,\cos(100\,t)\;\si{\ampere}
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
