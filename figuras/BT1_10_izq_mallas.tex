@@ -3,6 +3,7 @@
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usetikzlibrary{calc}
+\usepackage{siunitx}
 
 \begin{document}
 
@@ -14,13 +15,13 @@
 \coordinate (B) at (9,0);
 \coordinate (A) at (12,3);
   \draw
-  (0,0) to [esource, v^<= $90\,\text{V}$] (0,3)
-  (0,3) to [R, l= $10\Omega$, i= $I_1$] (3,3)
-  (3,3) to [R, l=$10\Omega$, i=$I_2$] (3,0)
+  (0,0) to [esource, v^<= $\qty{90}{\volt}$] (0,3)
+  (0,3) to [R, l= $\qty{10}{\ohm}$, i= $I_1$] (3,3)
+  (3,3) to [R, l=$\qty{10}{\ohm}$, i=$I_2$] (3,0)
   (3,0) to [short, -] (0,0)
    (3,3) to [short,-, i^<= $I_8$] (6,3)
-   (6,3) to [esource, v=$60\,\text{V}$] (6,0)
-   (6,0) to [R, l= $10\Omega$, i=$I_3$] (3,0);
+   (6,3) to [esource, v=$\qty{60}{\volt}$] (6,0)
+   (6,0) to [R, l= $\qty{10}{\ohm}$, i=$I_3$] (3,0);
 \node[label=above:E] (E) at ($(E)$) {};
   \node[label=above:D] (D) at ($(D)$) {};
   \node[label=below:F] (F) at ($(F)$) {};
