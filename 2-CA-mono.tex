@@ -203,7 +203,7 @@ Por definición, la potencia aparente es:
 que expresada en forma binómica, resulta en los valores de $P$ y $Q$:
 \begin{align*}
   P &= S \cos \theta = \qty{2217.17}{\watt}\\
-  Q &= S \sin \theta = \qty{-443.03}{\voltampere_r}
+  Q &= S \sin \theta = \qty{-443.03}{\var}
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -379,9 +379,9 @@ Sabiendo que la frecuencia del generador es de $\qty{250}{\hertz}$ y el f.d.p. d
 
     \vspace{-4mm}
   \begin{align*}
-    Q_Z = 7.5^2 \cdot 12 &= \qty{675}{\voltampere_r}\\
-    Q_c = - 6^2 \cdot 25 &= \qty{-900}{\voltampere_r}\\
-    Q = Q_Z + Q_c &= \qty{-225}{\voltampere_r}
+    Q_Z = 7.5^2 \cdot 12 &= \qty{675}{\var}\\
+    Q_c = - 6^2 \cdot 25 &= \qty{-900}{\var}\\
+    Q = Q_Z + Q_c &= \qty{-225}{\var}
   \end{align*}
   
   Por tanto:
@@ -434,11 +434,11 @@ El vatímetro $W_1$ mide la potencia total del circuito:
 
 Por otra parte, las potencias reactivas de las bobinas son:
 \begin{align*}
-  Q_{L1} &= X_1 \cdot I_1^2 = \qty{2308.52}{\voltampere}_r\\
-  Q_{L2} &= X_2 \cdot I_2^2 = \qty{1250.33}{\voltampere}_r
+  Q_{L1} &= X_1 \cdot I_1^2 = \qty{2308.52}{\var}\\
+  Q_{L2} &= X_2 \cdot I_2^2 = \qty{1250.33}{\var}
 \end{align*}
 
-Por tanto, la potencia reactiva total es $Q = \qty{3558.82}{\voltampere}_r$. Con el valor de la potencia activa podemos obtener la potencia aparente total:
+Por tanto, la potencia reactiva total es $Q = \qty{3558.82}{\var}$. Con el valor de la potencia activa podemos obtener la potencia aparente total:
 \begin{equation*}
   S = \sqrt{P^2 + Q^2} = \qty{4521.69}{\voltampere}
 \end{equation*}
@@ -496,7 +496,7 @@ Teniendo en cuenta que la corriente total es la referencia de fases,
 También podemos calcular la potencia reactiva del circuito
 (positiva dado que el circuito es inductivo):
 \[
-Q = P_1 \tan \phi = \qty{1450.2}{\voltampere_r}
+Q = P_1 \tan \phi = \qty{1450.2}{\var}
 \]
 
 
@@ -522,14 +522,14 @@ Por otra parte, podemos descomponer esta impedancia en:
 y por tanto,
 \begin{align*}
 P_z &= I^2 \cdot R_z = \qty{1250}{\watt}\\
-Q_z &= I^2 \cdot X_z = \qty{1250}{\voltampere_r}
+Q_z &= I^2 \cdot X_z = \qty{1250}{\var}
 \end{align*}
 
 Aplicando el teorema de Boucherot, podemos calcular la potencia activa
 y la potencia reactiva del circuito paralelo:
 \begin{align*}
 P_{CB} &= P - P_z = \qty{1100}{\watt}\\
-Q_{CB} &= Q - Q_z = \qty{200.2}{\voltampere_r}\\
+Q_{CB} &= Q - Q_z = \qty{200.2}{\var}\\
 \overline{S}_{CB} &= P_{CB} + \mathrm{j}\, Q_{CB} = {1118.07\phase{\ang{10.32}}}\,\si{\voltampere}
 \end{align*}
 
@@ -574,9 +574,9 @@ podemos calcular las respectivas reactancias:
 Podemos comprobar que estas soluciones concuerdan con la potencia
 reactiva de cada impedancia y con la total del circuito paralelo:
 \begin{align*}
-  Q_1 &= I_1^2 \cdot X_1 = \qty{500}{\voltampere_r}\\
-  Q_3 &= - I_3^2 \cdot X_3 = \qty{-300}{\voltampere_r}\\
-  Q_{CB} &= Q_1 + Q_3 =\qty{200}{\voltampere_r}
+  Q_1 &= I_1^2 \cdot X_1 = \qty{500}{\var}\\
+  Q_3 &= - I_3^2 \cdot X_3 = \qty{-300}{\var}\\
+  Q_{CB} &= Q_1 + Q_3 =\qty{200}{\var}
 \end{align*}
 
 Con estos resultados, recordando que  $\overline{U}_{CB} =
@@ -596,7 +596,7 @@ Para terminar, podemos comprobar que $\overline{I} = \overline{I}_1
 
 \section{Enunciado}
 
-La potencia reactiva del circuito de la figura es $\qty{80}{\voltampere_r}$ de tipo capacitivo. La tensión en la impedancia Z está en fase con la intensidad $I_1$ y las lecturas de los aparatos son $A = \qty{4}{\ampere}$, $V = \qty{50}{\volt}$, $W = \qty{200}{\watt}$. Sabiendo que $R_1 = \qty{10}{\ohm}$ y $X_2 = \qty{50}{\ohm}$, calcula:
+La potencia reactiva del circuito de la figura es $\qty{80}{\var}$ de tipo capacitivo. La tensión en la impedancia Z está en fase con la intensidad $I_1$ y las lecturas de los aparatos son $A = \qty{4}{\ampere}$, $V = \qty{50}{\volt}$, $W = \qty{200}{\watt}$. Sabiendo que $R_1 = \qty{10}{\ohm}$ y $X_2 = \qty{50}{\ohm}$, calcula:
 
 \begin{enumerate}
 \item Las corrientes $I_1$, $I_2$, $I_3$ en forma fasorial.
@@ -671,15 +671,15 @@ Aplicamos el teorema de Boucherot para obtener la reactancia de la rama 3, tenie
 
 \begin{align*}
   Q &= Q_1 + Q_2 + Q_3 = 0\\
-  Q_1 &= I_1^2 X_1 = \qty{100}{\voltampere_r}\\
-  Q_2 &= I_2^2 X_2 = \qty{50}{\voltampere_r}\\
+  Q_1 &= I_1^2 X_1 = \qty{100}{\var}\\
+  Q_2 &= I_2^2 X_2 = \qty{50}{\var}\\
   Q_3 &= - I_3^2 X_3
 \end{align*}
 
 Por tanto,
 
 \[
-   Q_3 = -\qty{150}{\voltampere_r} \rightarrow X_3 = \qty[parse-numbers=false]{\frac{50}{3}}{\ohm}
+   Q_3 = -\qty{150}{\var} \rightarrow X_3 = \qty[parse-numbers=false]{\frac{50}{3}}{\ohm}
 \]
 
 Una forma alternativa de calcular $X_3$ es simplemente a partir del cociente entre tensión y corriente: 
@@ -687,10 +687,10 @@ Una forma alternativa de calcular $X_3$ es simplemente a partir del cociente ent
     \overline{Z}_3 = \frac{\overline{U}_{AB}}{\overline{I}_3} = j X_3
 \]
 
-Para determinar $\overline{Z}$ tenemos en cuenta que la potencia reactiva total es $\qty{80}{\voltampere_r}$ de tipo capacitivo y que $Q_{AB} = \qty{0}{\voltampere}_r$:
+Para determinar $\overline{Z}$ tenemos en cuenta que la potencia reactiva total es $\qty{80}{\var}$ de tipo capacitivo y que $Q_{AB} = \qty{0}{\var}$:
 
 \[
-  Q = Q_Z + Q_{AB} \rightarrow Q_Z = -\qty{80}{\voltampere_r} 
+  Q = Q_Z + Q_{AB} \rightarrow Q_Z = -\qty{80}{\var} 
 \]
 
 Por tanto:
@@ -764,14 +764,14 @@ Suponemos línea ideal (sin pérdidas):
 
 \item La capacidad del condensador necesario para compensar el factor de potencia a la unidad.
 \begin{align*}
-Q_m &= S \cdot \sin(\theta_m) = \qty{6}{\kilo\voltampere_r}\\
+Q_m &= S \cdot \sin(\theta_m) = \qty{6}{\kilo\var}\\
 Q_c &= Q_m\\
 C &= \frac{Q_m}{\omega \cdot V^2} = \qty{361}{\micro\farad}
 \end{align*}
 
 \item El valor eficaz de la corriente absorbida por el conjunto condensador-motor. 
 \begin{align*}
-Q' &= \qty{0}{\voltampere_r}\\
+Q' &= \qty{0}{\var}\\
 S' &= P_m = \qty{8}{\kilo\voltampere}\\
 I' &= \frac{S'}{V} = \qty{34.8}{\ampere}
 \end{align*}
@@ -808,7 +808,7 @@ Las potencias del motor 1 son:
 \begin{align*}
   P_1&=\qty{7000}{\watt}\\ 
   Q_1&=P_1\,\tan(\phi_1)=7000\cdot
-                    \tan(\arccos(0.65))=\qty{8183.91}{\voltampere_r}\\
+                    \tan(\arccos(0.65))=\qty{8183.91}{\var}\\
   S_1&=\dfrac{P_1}{\cos(\phi_1)}=\dfrac{7000}{0.65}=\qty{10769.23}{\voltampere}
 \end{align*}
 
@@ -816,14 +816,14 @@ y las del motor 2:
 \begin{align*}
   P_2&=\qty{5000}{\watt}\\ 
   Q_2&=P_2\,\tan(\phi_2)=5000\cdot
-                    \tan(\arccos(0.85))=\qty{3098.72}{\voltampere_r}\\
+                    \tan(\arccos(0.85))=\qty{3098.72}{\var}\\
   S_2&=\dfrac{P_2}{\cos(\phi_2)}=\dfrac{5000}{0.85}=\qty{5882.53}{\voltampere}
 \end{align*}
 
 Por el teorema de Boucherot, la potencia total de las cargas es:
 \begin{align*}
   P_T&=P_1+P_2 = \qty{12000}{\watt}\\
-  Q_T&=Q_1+Q_2 = \qty{11282.63}{\voltampere_r}\\
+  Q_T&=Q_1+Q_2 = \qty{11282.63}{\var}\\
   S_T&=\sqrt{P_T^2+Q_T^2}=\qty{16471.12}{\voltampere}
 \end{align*}
 
@@ -855,7 +855,7 @@ Así, las pérdidas en la línea son:
 
 y el triángulo de potencias del generador, por el teorema de Boucherot:
 \begin{align*}
-  P_g&=P_l+P_T= \qty{13346.23}{\watt}\\ Q_g&=Q_T=\qty{11282.63}{\voltampere_r}\\
+  P_g&=P_l+P_T= \qty{13346.23}{\watt}\\ Q_g&=Q_T=\qty{11282.63}{\var}\\
   S_g&=\sqrt{P_g^2+Q_g^2}=\qty{17476.26}{\voltampere}
 \end{align*} 
 por lo que la tensión a la salida del generador es:
@@ -863,11 +863,11 @@ por lo que la tensión a la salida del generador es:
   U_g=\dfrac{S_g}{I}=\qty{244.4}{\volt}
 \end{equation*}
 
-Para mejorar el factor de potencia, se sabe que la potencia reactiva inicial es $\qty{11282.63}{\voltampere_r}$. Puesto que se quiere un f.d.p.' de $0.95$, la potencia reactiva final será:
+Para mejorar el factor de potencia, se sabe que la potencia reactiva inicial es $\qty{11282.63}{\var}$. Puesto que se quiere un f.d.p.' de $0.95$, la potencia reactiva final será:
 \begin{equation*}
-  Q_T'=P_T\,\tan(\phi')=12000\cdot \tan(\arccos(0.95))=\qty{3944.21}{\voltampere_r}
+  Q_T'=P_T\,\tan(\phi')=12000\cdot \tan(\arccos(0.95))=\qty{3944.21}{\var}
 \end{equation*} 
-siendo la potencia reactiva restante la generada por la batería de condensadores ($Q_C=Q_T'-Q_T=3944.21-11282.63=\qty{-7338.42}{\voltampere_r}$). Por tanto, la capacidad del condensador equivalente a instalar es:
+siendo la potencia reactiva restante la generada por la batería de condensadores ($Q_C=Q_T'-Q_T=3944.21-11282.63=\qty{-7338.42}{\var}$). Por tanto, la capacidad del condensador equivalente a instalar es:
 \begin{equation*}
   Q_c=X_c\,I^2=\dfrac{U^2}{X_c} \quad \Rightarrow \quad
   C=\dfrac{Q}{\omega\,U^2}=\dfrac{7338.42}{2\cdot\pi\cdot 50\cdot
@@ -894,7 +894,7 @@ Con esta corriente, las pérdidas en la línea se reducen a:
 \end{equation*} 
 y el triángulo de potencias del generador, por el teorema de Boucherot:
 \begin{align*}
-  P_g'&=P_l'+P_T=\qty{12791.75}{\watt}\\ Q_g'&=Q_T'=\qty{3944.21}{\voltampere_r}\\
+  P_g'&=P_l'+P_T=\qty{12791.75}{\watt}\\ Q_g'&=Q_T'=\qty{3944.21}{\var}\\
   S_g'&=\sqrt{P_g'^2+Q_g'^2}=\qty{13386.02}{\voltampere}
 \end{align*}
 
@@ -940,10 +940,10 @@ Se pide:
 
 \begin{align*}
   P_M &= \qty{7000}{\watt}\\
-  Q_M &= \qty{7141.4}{VA}_r\\
+  Q_M &= \qty{7141.4}{\var}\\
   S_M &= \qty{10000}{VA}\\
   P_F &= \qty{200}{\watt}\\
-  Q_F &= \qty{346.4}{VA}_r\\
+  Q_F &= \qty{346.4}{\var}\\
   S_F &= \qty{400}{VA}
 \end{align*}
 
@@ -959,7 +959,7 @@ Se pide:
 
 \begin{align*}
   P_T &= \qty{7200}{\watt}\\
-  Q_T &= \qty{7487.8}{VA}_r\\
+  Q_T &= \qty{7487.8}{\var}\\
   S_T &= \qty{10387.9}{VA}
 \end{align*}
 
@@ -985,7 +985,7 @@ Por tanto, la potencia entregada por el generador es:
 
 \begin{align*}
 P_g &= P_L + P_T = \qty{7811.5}{\watt}\\
-Q_g &= Q_T = \qty{7487.8}{VA}_r\\
+Q_g &= Q_T = \qty{7487.8}{\var}\\
 S_g &= \qty{10820.7}{VA}
 \end{align*}
 
@@ -1021,7 +1021,7 @@ P'_L = 2 \cdot I'^2 R_L = \qty{293.8}{\watt}
 Y la potencia entregada por el generador es:
 \begin{align*}
 P'_g &= \qty{7493.8}{\watt}\\
-Q'_g &= \qty{0}{VA}_r\\
+Q'_g &= \qty{0}{\var}\\
 S'_g &= \qty{7493.8}{VA}
 \end{align*}
 
@@ -1066,25 +1066,25 @@ Independientemente del resultado obtenido, suponga que la capacidad instalada es
     Motor:
   \begin{align*}
     P_m &= \SI{8000}{\watt}\\
-    Q_m &= \SI{6000}{\voltampere}_r\\
+    Q_m &= \SI{6000}{\var}\\
   \end{align*}
 
   Alumbrado
   \begin{align*}
     P_f &= \SI{800}{\watt}\\
-    Q_f &= \SI{387.5}{\voltampere}_r\\
+    Q_f &= \SI{387.5}{\var}\\
   \end{align*}
 
   Cargas Electrónicas
   \begin{align*}
     P_e &= \SI{540}{\watt}\\
-    Q_e &= \SI{935.3}{\voltampere}_r\\
+    Q_e &= \SI{935.3}{\var}\\
   \end{align*}
 
   Total (Teorema de Boucherot)
   \begin{align*}
     P_T &= P_m + P_f + P_e = \SI{9340}{\watt}\\
-    Q_T &= Q_m + Q_f + Q_e = \SI{7322.8}{\voltampere}_r\\
+    Q_T &= Q_m + Q_f + Q_e = \SI{7322.8}{\var}\\
   \end{align*}
 
   Por tanto, $S_T = \SI{11868.4}{\voltampere}$ y
@@ -1107,7 +1107,7 @@ Independientemente del resultado obtenido, suponga que la capacidad instalada es
 
   \begin{align*}
     P_g &= P_T + P_L = \SI{9702.1}{\watt}\\
-    Q_g &= Q_T = \SI{7322.8}{\voltampere}_r\\
+    Q_g &= Q_T = \SI{7322.8}{\var}\\
     S_g &= \SI{12155.4}{\voltampere}\\    
     \mathrm{fdp} &= 0.798
   \end{align*}
@@ -1120,7 +1120,7 @@ Independientemente del resultado obtenido, suponga que la capacidad instalada es
 
 \item Capacidad del banco de condensadores a instalar en bornes de la carga necesario para reducir la corriente que circula por la línea a un valor de $\SI{45}{\ampere}$.
 
-  Si la corriente en línea se reduce a $\SI{45}{\ampere}$ la potencia aparente resultante en cargas (incluyendo al condensador) es $S'_T = 230 \cdot 45 = \SI{10350}{\voltampere}$. Por tanto, $Q'_T = \SI{4459.5}{\voltampere}_r$. Así, es necesario instalar un banco de condensadores que aporte $Q_c = Q_T - Q'_T = \SI{2863.3}{\voltampere}_r$.
+  Si la corriente en línea se reduce a $\SI{45}{\ampere}$ la potencia aparente resultante en cargas (incluyendo al condensador) es $S'_T = 230 \cdot 45 = \SI{10350}{\voltampere}$. Por tanto, $Q'_T = \SI{4459.5}{\var}$. Así, es necesario instalar un banco de condensadores que aporte $Q_c = Q_T - Q'_T = \SI{2863.3}{\var}$.
 
 \[
 C = \frac{Q_c}{\omega U^2} = \SI{172.3}{\micro\farad}
@@ -1148,7 +1148,7 @@ I' = \frac{S'_T}{U} = \SI{45}{\ampere}
 \item Triángulo de potencias del generador y factor de potencia.
   \begin{align*}
     P'_g &= P_T + P'_L = \SI{9615.4}{\watt}\\
-    Q'_g &= Q'_T = \SI{4459.5}{\voltampere}_r\\
+    Q'_g &= Q'_T = \SI{4459.5}{\var}\\
     S'_g &= \SI{10599.2}{\voltampere}\\    
   \end{align*}
 
